@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Pacmen</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="./pacmen.js"></script>
+</head>
+
+<body style="background-color:black;
+    background-image:#040019;background-image:  
+    radial-gradient(at 40% 20%, hsla(30,70%,4%,1) 0, transparent 50%),  
+    radial-gradient(at 80% 0%, hsla(186,44%,5%,1) 0, transparent 50%),  
+    radial-gradient(at 0% 50%, hsla(0,0%,6%,1) 0, transparent 50%),  
+    radial-gradient(at 80% 50%, hsla(300,4%,5%,1) 0, transparent 50%),  
+    radial-gradient(at 0% 100%, hsla(20,8%,9%,1) 0, transparent 50%),  
+    radial-gradient(at 80% 100%, hsla(240,18%,9%,1) 0, transparent 50%),  
+    radial-gradient(at 0% 0%, hsla(0,8%,6%,1) 0, transparent 50%);"
+>
+
+    <div id='game' style='position: absolute; top: 20; left: 20; z-index: 100;'>
+        <button type="button" class="btn btn-primary" onclick='makeOne()' width='200' height='30' style='position: relative; z-index: 101'>Add PacMan</button>
+        <button id="start" type="button" class="btn btn-primary" onclick='update();buttonSwap(`start`)' width='200' height='30' style='position: relative; z-index: 101'>Start Animation</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,313 @@
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Jay Clark - Full Stack Developer / Portfolio</title>
+
+        <!-- TO DO: Fix meta description to be real text-->
+        <meta name="description" content="Lorem ipsum dolor." />
+        <meta name=viewport content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+        <style>
+            h1 {
+                font-size: 5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+
+            h2 {
+                font-size: 3.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+
+            h3 {
+                font-size: 2.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+
+            h4 {
+                font-size: 1.35rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+
+            h6 {
+                text-transform: uppercase;
+                color: #7f7f7f;
+                font-weight: 600;
+                letter-spacing: 2;
+            }
+
+            hr {
+                background-color:#d9d9d9;
+                height:1;
+            }
+
+            div.sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+            }
+
+            .btn-primary {
+                background-color:#3164f4;
+                border-radius: 6px;
+                margin: 10px 20px 10px 0px;
+                padding: 10px 15px;
+            }
+
+            .btn-default {
+                background-color:#ededed;
+                border-radius: 6px;
+                margin: 10px 20px 10px 0px;
+                padding: 10px 15px;
+            }
+
+            nav.navbar-default {
+                background-color: #ededed;
+                border-color: #ededed;
+                padding: 30px 10px 0px 10px;
+            }
+
+            .navbar-default .navbar-nav>li>a 
+            {
+                color: #262626;
+                font-weight: 600;
+                font-size: 1.35rem;
+                padding: 10px 18px;
+                letter-spacing: -0.1;
+            }
+
+            .footerlink {
+                color: #262626;
+                letter-spacing: -0.1;
+                font-size: 1.35rem;
+            }
+
+            .footerli {
+                padding: 5px 0px;
+            }
+
+            .navbar-default .navbar-nav>li>a:hover,
+            .navbar-default .navbar-nav>li>a:focus  
+            {
+                color: #666;
+            }
+
+            .navbar-default .navbar-nav>.active>a, 
+            .navbar-default .navbar-nav>.active>a:focus, 
+            .navbar-default .navbar-nav>.active>a:hover {
+                color: #3164f4;
+                background-color: #ededed;
+            }
+
+            .imageline {
+                padding: 0px 40px 20px 40px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .project-description {
+                font-size: 1rem;
+            }
+
+            .logo {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                padding: 5px;
+            }
+
+            .logo img {
+                height: 0.5in;
+            }
+
+            .card-grey {
+                border-radius: 16px;
+                background-color: #f2f2f2;
+                padding: 50px 0px;
+                z-index: 1;
+                margin: 20% 16px 0px 16px;
+                box-shadow: 0px 4px 24px rgba(50, 50, 50, 0.1);
+            }
+
+            .card-white {
+                border-radius: 16px;
+                background-color: #fff;
+                margin: 10% 0px 16px 0px;
+                z-index: 2;
+                padding: 60px 40px;
+                box-shadow: 0px 4px 24px rgba(50, 50, 50, 0.1);
+            }
+
+            .card-content {
+                z-index: 100;
+            }
+
+            .card-image-top {
+                z-index: 100;
+                margin: 0px 50px 40px 50px;
+            }
+
+            .card-image-bottom {
+                z-index: 100;
+                margin: 15% 50px 0px 50px;
+            }
+
+            .about-wrapper {
+            display: grid;
+            padding: 0px 10%;
+            grid-gap: 20px;            
+            grid-template-columns: 100%;
+            grid-template-areas:
+                'header'
+                'title'
+                'video'
+                'about-content'
+                'contact'
+                'footer';
+            }
+
+            .header {
+              grid-area: 1 / 1 / span 1 / span 1;
+            }
+            .title {
+              grid-area: 2 / 1 / span 1 / span 1;
+              text-align: center;
+            }
+            .video {
+              grid-area: 3 / 1 / span 1 / span 1;
+              padding: 20px;
+              text-align: center;
+            }
+            .about-content {
+              grid-area: 4 / 1 / span 1 / span 1;
+              padding: 10% 0px;
+            }
+            .contact {
+              grid-area: 5 / 1 / span 1 / span 1;
+            }
+            .footer {
+              grid-area: 6 / 1 / span 1 / span 1;
+            }
+
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body style="background-color: #ededed; font-family: 'Inter', sans-serif;">
+
+        <div class="about-wrapper">
+
+            <!-- HEADER -->
+            <div class="header">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid sticky">
+                      <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+                  
+                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li><a href="index.html#home">Home</a></li>
+                          <li class="active"><a href="about.html">About Me</a></li>
+                          <li><a href="index.html#projects">Projects</a></li>
+                          <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+
+            <!-- TITLE -->
+            <div class="title">
+                <h1>About Me</h1> 
+                <p>Here I can talk about myself team and why people should hire me as well as my background</p>
+            </div>
+            
+
+            <!-- VIDEO -->
+            <div class="video" id="video">
+                <h4>(Fancy youtube vidya goes here.)</h4>
+                <img src="./images/office.png" width = 60%/> 
+            </div>
+
+            <!-- ABOUT-CONTENT -->
+            <div class="about-content" id="story">
+                
+                <span style="text-align:center;">
+                    <hr style="width:60%">
+                    <h2>My Story</h2>
+                    <hr style="width:60%;height:0;">
+                </span>
+                <p></p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
+                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora 
+                    incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum 
+                    exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem 
+                    vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui 
+                    dolorem eum fugiat quo voluptas nulla pariatur? 
+                </p>
+                <p>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam 
+                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
+                    eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, 
+                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam 
+                    quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+                    nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse 
+                    quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                </p> 
+
+            </div>
+
+            <!-- CONTACT CARD -->
+            <div class="contact card-white" style="margin: 0px 0px 10% 0px;">
+            </div>
+            <div class="contact card-content" style="width:45%;z-index:105;margin: 0px 0px 10% 0px;padding:60px 40px">
+                <h2>Get started with Jay today</h2>
+                <p>Here I will explain why people should definitely contact me absolutely immediately</p>
+                <a href="contact.html" class="btn btn-primary">Get in touch</a>
+            </div>
+            <div class="contact card-image-bottom"><img src="./images/office.png" style="float:right;" width = 50% /></div>
+            <div class="footer">
+                <hr>
+            </div>
+            <div class="footer" style="padding: 30px 0px 0px 66%">
+                <dl>
+                    <dt class="footerli"><a class="footerlink" href="index.html#home">Home</a></dt>
+                    <dt class="footerli"><a class="footerlink" href="about.html">About Me</a></dt>
+                    <dt class="footerli"><a class="footerlink" href="index.html#projects">Projects</a></dt>
+                    <dt class="footerli"><a class="footerlink" href="contact.html">Contact</a></dt>
+                </dl>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer" style="padding: 30px 0px 0px 70%">
+                <ul>
+                   <p style="text-align: right;font-size:1rem"><script>document.write(new Date().getFullYear())</script> &copy; Jay Clark<br>
+                    All rights reserved.</p> 
+                </ul>
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>

@@ -44,7 +44,7 @@
 
             hr {
                 background-color:#d9d9d9;
-                height:1;
+                height: 1;
             }
 
             div.sticky {
@@ -68,9 +68,13 @@
             }
 
             nav.navbar-default {
-                background-color: #ededed;
-                border-color: #ededed;
-                padding: 30px 10px 0px 10px;
+                background-color: rgb(237,237,237,0.75);
+                border-color: rgb(237,237,237,0.1);
+                padding: 30px 6% 30px 5%;
+            }
+
+            .navbar-toggle {
+                margin-top:0px;margin-bottom:0px;
             }
 
             .navbar-default .navbar-nav>li>a 
@@ -102,11 +106,11 @@
             .navbar-default .navbar-nav>.active>a:focus, 
             .navbar-default .navbar-nav>.active>a:hover {
                 color: #3164f4;
-                background-color: #ededed;
+                background-color: rgb(237,237,237,0);
             }
 
             .imageline {
-                padding: 0px 40px 20px 40px;
+                padding: 20px 40px 20px 40px;
                 display: flex;
                 justify-content: center;
             }
@@ -146,6 +150,8 @@
 
             .card-content {
                 z-index: 100;
+                margin: 10% 0px 16px 0px;
+                padding: 60px 40px;
             }
 
             .card-image-top {
@@ -178,6 +184,7 @@
 
             .header {
               grid-area: 1 / 1 / span 1 / span 3;
+              padding: 40px 0px;
             }
             .landing {
               grid-area: 2 / 1 / span 1 / span 1;
@@ -220,6 +227,7 @@
             }
             .footer {
               grid-area: 10 / 1 / span 1 / span 3;
+              padding: 30px 0px 0px 0px;
             }
 
 
@@ -230,31 +238,31 @@
     </head>
 
     <body style="background-color: #ededed; font-family: 'Inter', sans-serif;">
-        <div class="wrapper">
-            <div class="header" id="home">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid sticky">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                      </div>
-                  
-                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                          <li class="active"><a href="#home">Home</a></li>
-                          <li><a href="about.html">About Me</a></li>
-                          <li><a href="#projects">Projects</a></li>
-                          <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
+        <nav class="navbar navbar-default navbar-fixed-top" id="home">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+              
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                      <li class="active"><a href="#home">Home</a></li>
+                      <li><a href="about.html">About Me</a></li>
+                      <li><a href="#projects">Projects</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                  </div>
             </div>
+        </nav>
 
+        <div class="wrapper">
+            <div class="header">
+            </div>
             <!-- LANDING PAGE -->
             <div class="landing">
                 <h1>Jay Clark<br> wants to work for you.</h1> 
@@ -267,23 +275,22 @@
 
             <!-- TECH STACK LOGOS -->
             <div class="logos">
-                <span style="text-align: center;"><hr style="background-color:#d9d9d9;height:1"><h6>My tech stack</h6></span>
+                <span style="text-align: center;"><hr style="background-color:#d9d9d9;height: 1"><h6>My tech stack</h6></span>
                 <div class="imageline">
                     <div class="logo"><img src="./images/mongodb.png"></div>
                     <div class="logo"><img src="./images/expressjs.png"></div>
-                    <div class="logo"><img src="./images/nodejs.png"></div>
                     <div class="logo"><img src="./images/react.png"></div>
+                    <div class="logo"><img src="./images/nodejs.png"></div>
                 </div>
             </div>
 
             <!-- SHORT BIO -->
-            <div class="bio card-white">
-                <div class="card-content" style="width:45%">
+            <div class="bio card-white"></div>
+            <div class="bio card-content" style="width:45%;z-index:101">
                     
-                    <h2>Some very nice headline</h2>
-                    <p>One sentence bio about me for lazy people who can't read good.</p> 
-                    <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
-                </div>
+                <h2>Get to know me</h2>
+                <p>I'm a Harvard-educated software engineer with strong communication skills and experience in teaching & mentorship.</p> 
+                <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
             </div>
             <div class="bio card-grey"></div>
             <div class="bio card-image-top"><img src="./images/office.png" style="float:right;" width = 50% /></div>
@@ -292,17 +299,20 @@
             <div class="photo2"><img src="./images/office.png" style="float:left;" width = 100% /></div>
             <div class="github">
                 <h6>Github</h6>
-                <h3>Explain why you should care</h3>
-                <p>This is a text block to let me write more information about my github and why it should matter to an employer</p>
+                <h3>Learning best practices early</h3>
+                <p> I use git and GitHub on even minor projects and assignments, in order to build competence on the pull request and merge process.
+                    I also seek out volunteer opportunities to gain experience working as part of a team of developers.
+                </p>
                 <a href="https://github.com/jayeclark/" class="btn btn-primary" target="_blank">Go to my GitHub</a>
             </div>
 
             <!-- CODEWARS -->
             <div class="codewars">
                 <h6>Codewars</h6>
-                <h3>Explain why Codewars matters</h3>
-                <p>More text to explain how super amazing and extra I am about every single thing in my life, and how because of that you should super duper 100% hire me.</p>
-                <a href="https://www.codewars.com/users/jayclark" class="btn btn-primary">Go to my profile</a>
+                <h3>Daily Javascript challenges</h3>
+                <p>I train daily on Codewars, completing as many kata as possible within an allotted 1-2 hour time frame. I have achieved a rank of 3 kyu,
+                    which reflects a 'highly competent' skill level at Javascript and places me among the top 3% of users on the site.</p>
+                <a href="https://www.codewars.com/users/jayclark" class="btn btn-primary" target="_blank">Go to my profile</a>
             </div>
             <div class="photo3"><img src="./images/office.png" style="float:right;" width = 100% /></div>
 
@@ -311,25 +321,30 @@
             <div class="projects card-white" style="clear: both;">
                 <div class="card-content" style="width:50%;padding: 10% 0px">
                     
-                    <h2>Javascript, HTML, and CSS Fundamentals</h2>
-                    <p>Wow these projects are so great! Let me tell you why right here, right now.</p>
-                    <p>Of course I will add more as I get better.</p> 
+                    <h2>Javascript, HTML, and CSS fundamentals</h2>
+                    <p>My early training has focused on learning the fundamentals of web development, especially Javascript. My projects 
+                        during this part of training were small, short exercises to gain familiarity with the basics of using Javascript to animate pages and 
+                        create interactive experiences.
+                    </p>
                 </div>
             </div>
-            <div class="projects card-content" style="width:45%;margin: 10% 0px 26px 55%;padding:10px;z-index:101;">
+            <div class="projects card-content" style="width:45%;margin: 10% 0px 26px 55%;padding:20px 40px 20px 0px;z-index:101;">
 
-                <h3>PacMen for Days</h3>
-                <p class="project-description">Simple explanation of the project for people who don't know what it is</p>
+                <h3>Pac-Men for Days</h3>
+                <p class="project-description">Pac-Man images appear each time a button is clicked, and wander around the screen at varying speeds once the button to start the animation is clicked.</p>
                 <a href="./pacmen-for-days/index.html" class="btn btn-primary btn-xs" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/PacMen-For-Days" class="btn btn-default btn-xs" target="_blank">View GitHub Repo</a>
                 <hr>
 
                 <h3>Eyes Animation</h3>
-                <p class="project-description">Simple explanation of the project for people who don't know what it is</p>
+                <p class="project-description">A pair of eyes follow your mouse cursor as it moves around the screen. This project 
+                    makes use of the transform property to translate the 'pupil' to different locations within the 'eyeball' based on the position of your mouse.
+                </p>
                 <a href="./eyes-animation/index.html" class="btn btn-primary btn-xs" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Eyes-Animation" class="btn btn-default btn-xs" target="_blank">View GitHub Repo</a>
                 <hr>
 
                 <h3>Bus Map Animation</h3>
-                <p class="project-description">Simple explanation of the project for people who don't know what it is</p>
+                <p class="project-description"> A map marker moves among the different MBTA bus stops between Harvard and MIT. This project demonstrates the ability to 
+                    interactively animate content in a context more relevant to users' everyday browsing experience. It makes use the Mapbox library and API to simplify map styling.</p>
                 <a href="./bus-map-animation/index.html" class="btn btn-primary btn-xs" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Bus-Map-Animation" class="btn btn-default btn-xs" target="_blank">View GitHub Repo</a>
                 
             </div>
@@ -342,7 +357,10 @@
                 <div class="imageline">
                     <div class="logo card-white" style="margin: 20px;padding:20px;text-align: center;">
                         <h4>MIT xPro Certificate</h4>
-                        <p class="project-description">Here I will explain and link to what I am working on.</p>&nbsp;
+                        <p class="project-description">I'm completing the MIT xPro Professional Certificate: Full Stack Development with MERN. This is a 
+                            32-week program covering the basics of web development, front-end development with react, and back-end 
+                            development with MongoDB and Node.js.
+                        </p>&nbsp;
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%;">
                                 <span class="sr-only">33% Complete</span>
@@ -351,14 +369,22 @@
                     </div>
                     <div class="logo card-white" style="margin: 20px;padding:20px;text-align: center;">
                         <h4>Open Source Courses</h4>
-                        <p class="project-description">Here I will explain and link to what I am working on.</p>&nbsp;
+                        <p class="project-description">To supplement MIT's certificate program, I'm completing the following open source courses on computer 
+                            science: Harvard's 
+                            <a href="https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0" target="_blank">CS50</a>, 
+                            Berkeley's <a href="https://inst.eecs.berkeley.edu/~cs61a/sp20/" target="_blank">CS61A</a>, 
+                            <a href="https://sp21.datastructur.es/" target="_blank">CS61B</a>, and 
+                            <a href="https://inst.eecs.berkeley.edu/~cs61c/fa19/" target="_blank">CS61C</a>, and 
+                            Princeton's <a href="https://algs4.cs.princeton.edu/home/" target="_blank">Algorithms</a>.</p>&nbsp;
                         <div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
                             <span class="sr-only">5% Complete</span>
                          </div></div>
                     </div>
                     <div class="logo card-white" style="margin: 20px;padding:20px;text-align: center;">
                         <h4>Competitive Programming</h4>
-                        <p class="project-description">Here I will explain and link to what I am working on.</p>&nbsp;
+                        <p class="project-description">I train daily on Codewars and Leetcode, with a goal of participating
+                            in and winning competitive programming challenges. I focus on speed, simplicity, and readability and find participating in daily challenges
+                            to be the fastest way to gain confidence and ease in programming.</p>&nbsp;
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
                                 <span class="sr-only">30% Complete</span>
@@ -372,25 +398,27 @@
             <div class="contact card-white" style="margin: 0px 0px 10% 0px;">
             </div>
             <div class="contact card-content" style="width:45%;z-index:105;margin: 0px 0px 10% 0px;padding:60px 40px">
-                <h2>Get started with Jay today</h2>
-                <p>Here I will explain why people should definitely contact me absolutely immediately</p>
+                <h2>Hire me</h2>
+                <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
+                    let's talk about a possible role for me on your team.
+                </p>
                 <a href="contact.html" class="btn btn-primary">Get in touch</a>
             </div>
             <div class="contact card-image-bottom"><img src="./images/office.png" style="float:right;" width = 50% /></div>
-            <div class="footer">
+
+             <!-- FOOTER -->
+            <div class="footer" style="padding-top: 0px">
                 <hr>
             </div>
-            <div class="footer" style="padding: 30px 0px 0px 66%">
+            <div class="footer" style="padding-left: 66%">
                 <dl>
                     <dt class="footerli"><a class="footerlink" href="#home">Home</a></dt>
                     <dt class="footerli"><a class="footerlink" href="about.html">About Me</a></dt>
                     <dt class="footerli"><a class="footerlink" href="#projects">Projects</a></dt>
                     <dt class="footerli"><a class="footerlink" href="contact.html">Contact</a></dt>
                 </dl>
-            </div>
-
-            <!-- FOOTER -->
-            <div class="footer" style="padding: 30px 0px 0px 70%">
+            </div>           
+            <div class="footer" style="padding-left: 70%">
                 <ul>
                    <p style="text-align: right;font-size:1rem"><script>document.write(new Date().getFullYear())</script> &copy; Jay Clark<br>
                     All rights reserved.</p> 

@@ -7,80 +7,47 @@
         <meta name="description" content="Lorem ipsum dolor." />
         <meta name=viewport content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="about-layout.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
         <style>
-
-            .wrapper {       
-            grid-template-columns: 100%;
-            grid-template-areas:
-                'header'
-                'title'
-                'video'
-                'about-content'
-                'contact'
-                'footer';
+            .navbar-toggle {
+                margin-top:0px;margin-bottom:0px;
             }
-
-            .header {
-              grid-area: 1 / 1 / span 1 / span 1;
-            }
-            .title {
-              grid-area: 2 / 1 / span 1 / span 1;
-              text-align: center;
-              padding: 0px 20%;
-            }
-            .video {
-              grid-area: 3 / 1 / span 1 / span 1;
-              padding: 20px;
-              text-align: center;
-            }
-            .about-content {
-              grid-area: 4 / 1 / span 1 / span 1;
-              padding: 10% 0px;
-            }
-            .contact {
-              grid-area: 5 / 1 / span 1 / span 1;
-            }
-            .footer {
-              grid-area: 6 / 1 / span 1 / span 1;
-            }
-
-
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
     </head>
 
-    <body style="background-color: #ededed; font-family: 'Inter', sans-serif;">
-
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid sticky">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+          
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html#home">Home</a></li>
+                  <li class="active"><a href="about.html">About Me</a></li>
+                  <li><a href="index.html#projects">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         <div class="wrapper">
 
             <!-- HEADER -->
             <div class="header">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid sticky">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                        </button>
-                      </div>
-                  
-                      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                          <li><a href="index.html#home">Home</a></li>
-                          <li class="active"><a href="about.html">About Me</a></li>
-                          <li><a href="index.html#projects">Projects</a></li>
-                          <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
+
             </div>
 
             <!-- TITLE -->

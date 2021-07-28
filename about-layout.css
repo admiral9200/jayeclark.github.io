@@ -1,0 +1,39 @@
+.wrapper {       
+    grid-template-columns: 100%;
+    grid-template-areas:
+        'header'
+        'title'
+        'video'
+        'about-content'
+        'contact'
+        'footer';
+}
+
+.header {
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.title {
+    grid-area: 2 / 1 / span 1 / span 1;
+    text-align: center;
+    padding: 0px 20%;
+}
+
+.video {
+    grid-area: 3 / 1 / span 1 / span 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-content {
+    grid-area: 4 / 1 / span 1 / span 1;
+    padding: 10% 0px;
+}
+
+.contact {
+    grid-area: 5 / 1 / span 1 / span 1;
+}
+
+.footer {
+    grid-area: 6 / 1 / span 1 / span 1;
+}

@@ -7,79 +7,16 @@
         <meta name="description" content="Lorem ipsum dolor." />
         <meta name=viewport content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="index-layout.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+        
+        <!-- TO DO: Figure out how to fix navbar toggle issue in bootstrap-->
         <style>
-            
             .navbar-toggle {
                 margin-top:0px;margin-bottom:0px;
             }
-
-            .wrapper {        
-            grid-template-columns: 45% 10% 45%;
-            grid-template-areas:
-                'header header header'
-                'landing photo1 photo1'
-                'logos logos logos'
-                'bio bio bio'
-                'photo2 photo2 github'
-                'codewars photo3 photo3'
-                'projects projects projects'
-                'training training training'
-                'contact contact contact'
-                'footer  footer  footer';
-            }
-
-            .header {
-              grid-area: 1 / 1 / span 1 / span 3;
-              padding: 40px 0px;
-            }
-            .landing {
-              grid-area: 2 / 1 / span 1 / span 1;
-              padding: 20% 0px 20px 0px;
-            }
-            .photo1 {
-              grid-area: 2 / 2 / span 1 / span 2;
-              padding: 0px 0px 20px 20px
-            }
-            .logos {
-              grid-area: 3 / 1 / span 1 / span 3;
-              margin: 0px 0px 5% 0px;
-            }
-            .bio {
-              grid-area: 4 / 1 / span 1 / span 3;
-            }
-            .photo2 {
-              grid-area: 5 / 1 / span 1 / span 2;
-              padding: 10% 0px;
-            }
-            .github {
-              grid-area: 5 / 3 / span 1 / span 1;
-              padding: 20% 10%;
-            }
-            .codewars {
-              grid-area: 6 / 1 / span 1 / span 1;
-              padding: 20% 10%;
-            }
-            .photo3 {
-              grid-area: 6 / 2 / span 1 / span 2;
-            }
-            .projects {
-              grid-area: 7 / 1 / span 1 / span 3;
-            }
-            .training {
-              grid-area: 8 / 1 / span 1 / span 3;
-            }
-            .contact {
-              grid-area: 9 / 1 / span 1 / span 3;
-            }
-            .footer {
-              grid-area: 10 / 1 / span 1 / span 3;
-              padding: 30px 0px 0px 0px;
-            }
-
-
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>

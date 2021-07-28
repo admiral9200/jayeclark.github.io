@@ -6,171 +6,12 @@
         <!-- TO DO: Fix meta description to be real text-->
         <meta name="description" content="Lorem ipsum dolor." />
         <meta name=viewport content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
         <style>
-            h1 {
-                font-size: 5rem;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-            }
-
-            h2 {
-                font-size: 3.5rem;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-            }
-
-            h3 {
-                font-size: 2.5rem;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-            }
-
-            h4 {
-                font-size: 1.35rem;
-                font-family: 'Poppins', sans-serif;
-                font-weight: 600;
-            }
-
-            h6 {
-                text-transform: uppercase;
-                color: #7f7f7f;
-                font-weight: 600;
-                letter-spacing: 2;
-            }
-
-            hr {
-                background-color:#d9d9d9;
-                height:1;
-            }
-
-            div.sticky {
-                position: -webkit-sticky;
-                position: sticky;
-                top: 0;
-            }
-
-            .btn-primary {
-                background-color:#3164f4;
-                border-radius: 6px;
-                margin: 10px 20px 10px 0px;
-                padding: 10px 15px;
-            }
-
-            .btn-primary:focus,
-            .btn-primary.focus {
-                background-color: #0033cc;
-            }
-
-            .btn-primary:hover {
-                background-color: #0033cc;
-            }
-
-            .btn-default {
-                background-color:#ededed;
-                border-radius: 6px;
-                margin: 10px 20px 10px 0px;
-                padding: 10px 15px;
-            }
-
-            nav.navbar-default {
-                background-color: #ededed;
-                border-color: #ededed;
-                padding: 30px 10px 0px 10px;
-            }
-
-            .navbar-default .navbar-nav>li>a 
-            {
-                color: #262626;
-                font-weight: 600;
-                font-size: 1.35rem;
-                padding: 10px 18px;
-                letter-spacing: -0.1;
-            }
-
-            .footerlink {
-                color: #262626;
-                letter-spacing: -0.1;
-                font-size: 1.35rem;
-            }
-
-            .footerli {
-                padding: 5px 0px;
-            }
-
-            .navbar-default .navbar-nav>li>a:hover,
-            .navbar-default .navbar-nav>li>a:focus  
-            {
-                color: #666;
-            }
-
-            .navbar-default .navbar-nav>.active>a, 
-            .navbar-default .navbar-nav>.active>a:focus, 
-            .navbar-default .navbar-nav>.active>a:hover {
-                color: #3164f4;
-                background-color: #ededed;
-            }
-
-            .imageline {
-                padding: 0px 40px 20px 40px;
-                display: flex;
-                justify-content: center;
-            }
-
-            .project-description {
-                font-size: 1rem;
-            }
-
-            .logo {
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                padding: 5px;
-            }
-
-            .logo img {
-                height: 0.5in;
-            }
-
-            .card-grey {
-                border-radius: 16px;
-                background-color: #f2f2f2;
-                padding: 50px 0px;
-                z-index: 1;
-                margin: 20% 16px 0px 16px;
-                box-shadow: 0px 4px 24px rgba(50, 50, 50, 0.1);
-            }
-
-            .card-white {
-                border-radius: 16px;
-                background-color: #fff;
-                margin: 10% 0px 16px 0px;
-                z-index: 2;
-                padding: 60px 40px;
-                box-shadow: 0px 4px 24px rgba(50, 50, 50, 0.1);
-            }
-
-            .card-content {
-                z-index: 100;
-            }
-
-            .card-image-top {
-                z-index: 100;
-                margin: 0px 50px 40px 50px;
-            }
-
-            .card-image-bottom {
-                z-index: 100;
-                margin: 15% 50px 0px 50px;
-            }
-
-            .about-wrapper {
-            display: grid;
-            padding: 0px 10%;
-            grid-gap: 20px;            
+            .wrapper {       
             grid-template-columns: 55% 45%;
             grid-template-areas:
                 'header header'
@@ -201,7 +42,7 @@
 
     <body style="background-color: #ededed; font-family: 'Inter', sans-serif;">
 
-        <div class="about-wrapper">
+        <div class="wrapper">
 
             <!-- HEADER -->
             <div class="header">

@@ -229,13 +229,12 @@
             function isElementInViewport(el) {
                 const rect = el.getBoundingClientRect();
                 const height = window.innerHeight || document.documentElement.clientHeight;
-                return (height - rect.top > 0 && rect.bottom > 0) 
+                return (rect.top < height / 2 && rect.bottom > 120)
             }
 
             function shouldChangeStatus(el) {
                 let navId = el.id + "-nav";
                 let isActive = document.getElementById(navId).classList.contains("active");
-                if (isElementInViewport(el)) {console.log("visible, active: " + isActive);}
                 if (isActive && isElementInViewport(el) === false) {activeOff(navId);}
                 else if (isActive === false && isElementInViewport(el)) {activeOn(navId);}
             }

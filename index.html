@@ -37,9 +37,9 @@
               
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="active" id="home-nav"><a href="#home" onclick="divToggle('home-nav')">Home</a></li>
+                      <li class="active" id="home-nav"><a href="#home" onclick="activeOn('home-nav')">Home</a></li>
                       <li><a href="about.html">About Me</a></li>
-                      <li id="projects-nav"><a href="#projects" onclick="divToggle('projects-nav')">Projects</a></li>
+                      <li id="projects-nav"><a href="#projects" onclick="activeOn('projects-nav')">Projects</a></li>
                       <li><a href="contact.html">Contact</a></li>
                     </ul>
                   </div>
@@ -47,9 +47,10 @@
         </nav>
 
         <div class="wrapper" data-bs-spy="scroll" data-bs-target="#navbar-index" data-bs-offset="0" tabindex="0">
-            <div class="header"  id="home">
+            <div class="header">
             </div>
             <!-- LANDING PAGE -->
+            <div class="landing" id="home" style="margin: -120px 0px"></div>
             <div class="landing">
                 <h1>Jay Clark<br> wants to work for you.</h1> 
                 <p style="font-size:1.75rem">I am a full stack software engineer seeking employment opportunities.</p>
@@ -104,7 +105,7 @@
 
             <!-- PROJECTS SECTION -->
 
-            <div class="projects" style="margin: -90px 0px" id="projects"></div>
+            <div class="projects" style="margin: -90px 0px"></div>
             <div class="projects card-white" style="clear: both;">
                 <div class="card-content" style="width:50%;padding: 10% 0px">
                     
@@ -136,7 +137,7 @@
                 
             </div>
             <div class="projects card-grey"></div>
-            <div class="projects card-image-top"><img src="./images/projects.png" style="float:left;" width = 45% /></div>
+            <div class="projects card-image-top" id="projects"><img src="./images/projects.png" style="float:left;" width = 45% /></div>
 
             <!-- TRAINING PLAN-->
             <div class="training" style="margin:5% 0px">
@@ -214,12 +215,36 @@
 
         </div>
         <script>
-            function divToggle(id) {
+
+            function activeOff(id) {
                 let curr = document.getElementById(id);
-                let prior = document.getElementsByClassName('active');
-                if (prior[0].id !== id) {prior[0].classList.remove('active');}
-                curr.classList.add('active');
+                if (curr.classList.contains('active')) {curr.classList.remove('active')};
             }
+
+            function activeOn(id) {
+                let curr = document.getElementById(id);
+                if (curr.classList.contains('active') === false) {curr.classList.add('active')};
+            }
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                const height = window.innerHeight || document.documentElement.clientHeight;
+                return (height - rect.top > 0 && rect.bottom > 0) 
+            }
+
+            function shouldChangeStatus(el) {
+                let navId = el.id + "-nav";
+                let isActive = document.getElementById(navId).classList.contains("active");
+                if (isElementInViewport(el)) {console.log("visible, active: " + isActive);}
+                if (isActive && isElementInViewport(el) === false) {activeOff(navId);}
+                else if (isActive === false && isElementInViewport(el)) {activeOn(navId);}
+            }
+
+            window.addEventListener("scroll", () => {
+                shouldChangeStatus(document.getElementById('projects'));
+                shouldChangeStatus(document.getElementById('home'));
+            });
+
         </script>
     </body>
 

@@ -11,6 +11,7 @@
 
 .header {
     grid-area: 1 / 1 / span 1 / span 1;
+    padding: 40px;
 }
 
 .title {

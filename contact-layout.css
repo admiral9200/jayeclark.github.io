@@ -8,6 +8,7 @@
     
 .header {
  grid-area: 1 / 1 / span 1 / span 2;
+ padding: 40px;
 }
 
 .contact {

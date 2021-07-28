@@ -23,8 +23,8 @@
 
     </head>
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top" id="home">
+    <body style="position:relative">
+        <nav class="navbar navbar-default navbar-fixed-top" id="navbar-index">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
@@ -37,17 +37,17 @@
               
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="active"><a href="#home">Home</a></li>
+                      <li class="active" id="home-nav"><a href="#home" onclick="divToggle('home-nav')">Home</a></li>
                       <li><a href="about.html">About Me</a></li>
-                      <li><a href="#projects">Projects</a></li>
+                      <li id="projects-nav"><a href="#projects" onclick="divToggle('projects-nav')">Projects</a></li>
                       <li><a href="contact.html">Contact</a></li>
                     </ul>
                   </div>
             </div>
         </nav>
 
-        <div class="wrapper">
-            <div class="header">
+        <div class="wrapper" data-bs-spy="scroll" data-bs-target="#navbar-index" data-bs-offset="0" tabindex="0">
+            <div class="header"  id="home">
             </div>
             <!-- LANDING PAGE -->
             <div class="landing">
@@ -212,7 +212,14 @@
             </div>
 
         </div>
-        
+        <script>
+            function divToggle(id) {
+                let curr = document.getElementById(id);
+                let prior = document.getElementsByClassName('active');
+                if (prior[0].id !== id) {prior[0].classList.remove('active');}
+                curr.classList.add('active');
+            }
+        </script>
     </body>
 
 </html>

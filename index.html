@@ -231,7 +231,7 @@
             function isElementInViewport(el) {
                 const rect = el.getBoundingClientRect();
                 const height = window.innerHeight || document.documentElement.clientHeight;
-                return (rect.top < height / 4 && rect.bottom > 120)
+                return (rect.top < height / 3 && rect.bottom > 120)
             }
 
             function shouldChangeStatus(el) {

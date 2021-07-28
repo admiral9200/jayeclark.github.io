@@ -23,8 +23,8 @@
 
     </head>
 
-    <body>
-        <nav class="navbar navbar-default navbar-fixed-top" id="home">
+    <body style="position:relative">
+        <nav class="navbar navbar-default navbar-fixed-top" id="navbar-index">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
@@ -37,19 +37,20 @@
               
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                      <li class="active"><a href="#home">Home</a></li>
+                      <li class="active" id="home-nav"><a href="#home">Home</a></li>
                       <li><a href="about.html">About Me</a></li>
-                      <li><a href="#projects">Projects</a></li>
+                      <li id="projects-nav"><a href="#projects">Projects</a></li>
                       <li><a href="contact.html">Contact</a></li>
                     </ul>
                   </div>
             </div>
         </nav>
 
-        <div class="wrapper">
+        <div class="wrapper" data-bs-spy="scroll" data-bs-target="#navbar-index" data-bs-offset="0" tabindex="0">
             <div class="header">
             </div>
             <!-- LANDING PAGE -->
+            <div class="landing" id="home" style="margin: -120px 0px"></div>
             <div class="landing">
                 <h1>Jay Clark<br> wants to work for you.</h1> 
                 <p style="font-size:1.75rem">I am a full stack software engineer seeking employment opportunities.</p>
@@ -75,7 +76,7 @@
             <div class="bio card-content" style="width:50%;z-index:101">
                     
                 <h2>Get to know me</h2>
-                <p>I'm a Harvard-educated software engineer with strong communication skills and experience in teaching & mentorship.</p> 
+                <p>I'm a Harvard-educated professional with strong communication skills and experience in teaching & mentorship.</p> 
                 <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
             </div>
             <div class="bio card-grey"></div>
@@ -86,7 +87,7 @@
             <div class="github">
                 <h6>Github</h6>
                 <h3>Applying best practices</h3>
-                <p> I use git and GitHub - even on minor assignments - to build competence on the pull request and merge process.
+                <p> I use git and GitHub - even on minor assignments - to build competence on pull requests and resolving conflicts.
                     I am also seeking out volunteer opportunities to gain experience working as part of a team of developers.
                 </p>
                 <a href="https://github.com/jayeclark/" class="btn btn-primary" target="_blank">Go to my GitHub</a>
@@ -104,6 +105,7 @@
 
             <!-- PROJECTS SECTION -->
 
+            <div class="projects" style="margin: -90px 0px"></div>
             <div class="projects card-white" style="clear: both;">
                 <div class="card-content" style="width:50%;padding: 10% 0px">
                     
@@ -114,24 +116,24 @@
                     </p>
                 </div>
             </div>
-            <div class="projects card-content" style="width:45%;margin: 20% 0px 26px 55%;padding:20px 40px 20px 0px;z-index:101;">
+            <div class="projects card-content" style="width:45%;margin: 10% 0px 26px 55%;padding:20px 40px 20px 0px;z-index:101;">
 
                 <h3>Pac-Men for Days</h3>
                 <p class="project-description">Pac-Man images appear each time a button is clicked, and wander around the screen at varying speeds once the button to start the animation is clicked.</p>
-                <a href="./pacmen-for-days/index.html" class="btn btn-primary" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/PacMen-For-Days" class="btn btn-default" target="_blank">View GitHub Repo</a>
+                <a href="./pacmen-for-days/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/PacMen-For-Days" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
                 <hr>
 
                 <h3>Eyes Animation</h3>
                 <p class="project-description">A pair of eyes follow your mouse cursor as it moves around the screen. This project 
                     makes use of the transform property to translate the 'pupil' to different locations within the 'eyeball' based on the position of your mouse.
                 </p>
-                <a href="./eyes-animation/index.html" class="btn btn-primary" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Eyes-Animation" class="btn btn-default" target="_blank">View GitHub Repo</a>
+                <a href="./eyes-animation/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Eyes-Animation" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
                 <hr>
 
                 <h3>Bus Map Animation</h3>
                 <p class="project-description"> A map marker moves among the different MBTA bus stops between Harvard and MIT. This project demonstrates the ability to 
                     interactively animate content in a context more relevant to users' everyday browsing experience. It makes use the Mapbox library and API to simplify map styling.</p>
-                <a href="./bus-map-animation/index.html" class="btn btn-primary" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Bus-Map-Animation" class="btn btn-default" target="_blank">View GitHub Repo</a>
+                <a href="./bus-map-animation/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Bus-Map-Animation" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
                 
             </div>
             <div class="projects card-grey"></div>
@@ -212,7 +214,38 @@
             </div>
 
         </div>
-        
+        <script>
+
+            function activeOff(id) {
+                let curr = document.getElementById(id);
+                if (curr.classList.contains('active')) {curr.classList.remove('active')};
+            }
+
+            function activeOn(id) {
+                let curr = document.getElementById(id);
+                if (curr.classList.contains('active') === false) {curr.classList.add('active')};
+            }
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                const height = window.innerHeight || document.documentElement.clientHeight;
+                return (height - rect.top > 0 && rect.bottom > 0) 
+            }
+
+            function shouldChangeStatus(el) {
+                let navId = el.id + "-nav";
+                let isActive = document.getElementById(navId).classList.contains("active");
+                if (isElementInViewport(el)) {console.log("visible, active: " + isActive);}
+                if (isActive && isElementInViewport(el) === false) {activeOff(navId);}
+                else if (isActive === false && isElementInViewport(el)) {activeOn(navId);}
+            }
+
+            window.addEventListener("scroll", () => {
+                shouldChangeStatus(document.getElementById('projects'));
+                shouldChangeStatus(document.getElementById('home'));
+            });
+
+        </script>
     </body>
 
 </html>

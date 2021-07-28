@@ -8,12 +8,34 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
+    <link href="../bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
+    <nav class="navbar navbar-default navbar-fixed-top" id="home">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+          
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="../index.html#home">Home</a></li>
+                  <li><a href="../about.html">About Me</a></li>
+                  <li><a href="../index.html#projects">Projects</a></li>
+                  <li><a href="../contact.html">Contact</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
     <div id="map"></div>
     <div class="map-overlay top">
-        <button class="btn btn-primary" style="font-size: 1em;padding:6px 12px;" onclick="move()">
+        <button class="btn btn-primary" style="font-size: 1em;margin:100px 0px;padding:6px 12px;" onclick="move()">
             Click to show bus stops between Harvard and MIT
         </button>
     </div>

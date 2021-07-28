@@ -208,13 +208,15 @@
             </div>           
             <div class="footer" style="padding-left: 70%">
                 <ul>
-                   <p style="text-align: right;font-size:1rem"><script>document.write(new Date().getFullYear())</script> &copy; Jay Clark<br>
-                    All rights reserved.</p> 
+                   <p id="footer-text" style="text-align: right;font-size:1rem"></p> 
                 </ul>
             </div>
 
         </div>
         <script>
+
+            const footer = () => document.getElementById('footer-text').innerHTML = `${new Date().getFullYear()} &copy; Jay Clark<br>All rights reserved</p> `
+            footer();
 
             function activeOff(id) {
                 let curr = document.getElementById(id);
@@ -235,8 +237,8 @@
             function shouldChangeStatus(el) {
                 let navId = el.id + "-nav";
                 let isActive = document.getElementById(navId).classList.contains("active");
-                if (isActive && isElementInViewport(el) === false) {activeOff(navId);}
-                else if (isActive === false && isElementInViewport(el)) {activeOn(navId);}
+                if (isActive && isElementInViewport(el) === false) { activeOff(navId); }
+                else if (isActive === false && isElementInViewport(el)) { activeOn(navId); }
             }
 
             window.addEventListener("scroll", () => {

@@ -80,10 +80,10 @@
                 <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
             </div>
             <div class="bio card-grey"></div>
-            <div class="bio card-image-top"><img src="./images/person.png" style="float:right;" width = 50% /></div>
+            <div class="bio card-image-top"><img src="./images/person.png" style="float:right;" width = 50% id="bio-img-1"/></div>
 
             <!-- GITHUB -->
-            <div class="photo2"><img src="./images/github.png" style="float:left;" width = 100% /></div>
+            <div class="photo2"><img src="./images/github.png" style="float:left;" width = 100% id="github-img-1"/></div>
             <div class="github">
                 <h6>Github</h6>
                 <h3>Applying best practices</h3>
@@ -101,7 +101,7 @@
                     in Javascript, which reflects a 'highly competent' skill level and places me among the top 3% of developers on the site.</p>
                 <a href="https://www.codewars.com/users/jayclark" class="btn btn-primary" target="_blank">Go to my profile</a>
             </div>
-            <div class="photo3"><img src="./images/codewars.png" style="float:right;" width = 100% /></div>
+            <div class="photo3"><img src="./images/codewars.png" style="float:right;" width = 100% id="codewars-img-1"/></div>
 
             <!-- PROJECTS SECTION -->
 
@@ -137,7 +137,7 @@
                 
             </div>
             <div class="projects card-grey"></div>
-            <div class="projects card-image-top" id="projects"><img src="./images/projects.png" style="float:left;" width = 45% /></div>
+            <div class="projects card-image-top" id="projects"><img src="./images/projects.png" style="float:left;" width = 45% id="projects-img-1"/></div>
 
             <!-- TRAINING PLAN-->
             <div class="training" style="margin:5% 0px">
@@ -192,7 +192,7 @@
                 </p>
                 <a href="contact.html" class="btn btn-primary">Get in touch</a>
             </div>
-            <div class="contact card-image-bottom"><img src="./images/hireme.png" style="float:right;" width = 50% /></div>
+            <div class="contact card-image-bottom"><img src="./images/hireme.png" style="float:right;transform:translate(0,0)" width = 50% id="contact-img-1"/></div>
 
              <!-- FOOTER -->
             <div class="footer" style="padding-top: 0px">
@@ -231,7 +231,7 @@
             function isElementInViewport(el) {
                 const rect = el.getBoundingClientRect();
                 const height = window.innerHeight || document.documentElement.clientHeight;
-                return (rect.top < height / 2 && rect.bottom > 120)
+                return (rect.top < height / 4 && rect.bottom > 120)
             }
 
             function shouldChangeStatus(el) {
@@ -241,9 +241,27 @@
                 else if (isActive === false && isElementInViewport(el)) { activeOn(navId); }
             }
 
+            function changeSize(id) {
+
+                let el = document.getElementById(id);
+                let isGrown = el.classList.contains("grown");
+                if (isGrown === true && isElementInViewport(el) === false) {
+                    el.classList.remove("grown");
+                    el.style.transform = 'scale(1)';
+                    
+                };
+                if (isGrown === false && isElementInViewport(el) === true) {
+                    el.classList.add("grown");
+                    el.style.transform = "scale(1.1)";
+                }; 
+            }
+
+            const imgsToGrow = ['bio-img-1','github-img-1','codewars-img-1','projects-img-1','contact-img-1'];
+
             window.addEventListener("scroll", () => {
                 shouldChangeStatus(document.getElementById('projects'));
                 shouldChangeStatus(document.getElementById('home'));
+                imgsToGrow.forEach(x=>changeSize(x));
             });
 
         </script>

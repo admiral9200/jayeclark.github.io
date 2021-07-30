@@ -2,7 +2,7 @@
     grid-template-columns: 45% 10% 45%;
     grid-template-areas:
         'header header header'
-        'landing photo1 photo1'
+        'landing landing landing'
         'logos logos logos'
         'bio bio bio'
         'photo2 photo2 github'
@@ -19,18 +19,13 @@
 }
 
 .landing {
-    grid-area: 2 / 1 / span 1 / span 1;
-    padding: 20% 0px 20px 0px;
-}
-
-.photo1 {
-    grid-area: 2 / 2 / span 1 / span 2;
-    padding: 0px 0px 20px 20px
+    grid-area: 2 / 1 / span 1 / span 3;
+    padding: 20px 0px;
 }
 
 .logos {
     grid-area: 3 / 1 / span 1 / span 3;
-    margin: 0px 0px 5% 0px;
+    margin: 10px 0px 5% 0px;
 }
 
 .bio {
@@ -38,21 +33,24 @@
 }
 .photo2 {
     grid-area: 5 / 1 / span 1 / span 2;
-    padding: 10% 0px;
+    padding: 30% 0px 0px 0px;
 }
 
 .github {
     grid-area: 5 / 3 / span 1 / span 1;
-    padding: 20% 10%;
+    padding: 30% 0px 0px 10%;
+    margin: 10px 0px;
 }
 
 .codewars {
     grid-area: 6 / 1 / span 1 / span 1;
-    padding: 20% 10%;
+    padding: 20% 10% 60px 0px;
+    margin: 20px 10px;
 }
 
 .photo3 {
     grid-area: 6 / 2 / span 1 / span 2;
+    padding: 30% 0px 60px 0px;
 }
 
 .projects {
@@ -61,6 +59,7 @@
 
 .training {
     grid-area: 8 / 1 / span 1 / span 3;
+    padding: 40px 0px 0px 0px;
 }
 
 .contact {

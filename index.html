@@ -50,38 +50,52 @@
             <div class="header">
             </div>
             <!-- LANDING PAGE -->
-            <div class="landing" id="home" style="margin: -120px 0px"></div>
-            <div class="landing">
-                <h1>Jay Clark<br> wants to work for you.</h1> 
-                <p style="font-size:1.75rem">I am a full stack software engineer seeking employment opportunities.</p>
-                <a href="#projects" class="btn btn-primary">See my work</a><a href="about.html#story" class="btn btn-default">Read my story</a>
+            <div class="landing" id="home" style="margin: -120px 0px 0px 0px;align-items:flex-end;padding:120px 0px 0px 0px;display:flex;flex-wrap:wrap">
+                <div style="width:350px;flex-grow:1;justify-content:last baseline; padding:10% 20px 0px 20px">
+                    <h1>Jay Clark<br> wants to work for you.</h1> 
+                    <p style="font-size:1.75rem">I am a full stack software engineer seeking employment opportunities.</p>
+                    <a href="#projects" class="btn btn-primary">See my work</a><a href="about.html#story" class="btn btn-default">Read my story</a>
+                </div>
+                <div style="width:400px;flex-grow:1;padding:20px 0px 0px 0px">
+                    <img src="./images/profile.jpg" style="float: right;" width = 100%/> 
+                </div>
+
             </div>
-            <div class="photo1">
-                <img src="./images/profile.jpg" style="float: right;" width = 100%/> 
-            </div>
+            
 
             <!-- TECH STACK LOGOS -->
             <div class="logos">
                 <span style="text-align: center;"><hr style="background-color:#d9d9d9;height: 1"><h6>My tech stack</h6></span>
                 <div class="imageline">
-                    <div class="logo"><img src="./images/mongodb.png"></div>
-                    <div class="logo"><img src="./images/expressjs.png"></div>
-                    <div class="logo"><img src="./images/react.png"></div>
-                    <div class="logo"><img src="./images/nodejs.png"></div>
+                    <div style="display:flex;flex-wrap:wrap;width:400px;flex-shrink:1">
+                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/mongodb.png"></div>
+                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/expressjs.png"></div>
+                    </div>
+                    <div style="display:flex;flex-wrap:wrap;width:400px;flex-shrink:1">
+                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/react.png"></div>
+                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/nodejs.png"></div>
+                    </div>
                 </div>
             </div>
 
             <!-- SHORT BIO -->
-            <div class="bio card-white"></div>
-            <div class="bio card-content" style="width:50%;z-index:101">
-                    
-                <h2>Get to know me</h2>
-                <p>I'm a Harvard-educated professional with strong communication skills and experience in teaching & mentorship.</p> 
-                <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
-            </div>
-            <div class="bio card-grey"></div>
-            <div class="bio card-image-top"><img src="./images/person.png" style="float:right;" width = 50% id="bio-img-1"/></div>
 
+            <div class="bio card-grey" style="z-index:1;width:95%;margin: 100px 16px -16px 16px;padding:-10% 0px -16px 0px">
+            
+                <div class="card-white" style="margin:0px 0px 0px -2.5%;clear: both;width:105%;display:flex;flex-wrap:wrap-reverse;justify-content:center;">
+                
+                    <div class="card-content" style="width:250px;z-index:101;flex-grow:1">
+                    
+                        <h2>Get to know me</h2>
+                        <p>I'm a Harvard-educated professional with strong communication skills and experience in teaching & mentorship.</p> 
+                        <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
+                    </div>
+                    <div class="card-image-top" style="width:300px;flex-grow:0"><img src="./images/person.png" width = 100% id="bio-img-1"/></div>
+
+                </div>
+            
+            </div>
+            
             <!-- GITHUB -->
             <div class="photo2"><img src="./images/github.png" style="float:left;" width = 100% id="github-img-1"/></div>
             <div class="github">
@@ -106,44 +120,58 @@
             <!-- PROJECTS SECTION -->
 
             <div class="projects" style="margin: -90px 0px"></div>
-            <div class="projects card-white" style="clear: both;">
-                <div class="card-content" style="width:50%;padding: 10% 0px">
-                    
-                    <h2>Javascript, HTML, and CSS</h2>
-                    <p>My early training has focused on learning the fundamentals of web development, especially Javascript. My projects 
-                        during this part of training were small, short exercises to gain familiarity with the basics of using Javascript to animate pages and 
-                        create interactive experiences.
-                    </p>
-                </div>
-            </div>
-            <div class="projects card-content" style="width:45%;margin: 10% 0px 26px 55%;padding:20px 40px 20px 0px;z-index:101;">
 
-                <h3>Pac-Men for Days</h3>
-                <p class="project-description">Pac-Man images appear each time a button is clicked, and wander around the screen at varying speeds once the button to start the animation is clicked.</p>
-                <a href="./pacmen-for-days/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/PacMen-For-Days" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
-                <hr>
-
-                <h3>Eyes Animation</h3>
-                <p class="project-description">A pair of eyes follow your mouse cursor as it moves around the screen. This project 
-                    makes use of the transform property to translate the 'pupil' to different locations within the 'eyeball' based on the position of your mouse.
-                </p>
-                <a href="./eyes-animation/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Eyes-Animation" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
-                <hr>
-
-                <h3>Bus Map Animation</h3>
-                <p class="project-description"> A map marker moves among the different MBTA bus stops between Harvard and MIT. This project demonstrates the ability to 
-                    interactively animate content in a context more relevant to users' everyday browsing experience. It makes use the Mapbox library and API to simplify map styling.</p>
-                <a href="./bus-map-animation/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Bus-Map-Animation" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
+            <div class="projects card-grey" style="z-index:1;width:95%;margin: 100px 16px -16px 16px;padding:-10% 0px -16px 0px">
+        
+                <div class="card-white" style="margin:0px 0px 0px -2.5%;clear: both;width:105%;display:flex;flex-wrap:wrap;justify-content:center;">
                 
+                    <div class="card-content" style="flex-grow:1;width:250px;padding: 10% 0px 0px 0px;margin:0px 0px 0px 0px">
+                        <div style="display:block;justify-content: center;">
+                            <div class="card-image-top" id="projects" style="margin:-20vw 0px 0px 0px;padding:20px;width:200x;"><img src="./images/projects.png" style="float:none;" width = 100% id="projects-img-1"/></div>
+                            <div style="width:100%;padding:20px">
+                                <h2>Javascript, HTML, and CSS</h2>
+                                <p>My early training has focused on learning the fundamentals of web development, especially Javascript. My projects 
+                                    during this part of training were small, short exercises to gain familiarity with the basics of using Javascript to animate pages and 
+                                    create interactive experiences.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="projects card-content" style="flex-grow:1;width:300px;margin: 0px 0px 0px 20px;padding:0px 0px 0px 0px;z-index:101;">
+    
+                        <h3>Pac-Men for Days</h3>
+                        <p class="project-description">Pac-Man images appear each time a button is clicked, and wander around the screen at varying speeds once the button to start the animation is clicked.</p>
+                        <a href="./pacmen-for-days/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/PacMen-For-Days" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
+                        <hr>
+        
+                        <h3>Eyes Animation</h3>
+                        <p class="project-description">A pair of eyes follow your mouse cursor as it moves around the screen. This project 
+                            makes use of the transform property to translate the 'pupil' to different locations within the 'eyeball' based on the position of your mouse.
+                        </p>
+                        <a href="./eyes-animation/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Eyes-Animation" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
+                        <hr>
+        
+                        <h3>Bus Map Animation</h3>
+                        <p class="project-description"> A map marker moves among the different MBTA bus stops between Harvard and MIT. This project demonstrates the ability to 
+                            interactively animate content in a context more relevant to users' everyday browsing experience. It makes use the Mapbox library and API to simplify map styling.</p>
+                        <a href="./bus-map-animation/index.html" class="btn btn-primary btn-sm" target="_blank">See it in Action</a><a href="https://github.com/jayeclark/Bus-Map-Animation" class="btn btn-default btn-sm" target="_blank">View GitHub Repo</a>
+                        
+                    </div> 
+    
+                </div>
+            
             </div>
-            <div class="projects card-grey"></div>
-            <div class="projects card-image-top" id="projects"><img src="./images/projects.png" style="float:left;" width = 45% id="projects-img-1"/></div>
 
+
+
+            
+            
             <!-- TRAINING PLAN-->
-            <div class="training" style="margin:5% 0px">
+            <div class="training" style="margin:5% 0px;width:100%">
                 <span style="text-align: center;"><h6>My Training Plan</h6></span>
                 <div class="imageline">
-                    <div class="logo card-white" style="margin: 20px;padding:20px;text-align: center;">
+                    <div class="logo card-white" style="margin: 20px;padding:20px;width:200px;flex-grow:1;text-align: center;">
                         <h4>MIT xPro Certificate</h4>
                         <p class="project-description">I'm completing the MIT xPro Professional Certificate: Full Stack Development with MERN. This is a 
                             32-week program covering the basics of web development, front-end development with react, and back-end 
@@ -155,7 +183,7 @@
                              </div>
                         </div>
                     </div>
-                    <div class="logo card-white" style="margin: 20px;padding:20px;text-align: center;">
+                    <div class="logo card-white" style="margin: 20px;padding:20px;width:200px;flex-grow:1;text-align: center;">
                         <h4>Open Source Courses</h4>
                         <p class="project-description">To supplement MIT's certificate program, I'm completing the following open source courses on computer 
                             science: Harvard's 
@@ -168,7 +196,7 @@
                             <span class="sr-only">5% Complete</span>
                          </div></div>
                     </div>
-                    <div class="logo card-white" style="margin: 20px;padding:20px;text-align: center;">
+                    <div class="logo card-white" style="margin: 20px;padding:20px;width:200px;flex-grow:1;text-align: center;">
                         <h4>Competitive Programming</h4>
                         <p class="project-description">I train daily on Codewars and Leetcode, with a goal of participating
                             in and winning competitive programming challenges. I focus on speed, simplicity, and readability and find participating in daily challenges
@@ -184,16 +212,26 @@
 
             <!-- CONTACT CARD -->
             <div class="contact card-white" style="margin: 0px 0px 10% 0px;">
-            </div>
-            <div class="contact card-content" style="width:45%;z-index:105;margin: 0px 0px 10% 0px;padding:60px 40px">
-                <h2>Hire me</h2>
-                <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
-                    let's talk about a possible role for me on your team.
-                </p>
-                <a href="contact.html" class="btn btn-primary">Get in touch</a>
-            </div>
-            <div class="contact card-image-bottom"><img src="./images/hireme.png" style="float:right;transform:translate(0,0)" width = 50% id="contact-img-1"/></div>
 
+                <div style="display:flex;flex-wrap:wrap;justify-content:center;">
+                
+                    <div class="card-content" style="width:300px;flex-grow:1;z-index:105;margin: 40px 0px 0px 0px;padding:0px 40px 0px 0px">
+                        <h2>Hire me</h2>
+                        <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
+                            let's talk about a possible role for me on your team.</p>
+                        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+                    </div>
+                    <div class="card-image-bottom" style="position:relative;top:10vm;width:300px;flex-grow:0;">
+                        <img src="./images/hireme.png" style="float:none;transform:translate(0,0)" width = 100% id="contact-img-1"/>
+                    </div>
+                
+                
+                    
+                </div>
+
+                
+            </div>
+           
              <!-- FOOTER -->
             <div class="footer" style="padding-top: 0px">
                 <hr>
@@ -247,12 +285,12 @@
                 let isGrown = el.classList.contains("grown");
                 if (isGrown === true && isElementInViewport(el) === false) {
                     el.classList.remove("grown");
-                    el.style.transform = 'scale(1)';
+                    el.style.transform = "scale(1.0)";
                     
                 };
                 if (isGrown === false && isElementInViewport(el) === true) {
                     el.classList.add("grown");
-                    el.style.transform = "scale(1.1)";
+                    el.style.transform = "scale(1.15)";
                 }; 
             }
 

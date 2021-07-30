@@ -285,11 +285,13 @@
                 let isGrown = el.classList.contains("grown");
                 if (isGrown === true && isElementInViewport(el) === false) {
                     el.classList.remove("grown");
+                    el.classList.add("shrunk");
                     el.style.transform = "scale(1.0)";
                     
                 };
                 if (isGrown === false && isElementInViewport(el) === true) {
                     el.classList.add("grown");
+                    el.classList.remove("shrunk");
                     el.style.transform = "scale(1.15)";
                 }; 
             }

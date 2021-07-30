@@ -77,6 +77,16 @@
 .training {
     grid-area: 8 / 1 / span 1 / span 3;
     padding: 40px 0px 0px 0px;
+    margin:5% 0px;
+    width:100%
+}
+
+.training-card {
+    margin: 20px;
+    padding:20px;
+    width:200px;
+    flex-grow:1;
+    text-align: center;
 }
 
 .contact {

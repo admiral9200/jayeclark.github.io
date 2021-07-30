@@ -20,7 +20,24 @@
 
 .landing {
     grid-area: 2 / 1 / span 1 / span 3;
-    padding: 20px 0px;
+    margin: -120px 0px 0px 0px;
+    align-items:flex-end;
+    padding:120px 0px 0px 0px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.landing-content {
+    width:350px;
+    flex-grow:1;
+    justify-content:last baseline; 
+    padding:10% 20px 0px 20px;
+}
+
+.landing-photo {
+    width:400px;
+    flex-grow:1;
+    padding:20px 0px 0px 0px;
 }
 
 .logos {

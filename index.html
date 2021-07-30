@@ -50,13 +50,13 @@
             <div class="header">
             </div>
             <!-- LANDING PAGE -->
-            <div class="landing" id="home" style="margin: -120px 0px 0px 0px;align-items:flex-end;padding:120px 0px 0px 0px;display:flex;flex-wrap:wrap">
-                <div style="width:350px;flex-grow:1;justify-content:last baseline; padding:10% 20px 0px 20px">
+            <div class="landing" id="home">
+                <div class="landing-content">
                     <h1>Jay Clark<br> wants to work for you.</h1> 
                     <p style="font-size:1.75rem">I am a full stack software engineer seeking employment opportunities.</p>
                     <a href="#projects" class="btn btn-primary">See my work</a><a href="about.html#story" class="btn btn-default">Read my story</a>
                 </div>
-                <div style="width:400px;flex-grow:1;padding:20px 0px 0px 0px">
+                <div class="landing-photo">
                     <img src="./images/profile.jpg" style="float: right;" width = 100%/> 
                 </div>
 
@@ -65,24 +65,24 @@
 
             <!-- TECH STACK LOGOS -->
             <div class="logos">
-                <span style="text-align: center;"><hr style="background-color:#d9d9d9;height: 1"><h6>My tech stack</h6></span>
+                <span style="text-align: center;"><hr><h6>My tech stack</h6></span>
                 <div class="imageline">
-                    <div style="display:flex;flex-wrap:wrap;width:400px;flex-shrink:1">
-                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/mongodb.png"></div>
-                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/expressjs.png"></div>
+                    <div class="logo-container">
+                        <div class="logo"><img src="./images/mongodb.png"></div>
+                        <div class="logo"><img src="./images/expressjs.png"></div>
                     </div>
-                    <div style="display:flex;flex-wrap:wrap;width:400px;flex-shrink:1">
-                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/react.png"></div>
-                        <div class="logo" style="width:200px;flex-shrink:0"><img src="./images/nodejs.png"></div>
+                    <div class="logo-container">
+                        <div class="logo"><img src="./images/react.png"></div>
+                        <div class="logo"><img src="./images/nodejs.png"></div>
                     </div>
                 </div>
             </div>
 
             <!-- SHORT BIO -->
 
-            <div class="bio card-grey" style="z-index:1;width:95%;margin: 100px 16px -16px 16px;padding:-10% 0px -16px 0px">
+            <div class="bio card-grey">
             
-                <div class="card-white" style="margin:0px 0px 0px -2.5%;clear: both;width:105%;display:flex;flex-wrap:wrap-reverse;justify-content:center;">
+                <div class="card-white" style="flex-wrap:wrap-reverse">
                 
                     <div class="card-content" style="width:250px;z-index:101;flex-grow:1">
                     
@@ -121,9 +121,9 @@
 
             <div class="projects" style="margin: -90px 0px"></div>
 
-            <div class="projects card-grey" style="z-index:1;width:95%;margin: 100px 16px -16px 16px;padding:-10% 0px -16px 0px">
+            <div class="projects card-grey">
         
-                <div class="card-white" style="margin:0px 0px 0px -2.5%;clear: both;width:105%;display:flex;flex-wrap:wrap;justify-content:center;">
+                <div class="card-white">
                 
                     <div class="card-content" style="flex-grow:1;width:250px;padding: 10% 0px 0px 0px;margin:0px 0px 0px 0px">
                         <div style="display:block;justify-content: center;">
@@ -211,21 +211,19 @@
             </div>
 
             <!-- CONTACT CARD -->
-            <div class="contact card-white" style="margin: 0px 0px 10% 0px;">
+            <div class="contact card-white" style="margin-bottom: 10%;">
 
-                <div style="display:flex;flex-wrap:wrap;justify-content:center;">
+                <div class="card-container">
                 
-                    <div class="card-content" style="width:300px;flex-grow:1;z-index:105;margin: 40px 0px 0px 0px;padding:0px 40px 0px 0px">
+                    <div class="card-content" style="width:300px;margin-top: 40px;padding:20px">
                         <h2>Hire me</h2>
                         <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
                             let's talk about a possible role for me on your team.</p>
                         <a href="contact.html" class="btn btn-primary">Get in touch</a>
                     </div>
                     <div class="card-image-bottom" style="position:relative;top:10vm;width:300px;flex-grow:0;">
-                        <img src="./images/hireme.png" style="float:none;transform:translate(0,0)" width = 100% id="contact-img-1"/>
+                        <img src="./images/hireme.png" style="transform:translate(0,0)" width = 100% id="contact-img-1"/>
                     </div>
-                
-                
                     
                 </div>
 

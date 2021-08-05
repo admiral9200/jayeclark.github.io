@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Pacmen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="./board.js"></script>
+    <script src="./mspacman.js"></script>
+</head>
+
+<body style="background-color:black;">
+    <div id="header" style="position: absolute; top: 20; left: 20; z-index: 800;">
+        <button id="start" type="button" class="btn btn-success" onclick='startGame()' width='200' height='30' style='margin: 10px;position: relative; z-index: 101'>Start Game</button>
+        <button id="stop" type="button" class="btn btn-danger" onclick='startGame()' width='200' height='30' style='display: none; margin: 10px; position: relative; z-index: 101'>Pause Game</button>
+        <button id="restart" type="button" class="btn btn-success" onclick='restartGame()' width='200' height='30' style='display: none; margin: 10px; position: relative; z-index: 101'>Play Again?</button>
+        <div id="score-board" style="position:absolute;color:chartreuse;font-family:'Press Start 2P',cursive;z-index:400;top:10;padding:10px;display:flex;left:60vw;width:200px;background-color: black;">
+            <div style="width:50px;flex-shrink:0">Score: </div>
+            <div id='score' style="width:100px;text-align:right;flex-shrink:1">0</div>
+        </div>
+    </div>
+    <div id='game' style='position: absolute; top: 90; left: 20; z-index: 100;'>
+
+    </div>
+</body>
+
+</html>

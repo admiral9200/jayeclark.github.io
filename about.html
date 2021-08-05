@@ -51,19 +51,21 @@
 
             <!-- TITLE -->
             <div class="title">
-                <h1>About Me</h1> 
+                <h1 id="video">About Me</h1> 
                 <p>I'm a Harvard-educated software engineer with strong communication skills and experience in teaching & mentorship.
                 </p>
             </div>
             
 
             <!-- VIDEO -->
-            <div class="video" id="video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/ByH9LuSILxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video" >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pNaepLSho48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            
 
             <!-- ABOUT-CONTENT -->
-            <div class="about-content" id="story">
+            <div class="about-content" id="story" style="margin:-60px 0px 0px 0px"></div>
+            <div class="about-content" >
                 
                 <span style="text-align:center;">
                     <hr style="width:60%">
@@ -99,14 +101,21 @@
 
             <!-- CONTACT CARD -->
             <div class="contact card-white" style="margin: 0px 0px 10% 0px;">
+
+                <div style="display:flex;flex-wrap:wrap;justify-content:center;">
+                    <div class="card-content" style="width:300px;flex-grow:1;z-index:105;margin: 40px 0px 0px 0px;padding:0px 40px 0px 0px">
+                        <h2>Hire me</h2>
+                        <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
+                            let's talk about a possible role for me on your team.</p>
+                        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+                    </div>
+                    <div class="card-image-bottom" style="position:relative;top:10vm;width:300px;flex-grow:0;">
+                        <img src="./images/hireme.png" style="float:none;transform:translate(0,0)" width = 100% id="contact-img-1"/>
+                    </div>
+                </div>
             </div>
-            <div class="contact card-content" style="width:45%;z-index:105;margin: 0px 0px 10% 0px;padding:60px 40px">
-                <h2>Hire me</h2>
-                <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
-                    let's talk about a possible role for me on your team.</p>
-                <a href="contact.html" class="btn btn-primary">Get in touch</a>
-            </div>
-            <div class="contact card-image-bottom"><img src="./images/hireme.png" style="float:right;" width = 50% /></div>
+
+            <!-- FOOTER -->
             <div class="footer">
                 <hr>
             </div>
@@ -117,9 +126,7 @@
                     <dt class="footerli"><a class="footerlink" href="index.html#projects">Projects</a></dt>
                     <dt class="footerli"><a class="footerlink" href="contact.html">Contact</a></dt>
                 </dl>
-            </div>
-
-            <!-- FOOTER -->
+            </div>            
             <div class="footer" style="padding: 30px 0px 0px 70%">
                 <ul>
                    <p style="text-align: right;font-size:1rem"><script>document.write(new Date().getFullYear())</script> &copy; Jay Clark<br>

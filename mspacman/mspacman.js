@@ -848,7 +848,7 @@ function spawn(item) {
 
     if (blinkCount === 44) {
                item.speed = d[item.direction].speed; item.free = 'free'; 
-               if (munchModeActive = true) {
+               if (munchModeActive === true) {
                       item.item.style.backgroundColor = 'blue';
                       let fringes = Array.from(ghost.item.getElementsByClassName('fringe'));
                       fringes.forEach(fringe=> {

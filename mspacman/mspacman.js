@@ -586,9 +586,6 @@ function checkReturnMoves(item) {
   let targetRow = 11;
   let targetCol = 14;
 
-  console.log(item.position.x,targetPosX,'-',item.position.y,targetPosY);
-  console.log(item.free);
-
   if (item.position.x === targetPosX && item.position.y === targetPosY && item.free === 'returning') {
     // if it has hit the way to get into the ghost box, but there is no space, respawn and start moving again
     let countNotFree = 0;
@@ -716,8 +713,7 @@ function checkReturnMoves(item) {
       if (isWall(nextPos(item.rcPos,dir),dir) === false) {return true;}
       else {return false;}
     })
-
-    console.log(dirs);
+           
     if (dirs.length === 1) {
       item.direction = dirs[0]; 
       item.speed = d[dirs[0]].speed;
@@ -776,7 +772,6 @@ function checkReturnMoves(item) {
         tempDir = dirs[index];
       }
 
-      console.log(tempDir);
       item.direction = tempDir;
       item.speed = d[tempDir].speed;
 
@@ -899,9 +894,7 @@ function munchMode() {
       })
     }
 
-    else if (powerCount < 80) {
-      console.log('woo');
-    }
+    //else if (powerCount < 80) {console.log('woo');}
 
     // flashing while winding down - count 80 (4 seconds)
     else if (powerCount < 120) {
@@ -931,7 +924,7 @@ function munchMode() {
         })
 
       }
-      console.log('pcount = ' + powerCount);
+
     }
 
     // done - count 120 (6 seconds)

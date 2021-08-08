@@ -846,10 +846,40 @@ function spawn(item) {
 
   function blink(item) {
 
-    if (blinkCount === 44) {item.speed = d[item.direction].speed; item.free = 'free'; return true;}
-    let display = 'none';
-    if (blinkCount % 8 === 0 || blinkCount === 0) {display = '';}
-    if (blinkCount % 4 === 0) {
+    if (blinkCount === 44) {
+               item.speed = d[item.direction].speed; item.free = 'free'; 
+               if (munchModeActive = true) {
+                      item.item.style.backgroundColor = 'blue';
+                      let fringes = Array.from(ghost.item.getElementsByClassName('fringe'));
+                      fringes.forEach(fringe=> {
+                                 
+                       if (fringe.style.backgroundColor === ghost.color) {fringe.style.backgroundColor = 'blue';}
+                       else {
+                         let gradient = fringe.style.backgroundImage;
+                         let newGradient = gradient.replace(ghost.color,'blue');
+                         fringe.style.backgroundImage = newGradient;
+                       }
+
+                     })
+
+                     let eyeballs = Array.from(ghost.item.getElementsByClassName('eyeball'));
+                     eyeballs.forEach(eye => eye.style.display = 'none');
+
+                     let pupils = Array.from(ghost.item.getElementsByClassName('pupil'));
+                     pupils.forEach(pupil=> pupil.style.display = 'none');
+
+                     let frowns = Array.from(ghost.item.getElementsByClassName('blue-frown'));
+                     frowns.forEach(frown=> frown.style.display = '');
+
+                     let frownEyes = Array.from(ghost.item.getElementsByClassName('blue-pupil'));
+                     frownEyes.forEach(eye=> eye.style.display = '');
+                          
+               }      
+               return true;}
+             
+      let display = 'none';
+      if (blinkCount % 8 === 0 || blinkCount === 0) {display = '';}
+      if (blinkCount % 4 === 0) {
 
       item.item.style.display = display;
 
@@ -941,7 +971,9 @@ function munchMode() {
 
           if (ghost.free === 'free') {
   
-            ghost.item.style.backgroundColor = tempColor;
+            if (ghost.item.style.backgroundColor = 'white' || ghost.item.style.backgroundColor = 'blue') {
+              ghost.item.style.backgroundColor = tempColor;
+            }
   
             let fringes = Array.from(ghost.item.getElementsByClassName('fringe'));
             fringes.forEach(fringe=> {

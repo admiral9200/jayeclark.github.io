@@ -971,7 +971,7 @@ function munchMode() {
 
           if (ghost.free === 'free') {
   
-            if (ghost.item.style.backgroundColor = 'white' || ghost.item.style.backgroundColor = 'blue') {
+            if (ghost.item.style.backgroundColor === 'white' || ghost.item.style.backgroundColor === 'blue') {
               ghost.item.style.backgroundColor = tempColor;
             }
   

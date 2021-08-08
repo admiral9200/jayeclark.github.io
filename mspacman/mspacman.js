@@ -931,7 +931,7 @@ function munchMode() {
     }
 
     // flashing while winding down - count 80 (4 seconds)
-    else if (powerCount < 120) {
+    else if (powerCount < 120 && powerCount >= 80) {
       let tempColor = 'white';
       if (powerCount % 8 === 0) {tempColor = 'blue';}
       if (powerCount % 4 === 0) {

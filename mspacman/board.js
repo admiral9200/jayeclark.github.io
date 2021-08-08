@@ -36,14 +36,15 @@ let board = ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
              'X---------------------------X',    
              'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX'];
 
-let height = +window.innerHeight - 40;
-let width = +window.innerWidth - 40;
-let rowHeight = Math.floor(height / ((board.length + 2) * speed)) * speed;
-let colHeight = Math.floor((+window.innerWidth - 40) / (board[0].length * speed)) * speed;
-let cellW = Math.min(rowHeight,colHeight);
+const height = +window.innerHeight - 40;
+const width = +window.innerWidth - 40;
+const rowHeight = Math.floor(height / ((board.length + 2) * speed)) * speed;
+const colHeight = Math.floor((+window.innerWidth - 40) / (board[0].length * speed)) * speed;
+const cellW = Math.min(rowHeight,colHeight);
+const fringeW = Math.floor(cellW * 1.5 / 12);
 
-let pacWidth = cellW * 1.5;
-let dotWidth = Math.floor(cellW / 9) * 2;
+const pacWidth = cellW * 1.5;
+const dotWidth = Math.floor(cellW / 9) * 2;
 
 let pacPos = {'col' : 0, 'colM' : 1, 'row' : 0, 'rowM' : 1}; 
 

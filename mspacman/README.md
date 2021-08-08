@@ -17,11 +17,11 @@ This will run locally in your browser from index.html if you download all files 
 
 ### Planned Future Improvements
 - [ ] Animate additional ghosts
-- [ ] Add win conditions and win screen
+- [X] Add win conditions and win screen
 - [ ] Add additional boards
 - [ ] Add extra lives
 - [ ] Add fruit
-- [ ] Add ghost-munching mode
+- [X] Add ghost-munching mode
 - [ ] Add dynamically generated boards
 
 ## Back Matter

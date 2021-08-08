@@ -357,7 +357,6 @@ function checkGhostCollision() {
 
       if (ghostCollision === true) {
         collidedGhosts.push(ghost.item.id); 
-        console.log(collidedGhosts);
       }
     }
 
@@ -722,11 +721,8 @@ function checkReturnMoves(item) {
 
       tempDir = '';
       // find targetPos relative to item
-      console.log(targetPosY,item.position.y);
-      console.log(targetPosX,item.position.x);
       let rowDir = targetPosY > item.position.y ? 'down' : targetPosY < item.position.y ? 'up' : 'same'
       let colDir = targetPosX > item.position.x ? 'right' : targetPosY < item.position.x ? 'left' : 'same'
-      console.log(rowDir,colDir);
 
       // if the item is in a portal row, see if it would be better to go through the portal
       if (portals.includes(item.rcPos.row)) {

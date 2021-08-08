@@ -47,6 +47,18 @@ let d = {'left' : {'transform' : 'rotateY(180deg)',
                    'pupiltop' : ((cellW / 6) + fringeW * 2.5) + 'px',
                    'pupilleft' : (fringeW * 3) + 'px'}}
 
+// Deprioritize a button after it has been clicked
+const buttonSwap = () => {
+
+  let start = document.getElementById('start');
+  if (start.style.display.includes('none')) { start.style.display = ''; } 
+  else { start.style.display = 'none'; }
+
+  let stop = document.getElementById('stop');
+  if (stop.style.display.includes('none')) { stop.style.display = ''; } 
+  else { stop.style.display = 'none'; }
+}
+
 function startGame() {
 
   if (stop === false && started === false) {
@@ -118,18 +130,6 @@ function restartGame() {
   let start = document.getElementById('start');
   start.style.display = ''; 
 
-}
-
-// Deprioritize a button after it has been clicked
-const buttonSwap = () => {
-
-  let start = document.getElementById('start');
-  if (start.style.display.includes('none')) { start.style.display = ''; } 
-  else { start.style.display = 'none'; }
-
-  let stop = document.getElementById('stop');
-  if (stop.style.display.includes('none')) { stop.style.display = ''; } 
-  else { stop.style.display = 'none'; }
 }
 
 // Update the position of Ms PacMan

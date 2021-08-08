@@ -977,11 +977,19 @@ function munchMode() {
   
             let fringes = Array.from(ghost.item.getElementsByClassName('fringe'));
             fringes.forEach(fringe=> {
-              if (fringe.style.backgroundColor === 'blue' || fringe.style.backgroundColor === 'white') {fringe.style.backgroundColor = tempColor;}
+              if (fringe.style.backgroundColor === 'blue' || fringe.style.backgroundColor === 'white') {
+                         fringe.style.backgroundColor = tempColor;
+              }
               else {
                 let gradient = fringe.style.backgroundImage;
-                let newGradient = gradient.replace(ghost.color,tempColor);
-                fringe.style.backgroundImage = newGradient;
+                if (gradient.includes('blue') && tempColor !== 'blue') {
+                      let newGradient = gradient.replace('blue',tempColor);
+                      fringe.style.backgroundImage = newGradient;
+                } else if (gradient.includes('white') && tempColor !== 'white') {
+                      let newGradient = gradient.replace('white',tempColor);
+                      fringe.style.backgroundImage = newGradient;                         
+                }
+                           
               }
               
             })

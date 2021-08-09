@@ -1,6 +1,8 @@
 const speed = 6;
 const ghosts = [];
 const portals = [];
+let isMobile = false;
+
 let dotCount = 0;
 
 let board = ['XXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
@@ -565,6 +567,7 @@ function drawBoard(board) {
   arrowsDiv.style.top = (board.length * cellW) + 'px';
   arrowsDiv.style.left = 0;
   arrowsDiv.style.position = 'absolute';
+  if (isMobile === false) {arrowsDiv.style.display = 'none';}
 
   let leftArrow = document.createElement('div');
   let leftImg = document.createElement('img');
@@ -646,6 +649,8 @@ const findXY = rcPos => {
 
 let msPacMan = {}; 
 window.onload = (event) => {
+  let test = document.getElementsByClassName('test-div')
+  if (test[0].style.display == 'none') {isMobile = true;}
   drawBoard(board);
   msPacMan = makePac();
 }

@@ -567,7 +567,7 @@ function drawBoard(board) {
   arrowsDiv.style.top = (board.length * cellW) + 'px';
   arrowsDiv.style.left = 0;
   arrowsDiv.style.position = 'absolute';
-  if (isMobile === false) {arrowsDiv.style.display = 'none';}
+  //if (isMobile === false) {arrowsDiv.style.display = 'none';}
 
   let leftArrow = document.createElement('div');
   let leftImg = document.createElement('img');

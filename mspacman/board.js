@@ -557,12 +557,11 @@ function drawBoard(board) {
 
   let arrowsDiv = document.createElement('div');
   let height = window.innerHeight - (board.length) * cellW;
-  console.log(height);
   let arrowH = height/3 - 40;
   let arrowW = arrowH * 2;
-  let arrowMargin = (board[0].length * cellW - arrowW * 2 - 40)/2;
+  let upArrowL = ((board[0].length) * cellW) / 2 - arrowH;
 
-  arrowsDiv.style.margin = '20px '+arrowMargin+' 20px '+arrowMargin;
+  arrowsDiv.style.margin = '20px 0px 20px 0px';
   arrowsDiv.style.top = (board.length * cellW) + 'px';
   arrowsDiv.style.left = 0;
   arrowsDiv.style.position = 'absolute';
@@ -574,7 +573,7 @@ function drawBoard(board) {
   leftImg.width = arrowW;
   leftImg.height = arrowH;
   leftArrow.appendChild(leftImg);
-  leftArrow.style.left = 0;
+  leftArrow.style.left = upArrowL - 20 - arrowH;
   leftArrow.id = 'left-arrow';
   leftArrow.style.margin = 0;
   leftArrow.style.top = arrowH;
@@ -590,7 +589,7 @@ function drawBoard(board) {
   upImg.height = arrowH;
   upArrow.appendChild(upImg);
   upArrow.zIndex = 2000;
-  upArrow.style.left = arrowH + 20;
+  upArrow.style.left = upArrowL;
   upArrow.style.top = 0;
   upArrow.id = 'up-arrow';
   upArrow.style.margin = 0;
@@ -607,7 +606,7 @@ function drawBoard(board) {
   rightArrow.style.margin = 0;
   rightArrow.zIndex = 2000;
   rightArrow.id = 'right-arrow';
-  rightArrow.style.left = arrowH * 3 + 20;
+  rightArrow.style.left = upArrowL + arrowW;
   rightArrow.style.top = arrowH;
   rightArrow.style.position = 'absolute';
   rightArrow.setAttribute('onclick','cache(\'right\')');
@@ -621,7 +620,7 @@ function drawBoard(board) {
   downArrow.zIndex = 2000;
   downArrow.style.margin = 0;
   downArrow.id = 'down-arrow';
-  downArrow.style.left = arrowH + 20;
+  downArrow.style.left = upArrowL;
   downArrow.style.top = arrowW;
   downArrow.style.position = 'absolute';
   downArrow.onclick = 'cache(\'down\')';

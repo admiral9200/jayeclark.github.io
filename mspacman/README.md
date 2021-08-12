@@ -16,7 +16,7 @@ This project demonstrates the ability to use JavaScript and CSS to dynamically d
 This will run locally in your browser from index.html if you download all files and ensure they're located in the same directory as each other and have the same file structure (i.e. images folder with separately stored images.) Alternately, you can see it in action <a href="https://jayeclark.github.io/mspacman" target="_blank">here</a>.
 
 ### Planned Future Improvements
-- [ ] Animate additional ghosts
+- [X] Animate additional ghosts
 - [X] Add win conditions and win screen
 - [ ] Add additional boards
 - [ ] Add extra lives

@@ -653,10 +653,10 @@ class Ghost {
                      fringe.style.backgroundColor = color;
                      fringe.style.display = '';
                    } else {
-                     let bgimage = fringe.style.backgroundImage;
-                     let newBgimage = bgimage.replace('blue',color);
-                     newBgimage = bgimage.replace('white',color);
-                     fringe.style.backgroundImage = newBgimage;
+                     let bgImage = fringe.style.backgroundImage;
+                     let newBgImage = bgImage.replace('blue',color);
+                     newBgImage = newBgImage.replace('white',color);
+                     fringe.style.backgroundImage = newBgImage;
                      fringe.style.display = '';
                    }
                  })

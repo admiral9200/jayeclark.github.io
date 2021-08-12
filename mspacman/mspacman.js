@@ -68,7 +68,7 @@ function startGame() {
     restarted = false;
     update();
     setTimeout(updateGhosts,1000);
-    setTimeout(function() {restartedRelease = false; release(board2);},7000)
+    setTimeout(function() {restartRelease = false; release(board2);},7000)
 
     started = true;
     let readyDiv = document.getElementById('ready');

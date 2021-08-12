@@ -728,10 +728,10 @@ class Ghost {
               fringe.style.backgroundColor = this.color;
               fringe.style.display = '';
             } else {
-              let bgimage = fringe.style.backgroundImage;
-              let newBgimage = bgimage.replace('blue',this.color);
-              newBgImage = bgimage.replace('white',this.color);
-              fringe.style.backgroundImage = newBgimage;
+              let bgImage = fringe.style.backgroundImage;
+              let newBgImage = bgImage.replace('blue',this.color);
+              newBgImage = newBgImage.replace('white',this.color);
+              fringe.style.backgroundImage = newBgImage;
               fringe.style.display = '';
             }
           })

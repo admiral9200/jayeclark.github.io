@@ -4,7 +4,7 @@
         <title>Jay Clark - Full Stack Developer / Portfolio</title>
 
         <!-- TO DO: Fix meta description to be real text-->
-        <meta name="description" content="Lorem ipsum dolor." />
+        <meta name="description" content="I'm a full stack developer seeking full-time or contract employment." />
         <meta name=viewport content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="index-layout.css">
@@ -68,17 +68,23 @@
 
             <!-- TECH STACK LOGOS -->
             <div class="logos">
-                <span style="text-align: center;"><hr><h6>My tech stack</h6></span>
+
+                <span class="centered"><hr><h6>My tech stack</h6></span>
+
                 <div class="imageline">
+
                     <div class="logo-container">
                         <div class="logo"><img src="./images/mongodb.png"></div>
                         <div class="logo"><img src="./images/expressjs.png"></div>
                     </div>
+
                     <div class="logo-container">
                         <div class="logo"><img src="./images/react.png"></div>
                         <div class="logo"><img src="./images/nodejs.png"></div>
                     </div>
+
                 </div>
+
             </div>
 
 
@@ -86,15 +92,17 @@
             <!-- SHORT BIO -->
             <div class="bio card-grey">
             
-                <div class="card-white" style="flex-wrap:wrap-reverse">
+                <div class="card-white reverse-stack">
                 
-                    <div class="card-content" style="width:250px;z-index:101;flex-grow:1">
-                    
+                    <div class="card-content offset-large">
                         <h2>Get to know me</h2>
                         <p>I'm a Harvard-educated professional with strong communication skills and experience in teaching & mentorship.</p> 
                         <a href="about.html#story" class="btn btn-primary">Read My Bio</a><a href="about.html#video" class="btn btn-primary">Watch My Video</a>
                     </div>
-                    <div class="card-image-top" style="width:300px;flex-grow:0"><img src="./images/person.png" width = 100% id="bio-img-1"/></div>
+
+                    <div class="card-image-top">
+                        <img src="./images/person.png" width = 100% id="bio-img-1"/>
+                    </div>
 
                 </div>
             
@@ -103,7 +111,7 @@
 
             
             <!-- GITHUB -->
-            <div class="photo2"><img src="./images/github.png" style="float:left;" width = 100% id="github-img-1"/></div>
+            <div class="photo2"><img src="./images/github.png" width=100% id="github-img-1"/></div>
             <div class="github">
                 <h6>Github</h6>
                 <h3>Applying best practices</h3>
@@ -118,9 +126,9 @@
             <!-- CODEWARS -->
             <div class="codewars">
                 <h6>Codewars</h6>
-                <h3>Daily Javascript challenges</h3>
+                <h3>Daily coding Challenges</h3>
                 <p>I train daily on Codewars, completing as many kata as possible within an allotted 1-2 hour time frame. I have achieved a rank of 3 kyu
-                    in Javascript, which reflects a 'highly competent' skill level and places me among the top 3% of developers on the site.</p>
+                    in Javascript, which reflects a 'highly competent' skill level, and I rank among the top 2% of developers on the site.</p>
                 <a href="https://www.codewars.com/users/jayclark" class="btn btn-primary" target="_blank">Go to my profile</a>
             </div>
             <div class="photo3"><img src="./images/codewars.png" style="float:right;" width = 100% id="codewars-img-1"/></div>
@@ -134,9 +142,9 @@
         
                 <div class="card-white">
                 
-                    <div class="card-content" style="flex-grow:1;width:250px;padding: 10% 0px 0px 0px;margin:0px 0px 0px 0px">
+                    <div class="card-content offset-small">
                         <div style="display:block;justify-content: center;">
-                            <div class="card-image-top"style="margin:-20vw 0px 0px 0px;padding:20px;width:200x;"><img src="./images/projects.png" style="float:none;" width = 100% id="projects-img-1"/></div>
+                            <div class="card-image-top-left"><img src="./images/projects.png" style="float:none;" width = 100% id="projects-img-1"/></div>
                             <div style="width:100%;padding:20px">
                                 <h2>Javascript, HTML, and CSS</h2>
                                 <p>My early training has focused on learning the fundamentals of web development, especially Javascript. My projects 
@@ -147,7 +155,7 @@
                         </div>
                     </div>
     
-                    <div class="projects card-content" style="flex-grow:1;width:300px;margin: 0px 0px 0px 20px;padding:0px 0px 0px 0px;z-index:101;">
+                    <div class="projects card-content offset-none" style="padding-left:0px;">
     
                         <h3>Pac-Men for Days</h3>
                         <p class="project-description">Pac-Man images appear each time a button is clicked, and wander around the screen at varying speeds once the button to start the animation is clicked.</p>
@@ -226,14 +234,14 @@
 
                 <div class="card-container">
                 
-                    <div class="card-content" style="width:300px;margin-top: 40px;padding:20px">
+                    <div class="card-content offset-small">
                         <h2>Hire me</h2>
                         <p>I'm looking for full-time or contract employment. If you think I may be a good fit, 
                             let's talk about a possible role for me on your team.</p>
                         <a href="contact.html" class="btn btn-primary">Get in touch</a>
                     </div>
-                    <div class="card-image-bottom" style="position:relative;top:10vm;width:300px;flex-grow:0;">
-                        <img src="./images/hireme.png" style="transform:translate(0,0)" width = 100% id="contact-img-1"/>
+                    <div class="card-image-bottom">
+                        <img src="./images/hireme.png" width = 100% id="contact-img-1"/>
                     </div>
                     
                 </div>
@@ -244,10 +252,10 @@
 
 
              <!-- FOOTER -->
-            <div class="footer" style="padding-top: 0px">
+            <div class="footer footer-hr">
                 <hr>
             </div>
-            <div class="footer" style="padding-left: 66%">
+            <div class="footer footer-main">
                 <dl>
                     <dt class="footerli"><a class="footerlink" href="#home">Home</a></dt>
                     <dt class="footerli"><a class="footerlink" href="about.html">About Me</a></dt>
@@ -255,9 +263,9 @@
                     <dt class="footerli"><a class="footerlink" href="contact.html">Contact</a></dt>
                 </dl>
             </div>           
-            <div class="footer" style="padding-left: 70%">
+            <div class="footer footer-copyright">
                 <ul>
-                   <p id="footer-text" style="text-align: right;font-size:1rem"></p> 
+                   <p id="footer-text" class="copyright"></p> 
                 </ul>
             </div>
 

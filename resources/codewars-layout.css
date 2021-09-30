@@ -1,0 +1,30 @@
+.wrapper {       
+    grid-template-columns: 100%;
+    grid-template-areas:
+        'header'
+        'title'
+        'arrays'
+        'footer';
+}
+
+.header {
+    grid-area: 1 / 1 / span 1 / span 1;
+    padding: 40px;
+}
+
+.title {
+    grid-area: 2 / 1 / span 1 / span 1;
+    text-align: center;
+    padding: 0px 20%;
+}
+
+.arrays {
+    grid-area: 3 / 1 / span 1 / span 1;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.footer {
+    grid-area: 4 / 1 / span 1 / span 1;
+}

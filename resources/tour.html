@@ -1,0 +1,223 @@
+<html lang="en-US">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Codewars Tour</title>
+
+        <meta name="description" content="A brief tour of how to practice on Codewars.com, with annotated screenshots." />
+        <meta name=viewport content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="../bootstrap.min.css">
+        <link rel="stylesheet" href="codewars-layout.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+
+        <style>
+            .navbar-toggle {
+                margin-top:0px;margin-bottom:0px;
+            }
+                    
+            .arrow {
+                position: relative;
+                width: 0;
+                height: 0;
+                border-top: 9px solid transparent;
+                border-right: 9px solid green;
+                transform: rotate(10deg);
+            }
+            .arrow:after {
+                content: "";
+                position: absolute;
+                border: 0 solid transparent;
+                border-top: 3px solid green;
+                border-radius: 20px 0 0 0;
+                top: -12px;
+                left: -9px;
+                width: 12px;
+                height: 12px;
+                transform: rotate(45deg);
+            }
+            .bubble {
+                border: 1px solid gray;
+                padding: 10px;
+                background-color:rgba(255,255,255,50);
+                z-index: 1000;
+                border-radius: 20px;
+                font-family: 'Caveat', cursive;
+            }
+
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid sticky">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" onclick="$('.collapse').collapse('show')" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+          
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html#home">Home</a></li>
+                  <li><a href="about.html">About Me</a></li>
+                  <li><a href="index.html#projects">Projects</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <div class="wrapper">
+
+            <!-- HEADER -->
+            <div class="header" id="top">
+            </div>
+
+            <!-- TITLE -->
+            <div class="title">
+                <h1>Codewars</h1> 
+                <h6>A Brief Tour</h6>
+                <p><a href='#signup'>Signing Up</a><br>
+                    <a href='#signup'>Your Dashboard</a><br>
+                    <a href='#arrays'>Completing Your First Practice</a></p>
+            </div>           
+
+            <!-- ABOUT-CONTENT -->
+            <div class="arrays" style="margin:-60px 0px 0px 0px"></div>
+            <div class="arrays" style="text-align:left">
+                <span id='signup' style="text-align:center;">
+                    <hr style="width:60%">
+                    <h2>Signing Up</h2>
+                    <hr style="width:60%;height:0;">
+                </span>
+                <ol>
+                    <li style='padding:10px'>Go to <a href="https://www.codewars.com/" target="_blank">Codewars.com</a>, click on 'sign up' at the upper right. On the next screen, click on JavaScript to select that as your language.
+                    </li>
+                    <li style='padding:10px'>A window will pop up - similar to the coding window in NextTech - asking you to 'fix' a function. (The issue with the function is one of these: syntax, return, loop iteration, scope). Once you complete that, you'll have access to sign up and go to your training homepage!
+                    </li>
+                </ol>
+                <p style="padding:10px 10px 30px 10px;font-size:1rem;font-style:italic;text-align:center;">(You can still practice even if you don't make an account - you just can't see other peoples' solutions.)</p>
+               
+                <span id="basics" style="text-align:center;">
+                    <hr style="width:60%">
+                    <h2>Your Dashboard</h2>
+                    <hr style="width:60%;height:0;">
+                </span>
+                <p style='text-align:center'> This is the main screen you'll see when you log in.
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/dashboard.png' width=100% h-align='center'>
+                </p>
+
+                <p style='text-align:center'><a href="#top">back to TOC</a></p>
+                
+                <span id="arrays" style="text-align:center;">
+                    <hr style="width:60%">
+                    <h2>Completing Your First Practice</h2>
+                    <h6>How to write, test, and submit your practice.</h6>
+                    <hr style="width:60%;height:0;">
+                </span>
+                <p style='text-align:left'> When you click on practice, you'll be taken to the training page. This should look pretty similar to NextTech - instructions 
+                    on the left, and your coding area in the upper right. At the lower right, instead of a browser window, there will be a 'testing' section which shows how your code will be tested (and you can add your own tests if you want.)
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/screen1.png' width=100% h-align='center'>
+                </p>
+                <hr>
+                <h3 style="text-align:center">Testing Your Solution</h3>
+                <p style='text-align:left'> Below, I've written my function and clicked test, but I got an error. Whoops! The light brown background means that
+                    there is something wrong with my code. The very first line of the message tells me 'multiply is not defined' ... if you look at my code it appears I've
+                    accidentally named my function 'multiple' instead of 'multiply'. The test is trying to run the function multiply(), but there is no function named
+                    multiply in my code for it to find!
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/screen2.png' width=100% h-align='center'>
+                </p>
+                <p style='text-align:left'> A big thing that I like about Codewars is that the test results section is color coded to make it a lot clearer what is going wrong - 
+                    whether the code or tests are not able to run (those errors will have a light brown background)
+                    or whether the function is running OK but is returning the wrong answer (the next few screenshots cover how test results appear).
+                </p>
+                <hr>
+                <h3 style="text-align:center">Testing Your Solution, Take 2</h3>
+                <p style='text-align:left'> Alright, I've fixed the typo and now my function is named correctly. I clicked 'Test' again, and this was 
+                    the output. The orangish color of the text immediately tells me that my function did not return the result that was expected. The results
+                    say that the test expected a result of 6 but that when the function actually ran (with the arguments 2 and 3), it returned a result of 4.
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/screen3.png' width=100% h-align='center'>
+                </p>
+                <hr>
+                <h3 style="text-align:center">Testing Your Solution, Take 3</h3>
+                <p style='text-align:left'> After looking at my code, I noticed that I had intended to multiply a * b but actually wrote a * a instead. 
+                    An easy fix! I clicked 'Test' again, and got the news that my function passed the test! Now I'm ready to click 'Attempt', which will subject 
+                    it to more tests, some of which might test edge cases or unusual situations. 
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/screen4.png' width=100% h-align='center'>
+                </p>
+                <hr>
+                <h3 style="text-align:center">Making the First Official Attempt</h3>
+                <p style='text-align:left'> I clicked 'Attempt' and - lo and behold - it worked! The 'Attempt' button has now turned into a 
+                    'Submit' button, which I can click to submit my solution to the database of solutions for the kata. For each kata there are thousands
+                    of people who have submitted solutions - don't be shy about submitting yours!
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/screen5.png' width=100% h-align='center'>
+                </p>
+                <hr>
+                <h3 style="text-align:center">Solutions Page</h3>
+                <p style='text-align:left'> Here you can see all of the solutions that people submitted for the kata. These are helpful because they will introduce you to new 
+                    methods and operators that haven't been (and won't be) covered in class. Seeing these new methods in the context of a problem
+                    I have already solved helps me to understand why they might be relevant to me in the future.
+                </p>
+                <p>The top of the solutions page has some interesting stats about the kata itself. (If you hover over them, a tooltip pops up that explains them.)
+                </p>
+                <p>The most interesting one for me is that this kata has been attempted <strong>25,845 times</strong>... and less than 8,500 of those attempts were successful. 
+                    On average, people needed to 'Attempt' this kata three times before they passed. There are thousands of people who wrote a
+                    version of this function that could not pass 10 multiplication tests even after several attempts - and many of them are employed as developers. So, you should never 
+                    feel bad if you didn't pass on the 1st, 10th, or even 100th attempt. All that matters is that you got it in the end and stuck with it.
+                </p>
+                <p style='text-align:center'>
+                    <img src='./images/screen6.png' width=100% h-align='center'>
+                </p>
+                <h3 style="text-align:center">What now?</h3>
+                <p style='text-align:left'> From here, if you would like to go back and try a new way of solving the kata exercise, you 
+                    can click on "Train Again" at the upper right. You can also attempt another kata if you want! (Click on 'Next Kata'.) The
+                    site recommends doing one at a time... ideally one every day. If you want to go at warp speed, I recommend setting aside a 
+                    certain amount of time and seeing how many you can complete in that time, rather than limiting yourself to just one!
+                </p>
+                <p style='text-align:center'><a href="#top">back to TOC</a></p>
+                
+            </div>
+
+            <!-- FOOTER -->
+            <div class="footer">
+                <hr>
+            </div>
+            <div class="footer" style="padding: 30px 0px 0px 66%">
+                <dl>
+                    <dt class="footerli"><a class="footerlink" href="index.html#home">Home</a></dt>
+                    <dt class="footerli"><a class="footerlink" href="about.html">About Me</a></dt>
+                    <dt class="footerli"><a class="footerlink" href="index.html#projects">Projects</a></dt>
+                    <dt class="footerli"><a class="footerlink" href="contact.html">Contact</a></dt>
+                </dl>
+            </div>            
+            <div class="footer" style="padding: 30px 0px 0px 70%">
+                <ul>
+                   <p style="text-align: right;font-size:1rem"><script>document.write(new Date().getFullYear())</script> &copy; Jay Clark<br>
+                    All rights reserved.</p> 
+                </ul>
+            </div>
+
+        </div>
+        
+    </body>
+
+</html>

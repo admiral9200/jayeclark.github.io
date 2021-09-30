@@ -1,26 +1,112 @@
 body {
   margin: 0;
   padding: 0;
-  background: #14495e;
+  background-color: #cfad95;
 }
 
 .eyes {
   position: absolute;
+  display: flex;
+  justify-content: center;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
 }
+
+.eye-container {
+  max-width: 320px;
+  position: relative;
+  margin: calc(min(60px,6vw));
+}
+
+.eyelash-container-right {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 45%;
+  justify-content: right;
+  left: 20px;
+}
+
+.eyelash-container-left {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left:18%;
+  padding-right:27%;
+  justify-content: left;
+  left: -20px;
+}
+
+.liner-wing-left {
+  height: 0;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 70px solid black;
+  position: absolute;
+  transform: rotate(-15deg);
+  left: -20px;
+  top: 48px;
+}
+
+.liner-wing-right {
+  height: 0;
+  width: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 70px solid black;
+  position: absolute;
+  transform: rotate(15deg);
+  right: -20px;
+  top: 48px;
+}
+
+
 .eye {
   width: 240px;
+  max-width: 240px;
   height: 120px;
+  max-height: 120px;
   background: #fff;
   display: inline-block;
-  margin: 40px;
+  margin: 40px 15px;
   border-radius: 50%;
   position: relative;
+  top: -20px;
   overflow: hidden;
+  border-top: 6px solid black;
+  border-left: 1px solid rgb(90, 40, 40);
+  border-bottom: 3px solid rgb(90, 40, 40);
+  border-right: 1px solid rgb(90, 40, 40);
+  z-index: 97;
 }
+
+.eyelash-right {
+  border-radius: 50%;
+  border-right: 3px solid black;
+  width: 100px;
+  height: 100px;
+  top: -15px;
+  transform: rotate(40deg);
+  position: relative;
+  left: -50px;
+}
+
+.eyelash-left {
+  border-radius: 50%;
+  border-left: 3px solid black;
+  width: 100px;
+  height: 100px;
+  top: -15px;
+  transform: rotate(-40deg);
+  position: relative;
+  left: 0px;
+}
+
 .ball {
   width: 80px;
   height: 80px;
@@ -30,6 +116,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  z-index: 98;
 }
 .pupil {
   width: 32px;
@@ -39,4 +126,12 @@ body {
   top: 30%;
   left: 30%;
   border-radius: 50%;
+  z-index: 99;
+}
+
+@media only screen and (max-width:700px) {
+  .eye-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }

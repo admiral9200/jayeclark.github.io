@@ -53,8 +53,7 @@
 
 .photo2 {
     grid-area: 5 / 1 / span 1 / span 2;
-    padding: 20% 0px 0px 0px;
-    margin: 0px 50px;
+    padding: 20% 15% 0px 15%;
     float: left;
 }
 
@@ -72,8 +71,7 @@
 
 .photo3 {
     grid-area: 6 / 2 / span 1 / span 2;
-    padding: 20% 0px 120px 0px;
-    margin: 0px 50px;
+    padding: 20% 15% 120px 15%;
 }
 
 .react-projects {

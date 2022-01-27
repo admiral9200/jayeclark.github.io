@@ -21,6 +21,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
         <script src="index.js" type="module"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+          (function() {
+            emailjs.init("user_UP4JSX06bSO1AlwW13SGc");
+          })();
+        </script>
+            <script type="text/javascript">
+              window.onload = function() {
+                  document.getElementById('contact-form').addEventListener('submit', function(event) {
+                      event.preventDefault();
+                      // generate a five digit number for the contact_number variable
+                      this.contact_number.value = Math.random() * 100000 | 0;
+                      // these IDs from the previous steps
+                      emailjs.sendForm('service_p5qd7wt', 'template_5dbp12j', this)
+                          .then(function() {
+                              alert("Thank you for reaching out! I'll be in touch shortly regarding your inquiry.");
+                              document.getElementById('contact_name').value = '';
+                              document.getElementById('contact_email').value = '';
+                              document.getElementById('contact_message').value = '';
+                              document.getElementById('contact_number').value = Math.random() * 100000 | 0;
+                          }, function(error) {
+                              alert("Unfortunately, there was a problem submitting your message - please try again later or use one of the other listed contact methods!")
+                          });
+                  });
+              }
+          </script>
     </head>
 
     <body>
@@ -53,11 +79,21 @@
             </div>
 
             <!-- CONTACT -->
-            <div class="contact" style="padding-top: 200px; min-height: calc(100vh - 250px)">
+            <div class="contact" style="padding-top: 100px; min-height: calc(100vh - 250px)">
                 <h2>Let's get in touch</h2>
                 <p>Explore the future with me.</p>
-                <a href="mailto:jayelizabethclark@gmail.com" class="btn btn-default">Email</a>
-                <a href="https://www.linkedin.com/in/jayeclark/" class="btn btn-default" target="_blank">LinkedIn</a>
+                <a href="mailto:jayelizabethclark@gmail.com" class="btn btn-default">Email Me</a>
+                <a href="https://www.linkedin.com/in/jayeclark/" class="btn btn-default" target="_blank">Connect on LinkedIn</a>
+            <div style="margin-top: 20px;">
+              Or submit your contact details here:
+              <form id="contact-form" style="padding: 10px 0px">
+                <input id="contact_number" type="hidden" name="contact_number">
+                <input id="contact_name" style="width:100%; max-width: 400px; margin:5px 0px; padding: 5px;" placeholder="Name" type="text" name="from_name"><br>
+                <input id="contact_email" style="width:100%; max-width: 400px; margin:5px 0px; padding: 5px;" placeholder="Email" type="email" name="from_email"><br>
+                <textarea id="contact_message" style="width:100%; max-width: 400px; margin:5px 0px; padding: 5px; height: 80px;" placeholder="Message" name="message"></textarea><br>
+                <input class="btn btn-primary" style="width: 120px; margin: 10px 0px 10px calc(100% - 120px);" type="submit" value="Send">
+              </form>
+            </div>
             </div>
 
             <!-- PHOTO -->

@@ -4,6 +4,7 @@
         'header header header'
         'landing landing landing'
         'logos logos logos'
+        'additional-logos additional-logos additional-logos'
         'bio bio bio'
         'photo2 photo2 github'
         'codewars photo3 photo3'
@@ -45,46 +46,51 @@
 
 .logos {
     grid-area: 3 / 1 / span 1 / span 3;
-    margin: 5% 0px 5% 0px;
+    margin: 5% 0px 0px 0px;
+}
+
+.additional-logos {
+    grid-area: 4 / 1 / span 1 / span 3;
+    margin: 0px 0px 5% 0px;
 }
 
 .bio {
-    grid-area: 4 / 1 / span 1 / span 3;
+    grid-area: 5 / 1 / span 1 / span 3;
 }
 
 .photo2 {
-    grid-area: 5 / 1 / span 1 / span 2;
+    grid-area: 6 / 1 / span 1 / span 2;
     padding: 20% 15% 0px 15%;
     float: left;
 }
 
 .github {
-    grid-area: 5 / 3 / span 1 / span 1;
+    grid-area: 6 / 3 / span 1 / span 1;
     padding: 30% 0px 0px 10%;
     margin: 10px 0px;
 }
 
 .codewars {
-    grid-area: 6 / 1 / span 1 / span 1;
+    grid-area: 7 / 1 / span 1 / span 1;
     padding: 20% 10% 60px 0px;
     margin: 20px 10px;
 }
 
 .photo3 {
-    grid-area: 6 / 2 / span 1 / span 2;
+    grid-area: 7 / 2 / span 1 / span 2;
     padding: 20% 15% 120px 15%;
 }
 
 .open-source-projects {
-    grid-area: 7 / 1 / span 1 / span 3;
-}
-
-.react-projects {
     grid-area: 8 / 1 / span 1 / span 3;
 }
 
-.projects {
+.react-projects {
     grid-area: 9 / 1 / span 1 / span 3;
+}
+
+.projects {
+    grid-area: 10 / 1 / span 1 / span 3;
     margin-top: 200px;
 }
 
@@ -95,7 +101,7 @@
 }
 
 .training {
-    grid-area: 10 / 1 / span 1 / span 3;
+    grid-area: 11 / 1 / span 1 / span 3;
     padding: 40px 0px 0px 0px;
     margin:5% 0px;
     width:100%
@@ -110,7 +116,7 @@
 }
 
 .contact {
-    grid-area: 11 / 1 / span 1 / span 3;
+    grid-area: 12 / 1 / span 1 / span 3;
 }
 
 #bottom-contact-card {
@@ -118,7 +124,7 @@
 }
 
 .footer {
-    grid-area: 12 / 1 / span 1 / span 3;
+    grid-area: 13 / 1 / span 1 / span 3;
     padding: 0px;
 }
 
@@ -172,19 +178,24 @@
         grid-area: 3 / 1 / span 1 / span 1;
         margin: 5% 0px 5% 0px;
     }
+
+    .additional-logos {
+        grid-area: 4 / 1 / span 1 / span 1;
+        margin: 5% 0px 5% 0px;
+    }
     
     .bio {
-        grid-area: 4 / 1 / span 1 / span 1;
+        grid-area: 5 / 1 / span 1 / span 1;
     }
 
     .github {
-        grid-area: 5 / 1 / span 1 / span 1;
+        grid-area: 6 / 1 / span 1 / span 1;
         padding: 10% 10% 30px 10%;
         margin: 20px 0px 0px 0px;
     }
 
     .photo2 {
-        grid-area: 6 / 1 / span 1 / span 1;
+        grid-area: 7 / 1 / span 1 / span 1;
         padding: 0px 10% 10% 10%;;
         float: none;
     }
@@ -194,22 +205,25 @@
     }
 
     .codewars {
-        grid-area: 7 / 1 / span 1 / span 1;
+        grid-area: 8 / 1 / span 1 / span 1;
         padding: 10% 10% 30px 10%;;
         margin: 0px;
     }
     
     .photo3 {
-        grid-area: 8 / 1 / span 1 / span 1;
+        grid-area: 9 / 1 / span 1 / span 1;
         padding: 0px 10% 10% 10%;;
     }
 
+    .open-source-projects {
+        grid-area: 10 / 1 / span 1 / span 1;
+    }
     .react-projects {
-        grid-area: 9 / 1 / span 1 / span 1;
+        grid-area: 11 / 1 / span 1 / span 1;
     }
     
     .projects {
-        grid-area: 10 / 1 / span 1 / span 1;
+        grid-area: 12 / 1 / span 1 / span 1;
     }
 
     .projects-description {
@@ -218,14 +232,14 @@
     }
     
     .training {
-        grid-area: 11 / 1 / span 1 / span 1;
+        grid-area: 13 / 1 / span 1 / span 1;
         padding: 40px 0px 0px 0px;
         margin:5% 0px;
         width:100%
     }
     
     .contact {
-        grid-area: 12 / 1 / span 1 / span 1;
+        grid-area: 14 / 1 / span 1 / span 1;
     }
     
     #bottom-contact-card {
@@ -238,7 +252,7 @@
     }
 
     .footer {
-        grid-area: 13 / 1 / span 1 / span 1;
+        grid-area: 15 / 1 / span 1 / span 1;
         padding: 0px;
     }
 

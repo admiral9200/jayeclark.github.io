@@ -7,6 +7,7 @@
         'bio bio bio'
         'photo2 photo2 github'
         'codewars photo3 photo3'
+        'open-source-projects open-source-projects open-source-projects '
         'react-projects react-projects react-projects'
         'projects projects projects'
         'training training training'
@@ -74,12 +75,16 @@
     padding: 20% 15% 120px 15%;
 }
 
-.react-projects {
+.open-source-projects {
     grid-area: 7 / 1 / span 1 / span 3;
 }
 
-.projects {
+.react-projects {
     grid-area: 8 / 1 / span 1 / span 3;
+}
+
+.projects {
+    grid-area: 9 / 1 / span 1 / span 3;
     margin-top: 200px;
 }
 
@@ -90,7 +95,7 @@
 }
 
 .training {
-    grid-area: 9 / 1 / span 1 / span 3;
+    grid-area: 10 / 1 / span 1 / span 3;
     padding: 40px 0px 0px 0px;
     margin:5% 0px;
     width:100%
@@ -105,7 +110,7 @@
 }
 
 .contact {
-    grid-area: 10 / 1 / span 1 / span 3;
+    grid-area: 11 / 1 / span 1 / span 3;
 }
 
 #bottom-contact-card {
@@ -113,12 +118,20 @@
 }
 
 .footer {
-    grid-area: 11 / 1 / span 1 / span 3;
+    grid-area: 12 / 1 / span 1 / span 3;
     padding: 0px;
 }
 
 .wrap-reverse {
     flex-wrap: wrap-reverse;
+}
+
+.display-desktop {
+    display: inline;
+}
+
+.display-mobile {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -233,4 +246,14 @@
         margin-left: 0px;
     }
 
+}
+
+@media only screen and (max-width: 737px) {
+    .display-desktop {
+        display: none;
+    }
+    
+    .display-mobile {
+        display: inline;
+    }
 }

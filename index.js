@@ -1,3 +1,4 @@
+import { trainingMatrix } from "./training.js";
 
 // Set footer
 const footer = async () => {
@@ -325,3 +326,36 @@ function renderTechRibbon() {
 }
 
 renderTechRibbon();
+
+// adjust percentages
+
+const trainingSections = Object.keys(trainingMatrix);
+
+trainingSections.forEach(section => {
+
+  const isDateInPast = (str) => {
+    const dates = str.split("/");
+    const [month, day, year] = [Number(dates[0]), Number(dates[1]), Number(dates[2]) + 2000];
+    const todayMonth = new Date().getMonth() + 1;
+    const todayDate = new Date().getDate();
+    const todayYear = new Date().getFullYear();
+    if (month < todayMonth && year <= todayYear) {
+      return true;
+    }
+    return month === todayMonth && year === todayYear && day < todayDate;
+  };
+
+  const element = document.getElementById(`${section}-progress`);
+  const span = element.getElementsByClassName("sr-only")[0];
+  
+  const trainingArray = trainingMatrix[section];
+
+  const pointsCompletedToDate = trainingArray.filter(option => isDateInPast(option.date)).reduce((a,b) => a + b.weight, 0);
+  const totalPoints = trainingArray.reduce((a,b) => (a + b.weight), 0);
+  const percentProgress = Math.floor(pointsCompletedToDate * 100 / totalPoints);
+  
+  element["aria-valuenow"] = percentProgress.toString();
+  element.style.width = percentProgress + '%';
+  span.innerHTML = percentProgress + '% Completed';
+
+})

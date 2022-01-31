@@ -352,10 +352,15 @@ trainingSections.forEach(section => {
 
   const pointsCompletedToDate = trainingArray.filter(option => isDateInPast(option.date)).reduce((a,b) => a + b.weight, 0);
   const totalPoints = trainingArray.reduce((a,b) => (a + b.weight), 0);
-  const percentProgress = Math.floor(pointsCompletedToDate * 100 / totalPoints);
+  const percentProgress = Math.ceiling(pointsCompletedToDate * 100 / totalPoints);
   
   element["aria-valuenow"] = percentProgress.toString();
   element.style.width = percentProgress + '%';
   span.innerHTML = percentProgress + '% Completed';
+
+  if (percentProgress === 100) {
+    const title = document.getElementById(`${section}-title`);
+    title.innerHTML += ' - COMPLETED!';
+  }
 
 })

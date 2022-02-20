@@ -8,6 +8,7 @@
         'bio bio bio'
         'photo2 photo2 github'
         'codewars photo3 photo3'
+        'backend-projects backend-projects backend-projects '
         'open-source-projects open-source-projects open-source-projects '
         'react-projects react-projects react-projects'
         'projects projects projects'
@@ -81,17 +82,15 @@
     padding: 20% 15% 120px 15%;
 }
 
-.open-source-projects {
+.backend-projects {
     grid-area: 8 / 1 / span 1 / span 3;
 }
 
-.react-projects {
+.open-source-projects {
     grid-area: 9 / 1 / span 1 / span 3;
 }
-
-.projects {
+.react-projects {
     grid-area: 10 / 1 / span 1 / span 3;
-    margin-top: 200px;
 }
 
 .projects-description {
@@ -215,15 +214,16 @@
         padding: 0px 10% 10% 10%;;
     }
 
+    .backend-projects {
+        grid-area: 10 / 1 / span 1 / span 1;
+    }
+
     .open-source-projects {
         grid-area: 10 / 1 / span 1 / span 1;
     }
+
     .react-projects {
         grid-area: 11 / 1 / span 1 / span 1;
-    }
-    
-    .projects {
-        grid-area: 12 / 1 / span 1 / span 1;
     }
 
     .projects-description {

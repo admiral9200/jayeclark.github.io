@@ -139,6 +139,15 @@
     display: none;
 }
 
+.project-description-container {
+    display: flex!important;
+    flex-wrap: nowrap!important;
+}
+
+.pl-25px {
+    padding-left: 25px!important;
+}
+
 @media only screen and (max-width: 600px) {
 
     .wrapper {        
@@ -229,15 +238,6 @@
     .projects-description {
         width: 100%;
         padding: 20px 0px 0px 0px;
-    }
-
-    .project-description-container {
-        display: flex;
-        flex-wrap: nowrap;
-    }
-    
-    .pl-25px {
-        padding-left: 25px;
     }
     
     .training {

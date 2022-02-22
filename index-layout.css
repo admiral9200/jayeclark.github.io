@@ -230,6 +230,15 @@
         width: 100%;
         padding: 20px 0px 0px 0px;
     }
+
+    .project-description-container {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .pl-25px {
+        padding-left: 25px;
+    }
     
     .training {
         grid-area: 13 / 1 / span 1 / span 1;

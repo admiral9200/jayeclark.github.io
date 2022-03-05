@@ -49,4 +49,7 @@ const currentPage = computed(() => router.currentRoute.value.name);
 
 <style>
 @import "@/assets/bootstrap.min.css";
+.navbar-nav > li > a {
+  font-size: 1.6rem !important;
+}
 </style>

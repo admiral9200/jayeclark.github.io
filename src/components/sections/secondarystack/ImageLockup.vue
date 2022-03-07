@@ -1,7 +1,7 @@
 <script lang="js">
 export default {
   name: 'ImageLockup',
-  props: ['ribbonHeight', 'adjustedWidth', 'imgHeight', 'tech'],
+  props: ['ribbonHeight', 'adjustedWidth', 'imgHeight', 'tech', 'refToSet', 'image'],
   data() {
     return {
       ratings: [0, 1, 2, 3],
@@ -14,8 +14,22 @@ export default {
     }
   },
   mounted() {
-    const imgUrl = new URL(`../../../assets/${this.tech.url}`, import.meta.url);
-    this.$refs.image.src = imgUrl;
+    console.log(this.$refs);
+    const el = this.$refs[`${this.refToSet}`];
+    console.log(el);
+    console.log(this.image);
+    if (el.classList.contains('unprocessed')) {
+      const imgUrl = new URL(`../../../assets/${this.image}`, import.meta.url);
+      el.src = imgUrl;
+      el.classList.remove('unprocessed');
+    }
+  },
+  updated() {
+    console.log(this.$refs);
+    const el = this.$refs[`${this.refToSet}`];
+    console.log(el);
+    const imgUrl = new URL(`../../../assets/${this.image}`, import.meta.url);
+    el.src = imgUrl;
   }
 }
 </script>
@@ -40,11 +54,14 @@ export default {
         {{ tech.name }}
       </div>
       <img
-        ref="image"
+        class="unprocessed"
+        src="@/assets/blank.png"
         :alt="tech.name"
+        :ref="refToSet"
         :height="tech.dimension && tech.dimension === 'height' ? '100' : ''"
         :width="!tech.dimension || tech.dimension === 'width' ? '100' : ''"
         :style="{ display: tech.url ? '' : 'none' }"
+        :id="tech.url"
       />
     </div>
     <div

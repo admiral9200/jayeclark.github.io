@@ -4,6 +4,7 @@ import { nextTick } from "vue";
 import ImageLockup from "./ImageLockup.vue";
 export default {
     name: "SecondaryStackSection",
+    props: ['cardsToDisplay'],
     data() {
         return {
             technologies: stack,
@@ -14,15 +15,14 @@ export default {
             arrowWidth: 20,
             scrollInProgress: false,
             ratings: [0, 1, 2, 3],
+            beforeStart: stack.length - this.cardsToDisplay,
+            afterStart: this.cardsToDisplay,
         };
     },
     computed: {
-        cardsToDisplay() {
-            const availableWidth = window.innerWidth * 0.82 - this.arrowWidth;
-            return Math.floor(availableWidth / this.cardWidth);
-        },
         adjustedWidth() {
-            const availableWidth = window.innerWidth * 0.82 - this.arrowWidth;
+            console.log(this.cardsToDisplay);
+            const availableWidth = window.innerWidth * 0.82 - this.arrowWidth * 2;
             const cardsToDisplay = Math.floor(availableWidth / this.cardWidth);
             return Math.floor(availableWidth / (cardsToDisplay * 10)) * 10;
         },
@@ -39,12 +39,8 @@ export default {
             const technologies = [];
             this.technologies.forEach(t => technologies.push({ ...t }));
             const num = this.cardsToDisplay;
-            let start = this.startingCard;
-            let newStart = start - num;
+            let newStart = this.beforeStart;
             const len = technologies.length;
-            if (newStart < 0) {
-                newStart += len;
-            }
             if (newStart + num > len) {
                 return [...technologies.slice(newStart, len), ...technologies.slice(0, newStart + num - len)];
             }
@@ -54,12 +50,8 @@ export default {
             const technologies = [];
             this.technologies.forEach(t => technologies.push({ ...t }));
             const num = this.cardsToDisplay;
-            let start = this.startingCard;
-            let newStart = start + num;
+            let newStart = this.afterStart;;
             const len = technologies.length;
-            if (newStart > len) {
-                newStart -= len;
-            }
             if (newStart + num > len) {
                 return [...this.technologies.slice(newStart, len), ...this.technologies.slice(0, newStart + num - len)];
             }
@@ -89,17 +81,32 @@ export default {
             }, 20);
             // Set new state and reset transitions
             setTimeout(() => {
+                this.$refs.before.style.transition = "opacity 100ms ease";
+                this.$refs.current.style.transition = "";
+                this.$refs.current.style.opacity = "0";
+                this.$refs.after.style.transition = "opacity 100ms ease";
+                this.scrollInProgress = false;
+
+                // Set the current starting card and move the div back to 0px
                 const [start, num, len] = [this.startingCard, this.cardsToDisplay, this.technologies.length];
                 this.startingCard = dir === "left" ? (start - num < 0 ? start - num + len : start - num) : (start + num > len ? start + num - len : start + num);
-                this.$refs.before.style.transition = "";
-                this.$refs.current.style.transition = "";
-                this.$refs.after.style.transition = "";
-                this.scrollInProgress = false;
-                nextTick(() => {
-                    this.$refs.before.style.left = `${-1 * this.adjustedWidth * this.cardsToDisplay}px`;
-                    this.$refs.current.style.left = "0px";
-                    this.$refs.after.style.left = `${this.adjustedWidth * this.cardsToDisplay}px`;
-                });
+
+                setTimeout(() => {
+                  this.$refs.current.style.left = "0px";
+                  this.$refs.current.style.opacity = "1";
+                  this.$refs.before.style.opacity = "0";
+                  this.$refs.after.style.opacity = "0";
+                }, 20);
+                setTimeout(() => {
+                  this.beforeStart = this.startingCard - this.cardsToDisplay < 0 ? this.startingCard - this.cardsToDisplay + this.technologies.length : this.startingCard - this.cardsToDisplay;
+                  this.afterStart = this.startingCard + this.cardsToDisplay > this.technologies.length ? this.startingCard + this.cardsToDisplay - this.technologies.length : this.startingCard + this.cardsToDisplay;
+                }, 40);
+                setTimeout(() => {
+                  this.$refs.before.style.left = `${-1 * this.adjustedWidth * this.cardsToDisplay}px`;
+                  this.$refs.after.style.left = `${this.adjustedWidth * this.cardsToDisplay}px`;
+                  this.$refs.before.style.opacity = '1';
+                  this.$refs.after.style.opacity = '1';
+                }, 50);
             }, 800);
             // Reset positions
             //setTimeout(() => {
@@ -144,9 +151,11 @@ export default {
           <ImageLockup
             v-for="(tech, index) in beforeSlice"
             :key="index"
+            :refToSet="`before-${index}`"
             :ribbonHeight="ribbonHeight"
             :adjustedWidth="adjustedWidth"
             :imgHeight="imgHeight"
+            :image="tech.url"
             :tech="{ ...tech }"
           ></ImageLockup>
         </div>
@@ -160,9 +169,11 @@ export default {
           <ImageLockup
             v-for="(tech, index) in techSlice"
             :key="index"
+            :refToSet="`current-${index}`"
             :ribbonHeight="ribbonHeight"
             :adjustedWidth="adjustedWidth"
             :imgHeight="imgHeight"
+            :image="tech.url"
             :tech="tech"
           ></ImageLockup>
         </div>
@@ -177,9 +188,11 @@ export default {
           <ImageLockup
             v-for="(tech, index) in afterSlice"
             :key="index"
+            :refToSet="`after-${index}`"
             :ribbonHeight="ribbonHeight"
             :adjustedWidth="adjustedWidth"
             :imgHeight="imgHeight"
+            :image="tech.url"
             :tech="tech"
           ></ImageLockup>
         </div>

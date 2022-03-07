@@ -7,6 +7,10 @@ import CardWithShadowVue from "@/components/ui/CardWithShadow.vue";
 import TransparentStripVue from "@/components/ui/TransparentStrip.vue";
 import ProjectsOverviewVue from "@/components/sections/ProjectsOverview.vue";
 import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
+import { computed } from "vue";
+const cardsToDisplay = computed(() =>
+  Math.floor((window.innerWidth * 0.82 - 20) / 170)
+);
 </script>
 
 <template>
@@ -18,7 +22,7 @@ import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
       <PrimaryStackSection />
     </div>
     <div>
-      <SecondaryStackSection />
+      <SecondaryStackSection :cardsToDisplay="cardsToDisplay" />
     </div>
     <div style="margin-bottom: 60px">
       <CardWithShadowVue

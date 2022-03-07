@@ -13,7 +13,7 @@ const categories = ref([
     ],
   },
   {
-    title: "Open Source",
+    title: "Open Source Software",
     description:
       "I've contributed code to more than <b>70 open source software projects</b> including TypeScript, O3DE, React Bootstrap, Material UI, Chatwoot, and MetaMask.",
     samples: [
@@ -76,13 +76,16 @@ const categories = ref([
                 :key="linkindex"
               >
                 <RouterLink
-                  :to="`/projects#${sample.name
-                    .toLowerCase()
-                    .replace(` `, ``)}`"
+                  :to="{
+                    name: `projects`,
+                    params: {
+                      section: category.title.toLowerCase().replace(/\s/g, ``),
+                    },
+                  }"
                 >
                   <img
                     :title="sample.name"
-                    :alt="sample.name.toLowerCase().replace(` `, ``)"
+                    :alt="sample.name.toLowerCase().replace(/\s/g, ``)"
                     class="project-thumbnail"
                     :src="`../src/assets${sample.img}`"
                     style="max-height: 100%"
@@ -90,9 +93,12 @@ const categories = ref([
                 </RouterLink>
               </template>
               <RouterLink
-                :to="`/projects#${category.title
-                  .toLowerCase()
-                  .replace(` `, ``)}`"
+                :to="{
+                  name: `projects`,
+                  params: {
+                    section: category.title.toLowerCase().replace(/\s/g, ``),
+                  },
+                }"
               >
                 <div class="btn btn-primary" style="width: 100%">
                   View Projects

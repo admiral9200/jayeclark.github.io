@@ -6,10 +6,10 @@ export default {
     return {
       ratings: [0, 1, 2, 3],
       titles: [
-        "I've worked on or contributed to an OSS project using this, but am still a novice",
-        "I've used this in one of my own projects or extensively in an OSS one, and am actively learning more",
+        "I've used this in an assignment or contributed to an OSS project using this, but am still a novice.",
+        "I've used this in one of my own projects or extensively in an OSS one, and am actively learning more.",
         "I have used this extensively and have successfully debugged and/or done troubleshooting with more complex situations.",
-        "I consider proficient in this relative to my overall career experience. I can hit the ground running in this language or environment.",
+        "I am proficient in this relative to my overall career experience. I can hit the ground running in this language or environment.",
       ]
     }
   }
@@ -46,6 +46,7 @@ export default {
     <div
       class="ratings-div"
       style="display: flex; flex-wrap: nowrap; justify-content: center"
+      :title="titles[tech.competence - 1]"
     >
       <template v-for="(rating, idx) in ratings" :key="idx">
         <div
@@ -56,7 +57,6 @@ export default {
             height: `${10 + rating * 5}px`,
             backgroundColor: tech.competence >= rating + 1 ? 'green' : '#ccc',
           }"
-          :title="titles[rating]"
         ></div>
       </template>
     </div>

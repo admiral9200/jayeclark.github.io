@@ -4,23 +4,58 @@ import emailjs from '@emailjs/browser';
 
 export default {
   methods: {
-    sendEmail() {
-      emailjs.sendForm('service_p5qd7wt', 'template_5dbp12j', this.$refs.form, 'user_UP4JSX06bSO1AlwW13SGc')
-        .then(() => {() => {
-            alert(
-              "Thank you for reaching out! I'll be in touch shortly regarding your inquiry."
-            );
-            document.getElementById("contact_name").value = "";
-            document.getElementById("contact_email").value = "";
-            document.getElementById("contact_message").value = "";
-            document.getElementById("contact_number").value =
-              (Math.random() * 100000) | 0;
-          };
-        }, () => {
-          alert(
-              "Unfortunately, there was a problem submitting your message - please try again later or use one of the other listed contact methods!"
-            );
-        });
+    sendEmail(event) {
+      event.preventDefault();
+      let proceed = true;
+      const { name: { value: name }, email: { value: email }, message: { value: message } } = this.$refs;
+      if (!email || !/.+@.+\..{2,3}/.test(email)) {
+        this.$refs.response.style.color = "darkred";
+        this.$refs.response.style.border = "1px solid darkred";
+        this.$refs.response.innerHTML = "<div style='font-weight:bold;'>Please enter a valid email address.</div>";
+        proceed = false;
+      }
+      else if (!name || name.length <= 1) {
+        this.$refs.response.style.color = "darkred";
+        this.$refs.response.style.border = "1px solid darkred";
+        this.$refs.response.innerHTML = "<div style='font-weight:bold;'><b>Please enter your name.</b></div>";
+        proceed = false;
+      }
+      else if (!message || message.length <= 10) {
+        this.$refs.response.style.color = "darkred";
+        this.$refs.response.style.border = "1px solid darkred";
+        this.$refs.response.innerHTML = "<div style='font-weight:bold;'><b>Please enter a message (at least 10 characters long).</b></div>";
+        proceed= false;
+      }
+      else {
+        this.$refs.response.style.color = "black";
+        this.$refs.response.style.border = "1px solid transparent";
+        this.$refs.response.innerHTML = "";
+      }
+      if (proceed == true) {
+        this.$refs.submit.disabled = true;
+        this.$refs.submit.opacity = 0.6;
+        this.$refs.submit.innerHTML = "Submitting...";
+        emailjs.sendForm('service_p5qd7wt', 'template_5dbp12j', this.$refs.form, 'user_UP4JSX06bSO1AlwW13SGc')
+          .then(() => {
+            this.$refs.submit.innerHTML = "Send";
+            this.$refs.submit.disabled = false;
+            this.$refs.submit.opacity = 1;
+            this.$refs.response.style.color = "darkgreen";
+            this.$refs.response.style.border = "1px solid darkgreen";
+            this.$refs.response.innerHTML = "<div style='font-weight:bold;'><b>Thank you for reaching out! I'll be in touch shortly regarding your inquiry.</b></div>"
+            this.$refs.name.value = "";
+            this.$refs.email.value = "";
+            this.$refs.message.value = "";
+            this.$refs.number.value = (Math.random() * 100000) | 0;
+          }, () => {
+            this.$refs.submit.innerHTML = "Send";
+            this.$refs.submit.disabled = false;
+            this.$refs.submit.opacity = 1;
+            this.$refs.response.style.color = "darkred";
+            this.$refs.response.style.border = "1px solid darkred";
+            this.$refs.response.innerHTML = "<div style='font-weight:bold;'><b>Unfortunately, there was a problem submitting your message - please try again later or use one of the other listed contact methods!</b></div>";
+          });
+      }
     }
   }
 }
@@ -48,15 +83,16 @@ export default {
         >
         <div style="margin-top: 20px; min-width: 40vw">
           Or submit your contact details here:
-          <form
-            id="contact-form"
-            ref="form"
-            style="padding: 10px 0px"
-            @submit.prevent="sendEmail"
-          >
-            <input id="contact_number" type="hidden" name="contact_number" />
+          <form id="contact-form" ref="form" style="padding: 10px 0px">
+            <input
+              ref="number"
+              id="contact_number"
+              type="hidden"
+              name="contact_number"
+            />
             <input
               id="contact_name"
+              ref="name"
               style="
                 width: 100%;
                 max-width: 400px;
@@ -69,6 +105,7 @@ export default {
             /><br />
             <input
               id="contact_email"
+              ref="email"
               style="
                 width: 100%;
                 max-width: 400px;
@@ -81,6 +118,7 @@ export default {
             /><br />
             <textarea
               id="contact_message"
+              ref="message"
               style="
                 width: 100%;
                 max-width: 400px;
@@ -92,13 +130,28 @@ export default {
               name="message"
             ></textarea
             ><br />
-            <input
+            <button
+              ref="submit"
               class="btn btn-primary"
               style="width: 120px; margin: 10px 0px 10px calc(100% - 120px)"
-              type="submit"
-              value="Send"
-            />
+              type="button"
+              @click="(e) => sendEmail(e)"
+            >
+              Send
+            </button>
           </form>
+          <div
+            ref="response"
+            style="
+              min-height: 70px;
+              border-radius: 8px;
+              border: 1px solid transparent;
+              padding: 10px;
+              display: flex;
+              align-items: center;
+              margin-right: 15px;
+            "
+          ></div>
         </div>
       </div>
 

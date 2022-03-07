@@ -48,7 +48,7 @@ export default {
                   <img
                     src="@/assets/images/projects.png"
                     style="float: none; max-width: 100%"
-                    id="react-projects-img-1"
+                    class="expanding-image"
                   />
                 </div>
                 <div class="projects-description">
@@ -62,7 +62,11 @@ export default {
               <template v-for="(project, pidx) in group.projects" :key="pidx">
                 <hr :style="{ display: pidx === 0 ? 'none' : '' }" />
                 <h3>{{ project.name }}</h3>
-                <div class="project-description-container">
+                <p
+                  class="project-description pl-25px"
+                  :innerHTML="project.description"
+                ></p>
+                <div class="project-description-container-detail">
                   <img
                     :src="`../src/assets${project.thumbnail}`"
                     height="70"
@@ -73,6 +77,7 @@ export default {
                       class="project-description"
                       style="
                         font-weight: bold;
+                        margin-left: 10px;
                         padding-top: none;
                         align-items: center;
                       "
@@ -101,24 +106,23 @@ export default {
                         :innerHTML="project.subtitle"
                       ></span>
                     </div>
-                    <p
-                      class="project-description pl-25px"
-                      :innerHTML="project.description"
-                    ></p>
+                    <div style="margin-left: 10px">
+                      <a
+                        :href="project.url"
+                        class="btn btn-primary btn-sm"
+                        style="margin-right: 10px"
+                        target="_blank"
+                        >See it in action</a
+                      >
+                      <a
+                        :href="project.github"
+                        class="btn btn-default btn-sm"
+                        target="_blank"
+                        >See the code</a
+                      >
+                    </div>
                   </div>
                 </div>
-                <a
-                  :href="project.url"
-                  class="btn btn-primary btn-sm"
-                  target="_blank"
-                  >See it in action</a
-                >
-                <a
-                  :href="project.github"
-                  class="btn btn-default btn-sm"
-                  target="_blank"
-                  >See the code</a
-                >
               </template>
             </div>
           </div>
@@ -129,10 +133,7 @@ export default {
 </template>
 
 <style>
-.project-description-container {
+.project-description-container-detail {
   display: flex;
-}
-.project-description {
-  margin-left: 10px;
 }
 </style>

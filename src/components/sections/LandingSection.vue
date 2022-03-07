@@ -30,7 +30,7 @@ import { RouterLink } from "vue-router";
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-end;
-  justify-content: stretch;
+  justify-content: center;
 }
 
 .landing-content {
@@ -51,6 +51,9 @@ import { RouterLink } from "vue-router";
 @media only screen and (max-width: 850px) {
   .landing {
     flex-wrap: wrap;
+  }
+  .landing-content {
+    max-width: max-content;
   }
 }
 </style>

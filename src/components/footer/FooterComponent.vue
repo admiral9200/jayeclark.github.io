@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
 interface Project {
   projectName: string;
   url: string;
@@ -6,43 +7,63 @@ interface Project {
 interface Props {
   projects?: Array<Project>;
 }
-
 // eslint-disable-next-line vue/no-setup-props-destructure
 const {
   projects = [
     { projectName: "Bad Bank", url: "https://jayeclark.github.io/banking" },
     { projectName: "Instaplate", url: "https://instaplate.herokuapp.com" },
+    {
+      projectName: "OSS Challenge",
+      url: "https://github.com/jayeclark/jayeclark/blob/main/opensourcechallenge.md",
+    },
   ],
 } = defineProps<Props>();
 </script>
 
 <template>
-  <div class="footer-hr">
-    <hr />
-  </div>
-  <div style="display: flex; flex-wrap: nowrap; justify-content: right">
+  <div class="footer-hr"></div>
+  <div class="footer-content">
+    <div class="footer-copyright">
+      <p id="footer-text" class="copyright" style="text-align: left">
+        &copy; {{ new Date().getFullYear() }} Jay Clark. All rights reserved.
+      </p>
+    </div>
     <div class="footer-main">
       <dl>
         <template v-for="(project, index) in projects" v-bind:key="index">
           <dt class="footerli">
-            <a class="footerlink" :href="project.url">{{
-              project.projectName
-            }}</a>
+            <a
+              class="footerlink"
+              :href="project.url"
+              target="_blank"
+              rel="noreferrer"
+              >{{ project.projectName }}</a
+            >
           </dt>
         </template>
       </dl>
     </div>
     <div class="footer-main">
       <dl>
-        <dt class="footerli"><a class="footerlink" href="#home">Home</a></dt>
         <dt class="footerli">
-          <a class="footerlink" href="about.html">About Me</a>
+          <RouterLink to="/">
+            <div class="footerlink">Home</div>
+          </RouterLink>
         </dt>
         <dt class="footerli">
-          <a class="footerlink" href="#projects">Projects</a>
+          <RouterLink to="/about">
+            <div class="footerlink">About Me</div>
+          </RouterLink>
         </dt>
         <dt class="footerli">
-          <a class="footerlink" href="contact.html">Contact</a>
+          <RouterLink to="/projects">
+            <div class="footerlink">Projects</div>
+          </RouterLink>
+        </dt>
+        <dt class="footerli">
+          <RouterLink to="/contact">
+            <div class="footerlink">Contact</div>
+          </RouterLink>
         </dt>
       </dl>
     </div>
@@ -80,20 +101,34 @@ const {
         </dt>
       </dl>
     </div>
-    <div class="footer-copyright">
-      <ul>
-        <p id="footer-text" class="copyright"></p>
-      </ul>
-    </div>
   </div>
 </template>
 
 <style>
 @import "@/assets/bootstrap.min.css";
+.footer-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: right;
+  margin: 0px calc(9% - 16px);
+  width: calc(82% + 32px);
+}
+.footer-copyright {
+  width: auto;
+  text-align: left;
+  flex-grow: 1;
+}
+.footer-hr {
+  height: 40px;
+}
 .footerlink {
   font-weight: bold !important;
 }
-
+.footer-main {
+  min-width: 150px;
+  max-width: max-content;
+  padding-right: 20px;
+}
 .footer-icons {
   width: fit-content;
   justify-content: left;

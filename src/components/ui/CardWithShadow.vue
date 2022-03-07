@@ -44,7 +44,7 @@ const imageClass = computed(() => {
     >
       <div class="card-image-top" :class="imageClass">
         <img
-          :src="`../src/assets${imageUrl}`"
+          :src="`@/assets${imageUrl}`"
           style="max-width: 100%"
           class="expanding-image"
         />
@@ -79,6 +79,7 @@ const imageClass = computed(() => {
 .offset-up {
   margin-top: -60px;
   align-items: flex-start;
+  align-self: flex-start;
 }
 
 .offset-down {

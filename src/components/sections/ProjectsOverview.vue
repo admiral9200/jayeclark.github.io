@@ -9,7 +9,7 @@ const categories = ref([
     samples: [
       { name: "Instaplate", img: "/images/instaplate-pic.png" },
       { name: "WhatsApp", img: "/images/whats-app.png" },
-      { name: "Holy Grail", img: "/images/holy-grail.png" },
+      { name: "Holy Grail", img: "/images/holygrail-thumbnail.png" },
     ],
   },
   {
@@ -44,9 +44,8 @@ const categories = ref([
             <div class="card-image-top-left" style="max-width: 350px">
               <img
                 src="@/assets/images/projects.png"
-                style="float: none"
-                width="100%"
-                id="projects-img-1"
+                style="max-width: 100%"
+                class="expanding-image"
               />
             </div>
           </div>
@@ -64,10 +63,7 @@ const categories = ref([
         <div style="width: 100%; max-width: 700px">
           <div style="width: 100%">
             <h3>{{ category.title }}</h3>
-            <p
-              class="project-description"
-              :innerHTML="category.description"
-            ></p>
+            <p :innerHTML="category.description"></p>
           </div>
           <div style="width: 100%">
             <div class="project-links">
@@ -87,7 +83,7 @@ const categories = ref([
                     :title="sample.name"
                     :alt="sample.name.toLowerCase().replace(/\s/g, ``)"
                     class="project-thumbnail"
-                    :src="`../src/assets${sample.img}`"
+                    :src="`@/assets${sample.img}`"
                     style="max-height: 100%"
                   />
                 </RouterLink>

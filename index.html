@@ -11,5 +11,34 @@
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+    <script>
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        const height = window.innerHeight || document.documentElement.clientHeight;
+        return (rect.top < height / 2 && rect.bottom > height / 2)
+      }
+
+      function changeSize(el) {
+        let isGrown = el.classList.contains("grown");
+        if (isGrown === true && isElementInViewport(el) === false) {
+            el.classList.remove("grown");
+            el.classList.add("shrunk");
+            el.style.transform = "scale(1.0)";
+        }
+        else if (isGrown === false && isElementInViewport(el) === true) {
+            el.classList.add("grown");
+            el.classList.remove("shrunk");
+            el.style.transform = "scale(1.10)";
+        }; 
+      }
+
+
+      window.addEventListener("scroll", () => {
+          const imgsToGrow = Array.from(document.getElementsByClassName("expanding-image"));
+          if (imgsToGrow.length > 0)
+          imgsToGrow.forEach(x=>changeSize(x));
+      });
+
+    </script>
   </body>
 </html>

@@ -33,7 +33,7 @@ const imageClass = computed(() => {
   if (offsetUp) {
     return "offset-up";
   }
-  return offsetDown ? "offset-down" : null;
+  return offsetDown ? "offset-down" : "centered";
 });
 </script>
 
@@ -41,7 +41,7 @@ const imageClass = computed(() => {
   <div :class="textLeft ? `order-reversed` : `order-normal`">
     <div :class="imageClass" style="flex-basis: 45%">
       <img
-        :src="`../src/assets/${imageUrl}`"
+        :src="`@/assets/${imageUrl}`"
         style="max-width: 100%"
         class="expanding-image"
       />
@@ -79,12 +79,18 @@ const imageClass = computed(() => {
   align-items: center;
 }
 .offset-up {
-  margin-top: -60px;
+  margin-top: -60p;
+  padding: 0px 20px;
   align-items: flex-start;
 }
 
 .offset-down {
   margin-bottom: -60px;
+  padding: 0px 20px;
   align-items: flex-end;
+}
+.centered {
+  padding: 0px 20px;
+  align-items: center;
 }
 </style>

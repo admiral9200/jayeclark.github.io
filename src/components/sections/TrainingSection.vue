@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { trainingMatrix } from "@/scripts/training.js";
+import { trainingMatrix } from "@/scripts/training";
 interface Milestone {
   date: string;
   weight: number;

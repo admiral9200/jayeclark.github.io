@@ -1,3 +1,20 @@
+interface Milestone {
+  date: string;
+  weight: number;
+  topics: string;
+}
+
+interface MilestoneGroup {
+  name: string;
+  fullname: string;
+  description: string;
+  completed: string;
+  milestones: Array<Milestone>;
+}
+
+type TrainingMatrix = Array<MilestoneGroup>;
+declare module "@/scripts/training.js" {}
+
 const fullStackCert = [
   {
     date: "1/11/22",
@@ -607,7 +624,7 @@ const leetCode = [
   { date: "5/8/22", weight: 1300, topics: "LeetCode Training - Hard" },
 ];
 
-export const trainingMatrix = [
+export const trainingMatrix: TrainingMatrix = [
   {
     name: "fullStackCert",
     fullname: "MIT Full Stack Development Certificate",

@@ -89,7 +89,7 @@ import { RouterLink } from "vue-router";
         </div>
         <div class="card-image-bottom">
           <img
-            src="@/assets/images/hireme.png"
+            src="@/assets/hireme.png"
             style="max-width: 100%"
             id="contact-img-1"
           />

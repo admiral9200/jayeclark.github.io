@@ -6,19 +6,19 @@
     <div class="imageline">
       <div class="logo-container">
         <div class="logo">
-          <img src="@/assets/images/mongodb.png" style="max-width: 100%" />
+          <img src="@/assets/mongodb.png" style="max-width: 100%" />
         </div>
         <div class="logo">
-          <img src="@/assets/images/expressjs.png" style="max-width: 100%" />
+          <img src="@/assets/expressjs.png" style="max-width: 100%" />
         </div>
       </div>
 
       <div class="logo-container">
         <div class="logo">
-          <img src="@/assets/images/react.png" style="max-width: 100%" />
+          <img src="@/assets/react.png" style="max-width: 100%" />
         </div>
         <div class="logo">
-          <img src="@/assets/images/nodejs.png" style="max-width: 100%" />
+          <img src="@/assets/nodejs.png" style="max-width: 100%" />
         </div>
       </div>
     </div>

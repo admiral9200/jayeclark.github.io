@@ -20,7 +20,7 @@ import { RouterLink } from "vue-router";
       >
     </div>
     <div class="landing-photo">
-      <img src="@/assets/images/profile.jpg" style="max-width: 100%" />
+      <img src="@/assets/profile.jpg" style="max-width: 100%" />
     </div>
   </div>
 </template>

@@ -1,38 +1,59 @@
-<script setup lang="ts">
+<script lang="js">
 import { RouterLink } from "vue-router";
-import { ref } from "vue";
-const categories = ref([
-  {
-    title: "Back End",
-    description:
-      "I work primarily in Node.js on the back end, though I've also done some work in Ruby on Rails, Flask, and LAMP.",
-    samples: [
-      { name: "Instaplate", img: "/images/instaplate-pic.png" },
-      { name: "WhatsApp", img: "/images/whats-app.png" },
-      { name: "Holy Grail", img: "/images/holygrail-thumbnail.png" },
-    ],
+export default {
+  RouterLink,
+  data() {
+    return {
+      categories: [
+        {
+          title: "Back End",
+          description:
+            "I work primarily in Node.js on the back end, though I've also done some work in Ruby on Rails, Flask, and LAMP.",
+          samples: [
+            { name: "Instaplate", img: "instaplate-pic.png" },
+            { name: "WhatsApp", img: "whats-app.png" },
+            { name: "Holy Grail", img: "holygrail-thumbnail.png" },
+          ],
+        },
+        {
+          title: "Open Source Software",
+          description:
+            "I've contributed code to more than <b>70 open source software projects</b> including TypeScript, O3DE, React Bootstrap, Material UI, Chatwoot, and MetaMask.",
+          samples: [
+            { name: "RailsDev", img: "railsdev-thumbnail.png" },
+            { name: "Interactivenn", img: "interactivenn-thumbnail.png" },
+            { name: "RottingResearch", img: "rottingresearch-thumbnail.png" },
+          ],
+        },
+        {
+          title: "Front End",
+          description:
+            "I work primarily in React, Vue, and vanilla JS on the front end, I've also done some work with Angular, and advanced customization in Wordpress and Wix.",
+          samples: [
+            { name: "Bad Bank", img: "badbank.png" },
+            { name: "Clones", img: "clones.png" },
+            { name: "Ms Pacman", img: "pacman.png" },
+          ],
+        },
+      ],
+      imageRefs: new Array(0),
+    };
   },
-  {
-    title: "Open Source Software",
-    description:
-      "I've contributed code to more than <b>70 open source software projects</b> including TypeScript, O3DE, React Bootstrap, Material UI, Chatwoot, and MetaMask.",
-    samples: [
-      { name: "RailsDev", img: "/images/railsdev-thumbnail.png" },
-      { name: "Interactivenn", img: "/images/interactivenn-thumbnail.png" },
-      { name: "RottingResearch", img: "/images/rottingresearch-thumbnail.png" },
-    ],
+  mounted() {
+    const parents = this.categories;
+    for (let i = 0; i < parents.length; i++) {
+      const children = this.categories[i].samples;
+        for (let j = 0; j < children.length; j++) {
+          const el = this.$refs[`ref-${i}-${j}`][0];
+          const currentSrc = el.getAttribute("src");
+          if (!/\//.test(currentSrc)) {
+            const newSrc = new URL(`../../assets/${currentSrc}`, import.meta.url);
+            el.src = newSrc;
+          }
+        };
+    }
   },
-  {
-    title: "Front End",
-    description:
-      "I work primarily in React, Vue, and vanilla JS on the front end, I've also done some work with Angular, and advanced customization in Wordpress and Wix.",
-    samples: [
-      { name: "Bad Bank", img: "/images/badbank.png" },
-      { name: "Clones", img: "/images/clones.png" },
-      { name: "Ms Pacman", img: "/images/pacman.png" },
-    ],
-  },
-]);
+};
 </script>
 
 <template>
@@ -43,7 +64,7 @@ const categories = ref([
           <div style="display: block; justify-content: center">
             <div class="card-image-top-left" style="max-width: 350px">
               <img
-                src="@/assets/images/projects.png"
+                src="@/assets/projects.png"
                 style="max-width: 100%"
                 class="expanding-image"
               />
@@ -80,10 +101,11 @@ const categories = ref([
                   }"
                 >
                   <img
+                    :ref="`ref-${index}-${linkindex}`"
                     :title="sample.name"
                     :alt="sample.name.toLowerCase().replace(/\s/g, ``)"
                     class="project-thumbnail"
-                    :src="`@/assets${sample.img}`"
+                    :src="sample.img"
                     style="max-height: 100%"
                   />
                 </RouterLink>

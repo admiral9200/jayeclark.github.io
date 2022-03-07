@@ -12,6 +12,10 @@ export default {
         "I am proficient in this relative to my overall career experience. I can hit the ground running in this language or environment.",
       ]
     }
+  },
+  mounted() {
+    const imgUrl = new URL(`../../../assets/${this.tech.url}`, import.meta.url);
+    this.$refs.image.src = imgUrl;
   }
 }
 </script>
@@ -36,7 +40,7 @@ export default {
         {{ tech.name }}
       </div>
       <img
-        :src="tech.url"
+        ref="image"
         :alt="tech.name"
         :height="tech.dimension && tech.dimension === 'height' ? '100' : ''"
         :width="!tech.dimension || tech.dimension === 'width' ? '100' : ''"

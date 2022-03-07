@@ -24,6 +24,19 @@ export default {
       const sortedProjects = newProjects.sort((a,b) => a.order - b.order);
       return sortedProjects;
     }
+  },
+  mounted() {
+    const images = Array.from(document.getElementsByTagName('img'));
+    console.log(images.length);
+    images.forEach((image) => {
+      console.log(image);
+      if (image.classList.contains('unprocessed') && image.classList.contains('projectsView-img')) {
+        const currentSrc = image.getAttribute("src");
+        const newSrc = new URL(`../assets/${currentSrc}`, import.meta.url);
+        image.src = newSrc;
+        image.classList.remove('unprocessed');
+      }
+    })
   }
 }
 </script>
@@ -46,7 +59,7 @@ export default {
               <div style="display: block; justify-content: center">
                 <div class="card-image-top-left">
                   <img
-                    src="@/assets/images/projects.png"
+                    src="@/assets/projects.png"
                     style="float: none; max-width: 100%"
                     class="expanding-image"
                   />
@@ -68,9 +81,10 @@ export default {
                 ></p>
                 <div class="project-description-container-detail">
                   <img
-                    :src="`../src/assets${project.thumbnail}`"
+                    :src="`${project.thumbnail}`"
                     height="70"
                     style="border: 1px solid #ccc"
+                    class="unprocessed projectsView-img"
                   />
                   <div>
                     <div
@@ -89,7 +103,8 @@ export default {
                         <img
                           width="16"
                           style="margin: 5px"
-                          :src="`../src/assets${icon}`"
+                          :src="`${icon}`"
+                          class="unprocessed projectsView-img"
                         />
                       </template>
                       <span

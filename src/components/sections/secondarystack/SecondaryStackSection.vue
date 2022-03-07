@@ -123,7 +123,7 @@ export default {
         :style="{ width: `${arrowWidth}px`, height: `${ribbonHeight}px` }"
         @click="scroll('left')"
       >
-        <img src="@/assets/images/chevron-left.svg" />
+        <img src="@/assets/chevron-left.svg" />
       </div>
       <div
         class="cards-container"
@@ -189,7 +189,7 @@ export default {
         :style="{ width: `${arrowWidth}px`, height: `${ribbonHeight}px` }"
         @click="scroll('right')"
       >
-        <img src="@/assets/images/chevron-right.svg" />
+        <img src="@/assets/chevron-right.svg" />
       </div>
     </div>
   </div>

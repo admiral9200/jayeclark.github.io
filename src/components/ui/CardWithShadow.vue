@@ -1,39 +1,24 @@
-<script setup lang="ts">
-import { computed } from "vue";
-
-interface Button {
-  text: string;
-  url: string;
-  classList: string;
-}
-interface Props {
-  title: string;
-  subtitle?: string;
-  paragraphs: Array<string>;
-  buttons: Array<Button>;
-  imageUrl: string;
-  textLeft: boolean;
-  offsetUp?: boolean;
-  offsetDown?: boolean;
-}
-
-// eslint-disable-next-line vue/no-setup-props-destructure
-const {
-  title,
-  paragraphs,
-  buttons,
-  imageUrl,
-  textLeft,
-  offsetUp = false,
-  offsetDown = false,
-} = defineProps<Props>();
-
-const imageClass = computed(() => {
-  if (offsetUp) {
-    return "offset-up";
+<script lang="js">
+export default {
+  name: "CardWithShadow",
+  props: ['title', 'paragraphs', 'buttons', 'imageUrl', 'textLeft', 'offsetUp', 'offsetDown' ],
+  computed: {
+    imageClass() {
+      if (this.offsetUp) {
+        return "offset-up";
+      }
+    return this.offsetDown ? "offset-down" : null;
+    }
+  },
+  mounted() {
+    const images = Array.from(document.getElementsByClassName("cardWithShadow-img"));
+    images.forEach((image) => {
+      const currentSrc = image.getAttribute("src");
+      const newSrc = new URL(`../../assets/${currentSrc}`, import.meta.url);
+      image.src = newSrc;
+    })
   }
-  return offsetDown ? "offset-down" : null;
-});
+};
 </script>
 
 <template>
@@ -44,9 +29,9 @@ const imageClass = computed(() => {
     >
       <div class="card-image-top" :class="imageClass">
         <img
-          :src="`@/assets${imageUrl}`"
+          class="cardWithShadow-img expanding-image"
+          :src="imageUrl"
           style="max-width: 100%"
-          class="expanding-image"
         />
       </div>
       <div class="card-content offset-large">

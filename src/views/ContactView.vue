@@ -157,7 +157,7 @@ export default {
 
       <!-- PHOTO -->
       <div class="contact-photo">
-        <img src="@/assets/images/hireme.png" style="max-width: 100%" />
+        <img src="@/assets/hireme.png" style="max-width: 100%" />
       </div>
     </div>
   </div>

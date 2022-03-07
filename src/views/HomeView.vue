@@ -42,7 +42,7 @@ import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
             classList: `btn btn-default`,
           },
         ]"
-        :imageUrl="`/images/person.png`"
+        :imageUrl="`person.png`"
         :textLeft="true"
         :offsetUp="true"
       />
@@ -71,7 +71,7 @@ import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
           },
         ]"
         :textLeft="false"
-        :image-url="`/images/github.png`"
+        :imageUrl="`github-hero.png`"
       />
     </div>
     <div style="margin-bottom: 120px; height: max-content">
@@ -92,7 +92,7 @@ import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
           },
         ]"
         :textLeft="true"
-        :image-url="`/images/codewars.png`"
+        :imageUrl="`codewars.png`"
       />
     </div>
 
@@ -118,7 +118,7 @@ import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
         </div>
         <div class="card-image-bottom">
           <img
-            src="@/assets/images/hireme.png"
+            src="@/assets/hireme.png"
             style="max-width: 100%"
             class="expanding-image"
           />

@@ -1,49 +1,31 @@
-<script setup lang="ts">
-import { computed } from "vue";
-
-interface Button {
-  text: string;
-  url: string;
-  classList: string;
-}
-interface Props {
-  title: string;
-  subtitle?: string;
-  paragraphs: Array<string>;
-  buttons: Array<Button>;
-  imageUrl: string;
-  textLeft: boolean;
-  offsetUp?: boolean;
-  offsetDown?: boolean;
-}
-
-// eslint-disable-next-line vue/no-setup-props-destructure
-const {
-  title,
-  subtitle,
-  paragraphs,
-  buttons,
-  imageUrl,
-  textLeft,
-  offsetUp = false,
-  offsetDown = false,
-} = defineProps<Props>();
-
-const imageClass = computed(() => {
-  if (offsetUp) {
+<script lang="js">
+export default {
+  props: ['title','subtitle','paragraphs','buttons','imageUrl', 'textLeft','offsetUp','offsetDown'],
+  computed: {
+    imageClass() {
+        if (this.offsetUp) {
     return "offset-up";
   }
-  return offsetDown ? "offset-down" : "centered";
-});
+  return this.offsetDown ? "offset-down" : "centered";
+    }
+  },
+  mounted() {
+    const image = this.$refs.image;
+    const currentSrc = image.getAttribute("src");
+    const newSrc = new URL(`../../assets/${currentSrc}`, import.meta.url);
+    image.src = newSrc;
+  },
+};
 </script>
 
 <template>
   <div :class="textLeft ? `order-reversed` : `order-normal`">
     <div :class="imageClass" style="flex-basis: 45%">
       <img
-        :src="`@/assets/${imageUrl}`"
+        :src="imageUrl"
+        ref="image"
         style="max-width: 100%"
-        class="expanding-image"
+        class="transparentStrip-img expanding-image"
       />
     </div>
     <div style="flex-basis: 65%">

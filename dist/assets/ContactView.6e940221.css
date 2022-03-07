@@ -1,0 +1,1 @@
+main{margin:0 9%}.contact-wrapper{width:100%;padding:0 9%}.contact-card{display:flex;flex-direction:row-reverse;justify-content:center;flex-wrap:nowrap}.contact-photo,.contact-content{margin:0 16px}.contact-photo{max-width:400px;display:flex;align-items:center}#contact-form{max-width:400px}@media only screen and (max-width: 796px){.contact-card{flex-wrap:wrap}}

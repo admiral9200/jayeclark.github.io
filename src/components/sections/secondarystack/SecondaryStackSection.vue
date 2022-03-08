@@ -20,7 +20,6 @@ export default {
     },
     computed: {
         adjustedWidth() {
-            console.log(this.cardsToDisplay);
             const availableWidth = window.innerWidth * 0.82 - this.arrowWidth * 2;
             const cardsToDisplay = Math.floor(availableWidth / this.cardWidth);
             return Math.floor(availableWidth / (cardsToDisplay * 10)) * 10;

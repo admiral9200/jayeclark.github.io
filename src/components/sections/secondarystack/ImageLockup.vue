@@ -14,10 +14,7 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$refs);
     const el = this.$refs[`${this.refToSet}`];
-    console.log(el);
-    console.log(this.image);
     if (el.classList.contains('unprocessed')) {
       const imgUrl = new URL(`../../../assets/${this.image}`, import.meta.url);
       el.src = imgUrl;
@@ -25,9 +22,7 @@ export default {
     }
   },
   updated() {
-    console.log(this.$refs);
     const el = this.$refs[`${this.refToSet}`];
-    console.log(el);
     const imgUrl = new URL(`../../../assets/${this.image}`, import.meta.url);
     el.src = imgUrl;
   }

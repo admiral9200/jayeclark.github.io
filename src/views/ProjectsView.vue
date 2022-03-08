@@ -27,9 +27,7 @@ export default {
   },
   mounted() {
     const images = Array.from(document.getElementsByTagName('img'));
-    console.log(images.length);
     images.forEach((image) => {
-      console.log(image);
       if (image.classList.contains('unprocessed') && image.classList.contains('projectsView-img')) {
         const currentSrc = image.getAttribute("src");
         const newSrc = new URL(`../assets/${currentSrc}`, import.meta.url);

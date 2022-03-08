@@ -136,4 +136,16 @@ const {
 .footer-icon:hover {
   opacity: 0.7;
 }
+
+@media only screen and (max-width: 576px) {
+  .footer-main {
+    display: none;
+  }
+  .footer-icons dl {
+    display: flex;
+  }
+  .footer-icons dt {
+    margin-left: 10px;
+  }
+}
 </style>

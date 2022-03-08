@@ -138,7 +138,13 @@ main {
   margin: 0px 9%;
 }
 
-@media only screen and (max-width: 1000) {
+@media only screen and (max-width: 576px) {
+  .card-image-bottom {
+    transform: translate(0px, 0px) !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
   .open-source-projects > .card-white {
     flex-wrap: wrap;
   }

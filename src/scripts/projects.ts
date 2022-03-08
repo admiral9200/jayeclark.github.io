@@ -72,7 +72,7 @@ export const projects: Array<Category> = [
     projects: [
       {
         name: "RailsDev",
-        thumbnail: "railsdev-thumbnail.png",
+        thumbnail: "railsdevs-thumbnail.png",
         url: "https://github.com/pulls?q=is%3Apr+author%3Ajayeclark+repo%3A%22joemasilotti%2Frailsdevs.com%22+is%3Amerged+",
         github: "https://github.com/joemasilotti/railsdevs.com",
         description:
@@ -119,7 +119,7 @@ export const projects: Array<Category> = [
         name: "Bad Bank",
         url: "https://jayeclark.github.io/banking/",
         github: "https://github.com/jayeclark/banking",
-        thumbnail: "badbank.png",
+        thumbnail: "badbank-thumbnail.png",
         description:
           "This front end project allows users to create accounts, deposit and withdraw funds, view recent transactions... and also view all user account info and passwords! Data is stored locally and resets with each reload.",
         icons: ["display.svg"],
@@ -131,7 +131,7 @@ export const projects: Array<Category> = [
         name: "Clones",
         url: "https://jayeclark.github.io/front-end/",
         github: "https://github.com/jayeclark/front-end",
-        thumbnail: "clones.png",
+        thumbnail: "clones-thumbnail.png",
         description:
           "lones of various commercial websites' desktop apps, with a toggler function to load different sites into the app. Built with React. <i>Note - does not work on mobile.</i>",
         icons: ["display.svg"],
@@ -143,7 +143,7 @@ export const projects: Array<Category> = [
         name: "Ms. Pacman",
         url: "https://jayeclark.github.io/mspacman/",
         github: "https://github.com/jayeclark/mspacman",
-        thumbnail: "pacman.png",
+        thumbnail: "pacman-thumbnail.png",
         description:
           "A desktop browser game built with vanilla JS. Ms. Pac-Man eats dots and runs from Inky, Blinky, Pinky & Clyde while racking up points on the scoreboard. Surprisingly difficult to beat!",
         icons: ["display.svg"],

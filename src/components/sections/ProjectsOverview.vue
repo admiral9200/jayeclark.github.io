@@ -20,7 +20,7 @@ export default {
           description:
             "I've contributed code to more than <b>70 open source software projects</b> including TypeScript, O3DE, React Bootstrap, Material UI, Chatwoot, and MetaMask.",
           samples: [
-            { name: "RailsDev", img: "railsdev-thumbnail.png" },
+            { name: "RailsDevs", img: "railsdevs-thumbnail.png" },
             { name: "Interactivenn", img: "interactivenn-thumbnail.png" },
             { name: "RottingResearch", img: "rottingresearch-thumbnail.png" },
           ],
@@ -30,9 +30,9 @@ export default {
           description:
             "I work primarily in React, Vue, and vanilla JS on the front end, I've also done some work with Angular, and advanced customization in Wordpress and Wix.",
           samples: [
-            { name: "Bad Bank", img: "badbank.png" },
-            { name: "Clones", img: "clones.png" },
-            { name: "Ms Pacman", img: "pacman.png" },
+            { name: "Bad Bank", img: "badbank-thumbnail.png" },
+            { name: "Clones", img: "clones-thumbnail.png" },
+            { name: "Ms Pacman", img: "pacman-thumbnail.png" },
           ],
         },
       ],
@@ -99,6 +99,10 @@ export default {
                       section: category.title.toLowerCase().replace(/\s/g, ``),
                     },
                   }"
+                  :class="{
+                    'final-project': category.samples.length % 2 > 0 &&
+                      linkindex === category.samples.length - 1,
+                  }"
                 >
                   <img
                     :ref="`ref-${index}-${linkindex}`"
@@ -119,9 +123,7 @@ export default {
                 }"
                 class="view-projects-btn"
               >
-                <div
-                  class="btn btn-primary view-projects-btn"
-                >
+                <div class="btn btn-primary view-projects-btn">
                   View Projects
                 </div>
               </RouterLink>
@@ -169,11 +171,16 @@ export default {
     flex-wrap: wrap;
   }
   .project-thumbnail {
-    height: 90px;
+    height: 100px;
   }
   .view-projects-btn {
     width: 100%;
     flex-grow: 1;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .final-project {
+    display: none;
   }
 }
 </style>

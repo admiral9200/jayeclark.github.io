@@ -54,11 +54,13 @@ export default {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  flex-wrap: nowrap;
 }
 .order-normal {
   display: flex;
   flex-direction: row;
   align-items: center;
+  flex-wrap: nowrap;
 }
 .offset-up {
   margin-top: -60p;
@@ -74,5 +76,22 @@ export default {
 .centered {
   padding: 0px 20px;
   align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  .order-reversed,
+  .order-normal {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .order-reversed > div,
+  .order-normal > div {
+    flex-grow: 1;
+  }
+  .offset-down,
+  .offset-up,
+  .centered {
+    max-width: 320px;
+    margin: 0px auto;
+  }
 }
 </style>

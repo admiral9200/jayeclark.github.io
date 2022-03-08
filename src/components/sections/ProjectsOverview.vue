@@ -10,8 +10,8 @@ export default {
           description:
             "I work primarily in Node.js on the back end, though I've also done some work in Ruby on Rails, Flask, and LAMP.",
           samples: [
-            { name: "Instaplate", img: "instaplate-pic.png" },
-            { name: "WhatsApp", img: "whats-app.png" },
+            { name: "Instaplate", img: "instaplate-thumbnail.png" },
+            { name: "WhatsApp", img: "whatsapp-thumbnail.png" },
             { name: "Holy Grail", img: "holygrail-thumbnail.png" },
           ],
         },
@@ -117,8 +117,11 @@ export default {
                     section: category.title.toLowerCase().replace(/\s/g, ``),
                   },
                 }"
+                class="view-projects-btn"
               >
-                <div class="btn btn-primary" style="width: 100%">
+                <div
+                  class="btn btn-primary view-projects-btn"
+                >
                   View Projects
                 </div>
               </RouterLink>
@@ -160,5 +163,17 @@ export default {
 }
 .projects-cta {
   width: 100%;
+}
+@media only screen and (max-width: 796px) {
+  .project-links {
+    flex-wrap: wrap;
+  }
+  .project-thumbnail {
+    height: 90px;
+  }
+  .view-projects-btn {
+    width: 100%;
+    flex-grow: 1;
+  }
 }
 </style>

@@ -27,7 +27,7 @@ export const projects: Array<Category> = [
     projects: [
       {
         name: "Instaplate",
-        thumbnail: "instaplate-pic.png",
+        thumbnail: "instaplate-thumbnail.png",
         url: "http://instaplate.herokuapp.com",
         github: "https://github.com/jayeclark/instaplate-backend",
         description:
@@ -39,7 +39,7 @@ export const projects: Array<Category> = [
       },
       {
         name: "WhatsApp",
-        thumbnail: "whats-app.png",
+        thumbnail: "whatsapp-thumbnail.png",
         url: "https://jayeclark.github.io/whatsapp/",
         github: "https://github.com/jayeclark/whatsapp/",
         description:

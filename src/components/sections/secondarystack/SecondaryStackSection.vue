@@ -1,6 +1,5 @@
 <script lang="js">
 import { stack } from "@/scripts/technologies";
-import { nextTick } from "vue";
 import ImageLockup from "./ImageLockup.vue";
 export default {
     name: "SecondaryStackSection",
@@ -108,12 +107,6 @@ export default {
                   this.$refs.after.style.opacity = '1';
                 }, 50);
             }, 800);
-            // Reset positions
-            //setTimeout(() => {
-            //  this.$refs.before.style.left = `${-1 * this.adjustedWidth * this.cardsToDisplay}px`;
-            //  this.$refs.current.style.left = "0px";
-            //  this.$refs.after.style.left = `${this.adjustedWidth * this.cardsToDisplay}px`
-            //}, 810)
         },
     },
     components: { ImageLockup }

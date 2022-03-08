@@ -34,7 +34,7 @@ export const projects: Array<Category> = [
           "This full stack project envisions what it would look like if Instacart started offering restaurant delivery a la Ubereats or Doordash. It has a Next.js front end, a Strapi api layer, and a MongoDB back end data store. An overview deck for the project is <a href='https://docs.google.com/presentation/d/1HaBLvaFerOTsETtlinI3tMJwsH72gzbk/edit?usp=sharing&ouid=104625467728173129269&rtpof=true&sd=true' target='_blank' rel='noreferrer'>available here</a>.",
         icons: [],
         subtitle:
-          "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;React, Strapi, MongoDB",
+          "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;React, Next, Strapi, MongoDB",
         feature: true,
       },
       {
@@ -133,7 +133,7 @@ export const projects: Array<Category> = [
         github: "https://github.com/jayeclark/front-end",
         thumbnail: "clones-thumbnail.png",
         description:
-          "lones of various commercial websites' desktop apps, with a toggler function to load different sites into the app. Built with React. <i>Note - does not work on mobile.</i>",
+          "lones of various commercial websites' desktop apps, with a toggler function to load different sites into the app. Built with React. <i>Note: Desktop only (not responsive.)</i>",
         icons: ["display.svg"],
         subtitle:
           "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;React",

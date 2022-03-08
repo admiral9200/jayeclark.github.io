@@ -59,7 +59,7 @@ export default {
 <template>
   <div class="projects-overview card-grey" style="margin-bottom: 80px">
     <div class="card-white">
-      <div style="width: 100%; display: flex; align-items: flex-end">
+      <div class="card-top">
         <div class="offset-small card-content">
           <div style="display: block; justify-content: center">
             <div class="card-image-top-left" style="max-width: 350px">
@@ -135,6 +135,11 @@ export default {
   </div>
 </template>
 <style>
+.card-top {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
 .hidden {
   display: none;
 }
@@ -181,6 +186,17 @@ export default {
 @media only screen and (max-width: 576px) {
   .final-project {
     display: none;
+  }
+  .card-top {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card-image-top-left {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .card-top h1 {
+    text-align: center;
   }
 }
 </style>

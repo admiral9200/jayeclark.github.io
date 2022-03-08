@@ -134,6 +134,7 @@ const cardsToDisplay = computed(() =>
 
 <style>
 main {
+  width: 82vw;
   margin: 0px 9%;
 }
 

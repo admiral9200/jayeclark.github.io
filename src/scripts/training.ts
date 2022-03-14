@@ -143,26 +143,6 @@ const dataScienceCert = [
     weight: 12,
     topics: "Linear Regression - Final Course Assessment",
   },
-  {
-    date: "3/9/22",
-    weight: 72,
-    topics: "Wrangling - Importing data into R, web scraping, tidyverse",
-  },
-  {
-    date: "3/10/22",
-    weight: 48,
-    topics: "Wrangling - String Processing, dplyr",
-  },
-  {
-    date: "3/11/22",
-    weight: 48,
-    topics: "Wrangling - Dates & Times, text mining",
-  },
-  {
-    date: "3/12/22",
-    weight: 12,
-    topics: "Wrangling - Final Course Assessment",
-  },
   { date: "3/13/22", weight: 12, topics: "Machine Learning - Basics" },
   {
     date: "3/14/22",
@@ -176,14 +156,35 @@ const dataScienceCert = [
   },
   { date: "3/16/22", weight: 12, topics: "Machine Learning - Regularization" },
   {
-    date: "3/17/22",
+    date: "3/16/22",
     weight: 12,
     topics: "Machine Learning - Final Course Assessment",
   },
-  { date: "3/24/22", weight: 24, topics: "Capstone Day 1" },
-  { date: "3/25/22", weight: 24, topics: "Capstone Day 2" },
-  { date: "3/26/22", weight: 24, topics: "Capstone Day 3" },
-  { date: "3/27/22", weight: 24, topics: "Capstone Day 4" },
+  {
+    date: "3/30/22",
+    weight: 72,
+    topics: "Wrangling - Importing data into R, web scraping, tidyverse",
+  },
+  {
+    date: "3/31/22",
+    weight: 48,
+    topics: "Wrangling - String Processing, dplyr",
+  },
+  {
+    date: "4/1/22",
+    weight: 48,
+    topics: "Wrangling - Dates & Times, text mining",
+  },
+  {
+    date: "4/2/22",
+    weight: 12,
+    topics: "Wrangling - Final Course Assessment",
+  },
+
+  { date: "4/3/22", weight: 24, topics: "Capstone Day 1" },
+  { date: "4/4/22", weight: 24, topics: "Capstone Day 2" },
+  { date: "4/5/22", weight: 24, topics: "Capstone Day 3" },
+  { date: "4/5/22", weight: 24, topics: "Capstone Day 4" },
 ];
 
 const machineLearningCert = [

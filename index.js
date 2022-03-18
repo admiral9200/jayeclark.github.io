@@ -12,55 +12,60 @@ footer();
 
 // Tech Stack
 const stack = [
-  { name: "Android SDK", url: "./images/tech/android.png", dimension:"height", competence: 1 },
-  { name: "Angular", url: "./images/tech/angular.png", competence: 1 },
-  { name: "AWS", url: "./images/tech/aws.png", competence: 1 },
-  { name: "Azure", url: "./images/tech/azure.png", competence: 1 },
-  { name: "Bootstrap", url: "./images/tech/bootstrap.png", dimension: "height", competence: 1 },
-  { name: "C", url: "./images/tech/c.png", dimension: "height", competence: 1 },
-  { name: "C++", url: "./images/tech/cplusplus.png", dimension: "height", competence: 1 },
-  { name: "C#", url: "./images/tech/csharp.png", competence: 1 },
-  { name: "Chrome Extensions", url: "./images/tech/chromeextension.png", competence: 1 },
-  { name: "Cypress", url: "./images/tech/cypress.png", competence: 1 },
-  { name: "D3", url: "./images/tech/d3.png", competence: 1 },
-  { name: "Dart", url: "./images/tech/dart.png", competence: 1 },
-  { name: "Deluge", url: "./images/tech/deluge.jpeg", competence: 1 },
-  { name: "Django", url: "./images/tech/django.png", competence: 1 },
-  { name: "Docker", url: "./images/tech/docker.png", competence: 1 },
-  { name: "Electron", url: "./images/tech/electron.png", competence: 1 },
-  { name: "EJS", url: "./images/tech/ejs.png", competence: 1 },
-  { name: "Firebase", url: "./images/tech/firebase.png", competence: 1 },
-  { name: "Flask", url: "./images/tech/flask.png", competence: 1 },
-  { name: "Gatsby", url: "./images/tech/gatsby.png", competence: 1 },
-  { name: "Git", url: "./images/tech/git.png", competence: 3 },
-  { name: "Go", url: "./images/tech/go.png", competence: 1 },
-  { name: "Gradle", url: "./images/tech/gradle.png", competence: 1 },
-  { name: "Java", url: "./images/tech/java.png", competence: 1 },
-  { name: "JavaScript", url: "./images/tech/javascript.png", competence: 4 },
-  { name: "Jekyll", url: "./images/tech/jekyll.png", competence: 1 },
-  { name: "Jest", url: "./images/tech/jest.png", competence: 3 },
-  { name: "Jinja", url: "./images/tech/jinja.png", competence: 1 },
-  { name: "Heroku", url: "./images/tech/heroku.png", competence: 1 },
-  { name: "Laravel", url: "./images/tech/laravel.png", competence: 1 },
-  { name: "MySQL", url: "./images/tech/mysql.png", competence: 1 },
-  { name: "PHP", url: "./images/tech/php.png", competence: 1 },
-  { name: "Postgres", url: "./images/tech/postgresql.png", competence: 1 },
-  { name: "Puppeteer", url: "./images/tech/puppeteer.png", competence: 1 },
-  { name: "Python", url: "./images/tech/python.png", competence: 1 },
-  { name: "QT", url: "./images/tech/qt.png", competence: 1 },
-  { name: "Ruby", url: "./images/tech/ruby.png", competence: 2 },
-  { name: "Ruby on Rails", url: "./images/tech/rails.png", competence: 2 },
-  { name: "SASS", url: "./images/tech/sass.png", competence: 1 },
-  { name: "Strapi", url: "./images/tech/strapi.png", competence: 1 },
-  { name: "Tailwind", url: "./images/tech/tailwindcss.svg", competence: 1 },
-  { name: "TravisCI", url: "./images/tech/travisci.png", competence: 1 },
-  { name: "Typescript", url: "./images/tech/typescript.png", competence: 1 },
-  { name: "Unity", url: "./images/tech/unity.png", dimenson: "height", competence: 1 },
-  { name: "Vue", url: "./images/tech/vuejs.svg", competence: 1 },
-  { name: "Wix", url: "./images/tech/wix.png", competence: 1 },
-  { name: "Wordpress", url: "./images/tech/wordpress.png", competence: 1 },
-  { name: "XCode", url: "./images/tech/xcode.png", competence: 1 },
-  { name: "Yeoman", url: "./images/tech/yeoman.png", competence: 1 },
+  { name: "Android SDK", url: "android.png", dimension:"height", competence: 1 },
+  { name: "Angular", url: "angular.png", competence: 1 },
+  { name: "AWS", url: "aws.png", competence: 1 },
+  { name: "Azure", url: "azure.png", competence: 1 },
+  {
+    name: "Bootstrap",
+    url: "bootstrap.png",
+    dimension: "height",
+    competence: 1,
+  },
+  { name: "C", url: "c.png", dimension: "height", competence: 1 },
+  { name: "C++", url: "cplusplus.png", dimension: "height", competence: 1 },
+  { name: "C#", url: "csharp.png", competence: 1 },
+  { name: "Chrome Extensions", url: "chromeextension.png", competence: 1 },
+  { name: "Cypress", url: "cypress.png", competence: 1 },
+  { name: "D3", url: "d3.png", competence: 1 },
+  { name: "Dart", url: "dart.png", competence: 1 },
+  { name: "Deluge", url: "deluge.jpeg", competence: 1 },
+  { name: "Django", url: "django.png", competence: 1 },
+  { name: "Docker", url: "docker.png", competence: 1 },
+  { name: "Electron", url: "electron.png", competence: 1 },
+  { name: "EJS", url: "ejs.png", competence: 1 },
+  { name: "Firebase", url: "firebase.png", competence: 1 },
+  { name: "Flask", url: "flask.png", competence: 1 },
+  { name: "Gatsby", url: "gatsby.png", competence: 1 },
+  { name: "Git", url: "git.png", competence: 3 },
+  { name: "Go", url: "go.png", competence: 1 },
+  { name: "Gradle", url: "gradle.png", competence: 1 },
+  { name: "Java", url: "java.png", competence: 1 },
+  { name: "JavaScript", url: "javascript.png", competence: 4 },
+  { name: "Jekyll", url: "jekyll.png", competence: 1 },
+  { name: "Jest", url: "jest.png", competence: 3 },
+  { name: "Jinja", url: "jinja.png", competence: 1 },
+  { name: "Heroku", url: "heroku.png", competence: 1 },
+  { name: "Laravel", url: "laravel.png", competence: 1 },
+  { name: "MySQL", url: "mysql.png", competence: 1 },
+  { name: "PHP", url: "php.png", competence: 1 },
+  { name: "Postgres", url: "postgresql.png", competence: 1 },
+  { name: "Puppeteer", url: "puppeteer.png", competence: 1 },
+  { name: "Python", url: "python.png", competence: 1 },
+  { name: "QT", url: "qt.png", competence: 1 },
+  { name: "Ruby", url: "ruby.png", competence: 2 },
+  { name: "Ruby on Rails", url: "rails.png", competence: 2 },
+  { name: "SASS", url: "sass.png", competence: 1 },
+  { name: "Strapi", url: "strapi.png", competence: 1 },
+  { name: "Tailwind", url: "tailwindcss.svg", competence: 1 },
+  { name: "TravisCI", url: "travisci.png", competence: 1 },
+  { name: "Typescript", url: "typescript.png", competence: 1 },
+  { name: "Unity", url: "unity.png", dimenson: "height", competence: 1 },
+  { name: "Vue", url: "vuejs.svg", competence: 1 },
+  { name: "Wix", url: "wix.png", competence: 1 },
+  { name: "Wordpress", url: "wordpress.png", competence: 1 },
+  { name: "XCode", url: "xcode.png", competence: 1 },
+  { name: "Yeoman", url: "yeoman.png", competence: 1 },
 ]
 
 // Set display consts
@@ -220,7 +225,7 @@ function Ribbon(cards) {
 
   })
   const arrowImgL = document.createElement('img');
-  arrowImgL.src = "./images/chevron-left.svg";
+  arrowImgL.src = "@/assets/chevron-left.svg";
   arrowLeft.appendChild(arrowImgL);
   ribbonDiv.appendChild(arrowLeft)
 
@@ -255,7 +260,7 @@ function Ribbon(cards) {
   arrowRight.style.justifyContent = "center";
   arrowRight.style.alignItems = "center";
   const arrowImgR = document.createElement('img');
-  arrowImgR.src = "./images/chevron-right.svg";
+  arrowImgR.src = "@assets/chevron-right.svg";
   arrowRight.appendChild(arrowImgR);
   arrowRight.addEventListener("click", () => {
 

@@ -74,7 +74,7 @@ export const stack: Array<Technology> = [
   {
     name: "Firebase",
     url: "firebase.png",
-    competence: 1,
+    competence: 2,
   },
   { name: "Flask", url: "flask.png", competence: 2 },
   {

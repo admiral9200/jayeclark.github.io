@@ -89,12 +89,12 @@ const cs50 = [
   },
   { date: "3/8/22", weight: 6, topics: "Lab 10" },
   { date: "3/9/22", weight: 12, topics: "Problem Set 10" },
-  { date: "3/10/22", weight: 12, topics: "Final Project Day 1" },
-  { date: "3/11/22", weight: 12, topics: "Final Project Day 2" },
-  { date: "3/14/22", weight: 12, topics: "Final Project Day 3" },
-  { date: "3/15/22", weight: 12, topics: "Final Project Day 4" },
-  { date: "3/21/22", weight: 12, topics: "Final Project Day 5" },
-  { date: "3/22/22", weight: 12, topics: "Final Project Day 6" },
+  { date: "3/28/22", weight: 1, topics: "Final Project - GitHub Issues App" },
+  { date: "4/11/22", weight: 23, topics: "Final Project - GitHub Issues App" },
+  { date: "5/4/22", weight: 12, topics: "Final Project - GitHub Issues App" },
+  { date: "5/5/22", weight: 12, topics: "Final Project - GitHub Issues App" },
+  { date: "5/21/22", weight: 12, topics: "Final Project - GitHub Issues App" },
+  { date: "5/22/22", weight: 12, topics: "Final Project - GitHub Issues App" },
 ];
 
 const dataScienceCert = [
@@ -464,144 +464,144 @@ const machineLearningCert = [
 ];
 
 const openSource = [
-  { date: "1/15/22", weight: 5, topics: "Algorithms" },
+  { date: "1/15/22", weight: 400, topics: "Algorithms" },
   {
-    date: "3/15/22",
+    date: "4/1/22",
     weight: 60,
     topics: "Algorithms - Fundamentals, Sorting, Searching",
   },
   {
-    date: "3/16/22",
+    date: "4/2/22",
     weight: 60,
     topics: "Algorithms - Graphs, Strings, Context",
   },
   {
-    date: "3/17/22",
+    date: "4/3/22",
     weight: 40,
     topics:
       "Computer Programs - Functions, Names, Control, Higher-Order Functions, Environments, Iteration, Design, Function Examples",
   },
   {
-    date: "3/18/22",
+    date: "4/4/22",
     weight: 40,
     topics:
       "Computer Programs - Recursion, Tree Recursion, Containers, Data Abstraction, Trees, Mutable Values, Mutable Functions, Iterators",
   },
   {
-    date: "3/19/22",
+    date: "4/5/22",
     weight: 55,
     topics:
       "Computer Programs - Objects, Inheritance, Representation, Composition, Efficiency, Decomposition, Data Examples, Users, Scheme, Exceptions, Calculator",
   },
   {
-    date: "3/20/22",
+    date: "4/6/22",
     weight: 45,
     topics:
       "Computer Programs - Interpreters, Declarative Programming, Tables, Aggregation, Databases, Distributed Data, Natural Language, Tail Calls, Macros",
   },
   {
-    date: "3/22/22",
-    weight: 0,
+    date: "4/7/22",
+    weight: 40,
     topics:
       "Data Structures - Classes, Testing, References, Recursion, Lists, SLLists, Nested Classes, Sentinel Nodes",
   },
   {
-    date: "3/23/22",
-    weight: 0,
+    date: "4/8/22",
+    weight: 40,
     topics:
       "Data Structures - DLLists, Arrays, ALists, Inheritance, Extends, Casting, Subtype Polymorphism vs HoFs",
   },
   {
-    date: "3/24/22",
-    weight: 0,
+    date: "4/9/22",
+    weight: 40,
     topics:
       "Data Structures - Exceptions, Iterators, Object Methods, Command LIne Programming",
   },
   {
-    date: "3/25/22",
-    weight: 0,
+    date: "4/10/22",
+    weight: 40,
     topics:
       "Data Structures - Asymptotics, Disjoint Sets, ADTs, Sets, Maps, BSTs",
   },
   {
-    date: "3/26/22",
-    weight: 0,
+    date: "4/11/22",
+    weight: 40,
     topics:
       "Data Structures - B-Trees, Red Black Trees, Hashing, Heaps & PQs, Tree and Graph Traversals",
   },
   {
-    date: "3/27/22",
-    weight: 0,
+    date: "4/12/22",
+    weight: 40,
     topics:
       "Data Str/uctures - Shortest Paths, Minimum Spanning Trees, Range Searching and Multidimensional Data",
   },
   {
-    date: "3/29/22",
-    weight: 0,
+    date: "4/13/22",
+    weight: 40,
     topics:
       "Data Structures - Prefix Operations & Tries, Reductions  Decomposition, Basic Sorts, Quick Sort",
   },
   {
-    date: "3/30/22",
-    weight: 0,
+    date: "4/14/22",
+    weight: 40,
     topics: "Data Structures - Sorting & Algorithmic Bounds, Radix Sorts",
   },
   {
-    date: "3/31/22",
-    weight: 0,
+    date: "4/15/22",
+    weight: 40,
     topics: "Data Structures - Compression, Complexity, P = NP?",
   },
   {
-    date: "4/1/22",
-    weight: 0,
+    date: "4/16/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Number representation, C Intro, Memory Management, Floating Point, RISC-V intro",
   },
   {
-    date: "4/2/22",
-    weight: 0,
+    date: "4/17/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - RISC-V lw, sw, Decisions, Procedure, Instruction Formats",
   },
   {
-    date: "4/3/22",
-    weight: 0,
+    date: "4/18/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Syncronous Digital Systems, State machines, Combinational Logic",
   },
   {
-    date: "4/5/22",
-    weight: 0,
+    date: "4/19/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Single-cycle CPU Datapath, Conrol, Pipelining, Caches",
   },
   {
-    date: "4/6/22",
-    weight: 0,
+    date: "4/20/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Virtual Memory, Flynn Taxonomy, SIMD ",
   },
   {
-    date: "4/7/22",
-    weight: 0,
+    date: "4/21/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Thread-Level & Data-Level Parallelism",
   },
   {
-    date: "4/8/22",
-    weight: 0,
+    date: "4/22/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - MapReduce, Spark, Data Centers",
   },
   {
-    date: "4/9/22",
-    weight: 0,
+    date: "4/23/22",
+    weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Cloud Computing, I/O, Parity, ECC",
   },
   {
-    date: "4/10/22",
-    weight: 0,
+    date: "4/34/22",
+    weight: 40,
     topics: "Great Ideas in Computer Architecture - GPUs",
   },
 ];
@@ -632,7 +632,7 @@ export const trainingMatrix: TrainingMatrix = [
     description:
       "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covers web development, javascript,front-end development with React, and back-end development with Express, MongoDB and Node.js.",
     completed:
-      "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covers web development, javascript,front-end development with React, and back-end development with Express, MongoDB and Node.js.",
+      "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covered web development, javascript,front-end development with React, and back-end development with Express, MongoDB and Node.js.",
     milestones: fullStackCert,
   },
   {

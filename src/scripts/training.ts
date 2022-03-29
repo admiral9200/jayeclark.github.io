@@ -630,9 +630,9 @@ export const trainingMatrix: TrainingMatrix = [
     name: "fullStackCert",
     fullname: "MIT Full Stack Development Certificate",
     description:
-      "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covers web development, javascript,front-end development with React, and back-end development with Express, MongoDB and Node.js.",
+      "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covers web development, JavaScript, front-end development with React, and back-end development with Express, MongoDB and Node.js.",
     completed:
-      "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covered web development, javascript,front-end development with React, and back-end development with Express, MongoDB and Node.js.",
+      "I completed the Professional Certificate in Full Stack Development with MERN with MIT xPro. This 32-week program covered web development, JavaScript, front-end development with React, and back-end development with Express, MongoDB and Node.js.",
     milestones: fullStackCert,
   },
   {

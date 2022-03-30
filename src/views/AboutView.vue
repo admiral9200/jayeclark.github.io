@@ -37,36 +37,44 @@ import { RouterLink } from "vue-router";
       </span>
       <p></p>
       <p>
+        I'm a career-transitioning full stack SWE focusing on React, Express &
+        Node.js. I’ve contributed code to 70+ Open Source Software projects, and
+        am completing professional certificates in Data Science and Machine
+        Learning to round out my full-stack training.
+      </p>
+      <p>
         When the pandemic put my small business executive job on pause, I
-        reflected on my past roles and realized none had been quite the right
-        fit. I started to give serious, deep thought to what that 'right' type
-        of work might be, and realized I'd felt most fulfilled (and most useful)
-        applying technology to solve business problems.
+        reflected on my past roles and realized I'd gravitated toward software
+        development projects in each, even though that wasn't my primary role to
+        begin with. I started to give serious, deep thought to the future
+        direction of my career, and realized I'd felt most fulfilled (and most
+        useful) applying technology to solve business problems.
       </p>
 
       <p>
-        In May 2021, I took the humbling step of completely rebooting my career,
-        starting over from scratch as a software engineer.
+        I started looking for software development roles, but soon realized I
+        couldn't get the kind of role I really wanted - there were too many gaps in
+        my technical knowledge. I rented out my house, hit the road as a digital
+        nomad (new experiences are the PERFECT backdrop for learning), and
+        embarked on a 12-month training program of self study accompanied by
+        four professional certificates: Intro to Computer Science, Full-stack
+        Web Development, Data Science, and Machine Learning.
       </p>
 
       <p>
         My previous experience includes co-founding and running a talent
         management business for gaming content creators, working in management
-        consulting, and internships at a nonprofit biotech and a software
-        startup. I received my AB <i>magna cum laude</i> from Harvard, where my
-        thesis on internet culture was nominated for a Hoopes Prize.
+        consulting, teaching at Harvard & MIT, and internships at a nonprofit
+        biotech and a software startup. I received my AB magna cum laude from
+        Harvard, where my thesis on internet culture was nominated for a Hoopes
+        Prize.
       </p>
 
       <p>
-        In my spare time, I enjoy traveling, assembling IKEA furniture, Bikram
-        yoga, and the culinary arts. You can see some of my culinary plating
-        ventures on my hobby
-        <a href="https://www.instagram.com/jennbot3000/" target="_blank"
-          >Instagram</a
-        >
-        account. I collect silvestre Mezcals (made from wild harvested agave)
-        and obscure worm salts to accompany them. I've never lived more than 10
-        minutes from the ocean.
+        In my spare time, I enjoy traveling, exercising (I'm working very hard
+        at shedding weight gained after a back injury), volunteering for my
+        neighborhood cat rescue organization, and cultivating my amateur chef &
+        photographer skills.
       </p>
     </div>
 

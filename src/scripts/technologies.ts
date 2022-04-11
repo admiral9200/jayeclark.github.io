@@ -12,11 +12,6 @@ export const stack: Array<Technology> = [
     dimension: "height",
     competence: 1,
   },
-  {
-    name: "Angular",
-    url: "angular.png",
-    competence: 1,
-  },
   { name: "AWS", url: "aws.png", competence: 1 },
   { name: "Azure", url: "azure.png", competence: 1 },
   {
@@ -32,18 +27,6 @@ export const stack: Array<Technology> = [
     competence: 2,
   },
   {
-    name: "C++",
-    url: "cplusplus.png",
-    dimension: "height",
-    competence: 1,
-  },
-  { name: "C#", url: "csharp.png", competence: 1 },
-  {
-    name: "Chrome Extensions",
-    url: "chromeextension.png",
-    competence: 1,
-  },
-  {
     name: "Cypress",
     url: "cypress.png",
     competence: 1,
@@ -54,11 +37,6 @@ export const stack: Array<Technology> = [
     name: "Deluge",
     url: "deluge.jpeg",
     competence: 4,
-  },
-  {
-    name: "Django",
-    url: "django.png",
-    competence: 1,
   },
   {
     name: "Docker",
@@ -83,7 +61,6 @@ export const stack: Array<Technology> = [
     competence: 1,
   },
   { name: "Git", url: "git.png", competence: 3 },
-  { name: "Go", url: "go.png", competence: 1 },
   {
     name: "Gradle",
     url: "gradle.png",
@@ -94,17 +71,11 @@ export const stack: Array<Technology> = [
     url: "heroku.png",
     competence: 2,
   },
-  { name: "Java", url: "java.png", competence: 1 },
   {
     name: "JavaScript",
     url: "javascript.png",
     dimension: "height",
     competence: 4,
-  },
-  {
-    name: "Jekyll",
-    url: "jekyll.png",
-    competence: 1,
   },
   { name: "Jest", url: "jest.png", competence: 3 },
   { name: "Jinja", url: "jinja.png", competence: 2 },
@@ -130,7 +101,6 @@ export const stack: Array<Technology> = [
     url: "python.png",
     competence: 2,
   },
-  { name: "QT", url: "qt.png", competence: 1 },
   { name: "Ruby", url: "ruby.png", competence: 2 },
   {
     name: "Ruby on Rails",
@@ -158,20 +128,8 @@ export const stack: Array<Technology> = [
     url: "typescript.png",
     competence: 2,
   },
-  {
-    name: "Unity",
-    url: "unity.png",
-    dimension: "width",
-    competence: 1,
-  },
   { name: "Vue", url: "vuejs.svg", competence: 2 },
   { name: "Wix", url: "wix.png", competence: 3 },
-  {
-    name: "Wordpress",
-    url: "wordpress.png",
-    competence: 3,
-  },
-  { name: "XCode", url: "xcode.png", competence: 1 },
   {
     name: "Yeoman",
     url: "yeoman.png",

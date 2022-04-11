@@ -13,23 +13,13 @@ import { RouterLink } from "vue-router";
     </div>
 
     <!-- VIDEO -->
-    <div class="video">
-      <div class="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/pNaepLSho48"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div id="story"></div>
+    <div style="display: flex; justify-content: center; margin: 40px">
+      <img src="@/assets/profile.jpg" style="max-width: 400px" />
     </div>
 
     <!-- ABOUT-CONTENT -->
-    <div class="about-content" style="margin: 0px 0px 90px 0px"></div>
+    <div id="story">&nbsp;</div>
+    <div class="about-content" style="margin: 0px 0px 70px 0px"></div>
     <div class="about-content">
       <span style="text-align: center">
         <hr style="width: 60%" />
@@ -38,27 +28,26 @@ import { RouterLink } from "vue-router";
       <p></p>
       <p>
         I'm a career-transitioning full stack SWE focusing on React, Express &
-        Node.js. I’ve contributed code to 70+ Open Source Software projects, and
+        Node.js. I’ve contributed code to 80+ Open Source Software projects, and
         am completing professional certificates in Data Science and Machine
         Learning to round out my full-stack training.
       </p>
       <p>
-        When the pandemic put my small business executive job on pause, I
+        The small business I worked for closed three months into the pandemic. I
         reflected on my past roles and realized I'd gravitated toward software
-        development projects in each, even though that wasn't my primary role to
-        begin with. I started to give serious, deep thought to the future
-        direction of my career, and realized I'd felt most fulfilled (and most
-        useful) applying technology to solve business problems.
+        development projects in each, even though that hadn't been my primary
+        role to begin with. I realized I'd felt most fulfilled (and most useful)
+        applying technology to solve business problems.
       </p>
 
       <p>
-        I started looking for software development roles, but soon realized I
-        couldn't get the kind of role I really wanted - there were too many gaps in
-        my technical knowledge. I rented out my house, hit the road as a digital
-        nomad (new experiences are the PERFECT backdrop for learning), and
-        embarked on a 12-month training program of self study accompanied by
-        four professional certificates: Intro to Computer Science, Full-stack
-        Web Development, Data Science, and Machine Learning.
+        Seven years of being a self-taught, part-time solo developer left me
+        with some serious knowledge gaps! I rented out my house, hit the road as
+        a digital nomad (new experiences are the PERFECT backdrop for learning),
+        and embarked on a 12-month training program of self-study and
+        self-improvement accompanied by four professional certificates: Intro to
+        Computer Science, Full-stack Web Development, Data Science, and Machine
+        Learning.
       </p>
 
       <p>
@@ -71,10 +60,14 @@ import { RouterLink } from "vue-router";
       </p>
 
       <p>
-        In my spare time, I enjoy traveling, exercising (I'm working very hard
-        at shedding weight gained after a back injury), volunteering for my
-        neighborhood cat rescue organization, and cultivating my amateur chef &
-        photographer skills.
+        In my spare time, I enjoy traveling, cooking, and amateur food
+        photography. I spend a lot of my free time exercising - I'm working very
+        hard at shedding weight gained after the one-two punch of a back injury
+        and the the pandemic. I also volunteer for my neighborhood cat rescue
+        organization both on the tech front (improving their website to raise
+        more funds) and by fostering feral kittens to make them adopable (they
+        and their adorable toebeans are frequent guest stars on my Zoom calls),
+        and cultivating my amateur chef & photographer skills.
       </p>
     </div>
 

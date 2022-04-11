@@ -125,7 +125,11 @@ export default {
                         class="btn btn-primary btn-sm"
                         style="margin-right: 10px"
                         target="_blank"
-                        >See it in action</a
+                        >{{
+                          group.category == "Open Source Software"
+                            ? "See my PRs"
+                            : "See it in action"
+                        }}</a
                       >
                       <a
                         :href="project.github"

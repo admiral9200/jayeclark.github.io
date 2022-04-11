@@ -13,7 +13,6 @@ export const stack: Array<Technology> = [
     competence: 1,
   },
   { name: "AWS", url: "aws.png", competence: 1 },
-  { name: "Azure", url: "azure.png", competence: 1 },
   {
     name: "Bootstrap",
     url: "bootstrap.png",
@@ -32,7 +31,6 @@ export const stack: Array<Technology> = [
     competence: 1,
   },
   { name: "D3", url: "d3.png", competence: 2 },
-  { name: "Dart", url: "dart.png", competence: 1 },
   {
     name: "Deluge",
     url: "deluge.jpeg",

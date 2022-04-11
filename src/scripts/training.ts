@@ -161,30 +161,30 @@ const dataScienceCert = [
     topics: "Machine Learning - Final Course Assessment",
   },
   {
-    date: "3/30/22",
+    date: "4/12/22",
     weight: 72,
     topics: "Wrangling - Importing data into R, web scraping, tidyverse",
   },
   {
-    date: "3/31/22",
+    date: "4/14/22",
     weight: 48,
     topics: "Wrangling - String Processing, dplyr",
   },
   {
-    date: "4/1/22",
+    date: "4/16/22",
     weight: 48,
     topics: "Wrangling - Dates & Times, text mining",
   },
   {
-    date: "4/2/22",
+    date: "4/18/22",
     weight: 12,
     topics: "Wrangling - Final Course Assessment",
   },
 
-  { date: "4/3/22", weight: 24, topics: "Capstone Day 1" },
-  { date: "4/4/22", weight: 24, topics: "Capstone Day 2" },
-  { date: "4/5/22", weight: 24, topics: "Capstone Day 3" },
-  { date: "4/5/22", weight: 24, topics: "Capstone Day 4" },
+  { date: "4/26/22", weight: 24, topics: "Capstone Day 1" },
+  { date: "4/27/22", weight: 24, topics: "Capstone Day 2" },
+  { date: "4/28/22", weight: 24, topics: "Capstone Day 3" },
+  { date: "4/28/22", weight: 24, topics: "Capstone Day 4" },
 ];
 
 const machineLearningCert = [
@@ -466,141 +466,141 @@ const machineLearningCert = [
 const openSource = [
   { date: "1/15/22", weight: 400, topics: "Algorithms" },
   {
-    date: "4/1/22",
+    date: "4/11/22",
     weight: 60,
     topics: "Algorithms - Fundamentals, Sorting, Searching",
   },
   {
-    date: "4/2/22",
+    date: "4/12/22",
     weight: 60,
     topics: "Algorithms - Graphs, Strings, Context",
-  },
-  {
-    date: "4/3/22",
-    weight: 40,
-    topics:
-      "Computer Programs - Functions, Names, Control, Higher-Order Functions, Environments, Iteration, Design, Function Examples",
-  },
-  {
-    date: "4/4/22",
-    weight: 40,
-    topics:
-      "Computer Programs - Recursion, Tree Recursion, Containers, Data Abstraction, Trees, Mutable Values, Mutable Functions, Iterators",
-  },
-  {
-    date: "4/5/22",
-    weight: 55,
-    topics:
-      "Computer Programs - Objects, Inheritance, Representation, Composition, Efficiency, Decomposition, Data Examples, Users, Scheme, Exceptions, Calculator",
-  },
-  {
-    date: "4/6/22",
-    weight: 45,
-    topics:
-      "Computer Programs - Interpreters, Declarative Programming, Tables, Aggregation, Databases, Distributed Data, Natural Language, Tail Calls, Macros",
-  },
-  {
-    date: "4/7/22",
-    weight: 40,
-    topics:
-      "Data Structures - Classes, Testing, References, Recursion, Lists, SLLists, Nested Classes, Sentinel Nodes",
-  },
-  {
-    date: "4/8/22",
-    weight: 40,
-    topics:
-      "Data Structures - DLLists, Arrays, ALists, Inheritance, Extends, Casting, Subtype Polymorphism vs HoFs",
-  },
-  {
-    date: "4/9/22",
-    weight: 40,
-    topics:
-      "Data Structures - Exceptions, Iterators, Object Methods, Command LIne Programming",
-  },
-  {
-    date: "4/10/22",
-    weight: 40,
-    topics:
-      "Data Structures - Asymptotics, Disjoint Sets, ADTs, Sets, Maps, BSTs",
-  },
-  {
-    date: "4/11/22",
-    weight: 40,
-    topics:
-      "Data Structures - B-Trees, Red Black Trees, Hashing, Heaps & PQs, Tree and Graph Traversals",
-  },
-  {
-    date: "4/12/22",
-    weight: 40,
-    topics:
-      "Data Str/uctures - Shortest Paths, Minimum Spanning Trees, Range Searching and Multidimensional Data",
   },
   {
     date: "4/13/22",
     weight: 40,
     topics:
-      "Data Structures - Prefix Operations & Tries, Reductions  Decomposition, Basic Sorts, Quick Sort",
+      "Computer Programs - Functions, Names, Control, Higher-Order Functions, Environments, Iteration, Design, Function Examples",
   },
   {
     date: "4/14/22",
     weight: 40,
-    topics: "Data Structures - Sorting & Algorithmic Bounds, Radix Sorts",
+    topics:
+      "Computer Programs - Recursion, Tree Recursion, Containers, Data Abstraction, Trees, Mutable Values, Mutable Functions, Iterators",
   },
   {
     date: "4/15/22",
-    weight: 40,
-    topics: "Data Structures - Compression, Complexity, P = NP?",
+    weight: 55,
+    topics:
+      "Computer Programs - Objects, Inheritance, Representation, Composition, Efficiency, Decomposition, Data Examples, Users, Scheme, Exceptions, Calculator",
   },
   {
     date: "4/16/22",
-    weight: 40,
+    weight: 45,
     topics:
-      "Great Ideas in Computer Architecture - Number representation, C Intro, Memory Management, Floating Point, RISC-V intro",
+      "Computer Programs - Interpreters, Declarative Programming, Tables, Aggregation, Databases, Distributed Data, Natural Language, Tail Calls, Macros",
   },
   {
     date: "4/17/22",
     weight: 40,
     topics:
-      "Great Ideas in Computer Architecture - RISC-V lw, sw, Decisions, Procedure, Instruction Formats",
+      "Data Structures - Classes, Testing, References, Recursion, Lists, SLLists, Nested Classes, Sentinel Nodes",
   },
   {
     date: "4/18/22",
     weight: 40,
     topics:
-      "Great Ideas in Computer Architecture - Syncronous Digital Systems, State machines, Combinational Logic",
+      "Data Structures - DLLists, Arrays, ALists, Inheritance, Extends, Casting, Subtype Polymorphism vs HoFs",
   },
   {
     date: "4/19/22",
     weight: 40,
     topics:
-      "Great Ideas in Computer Architecture - Single-cycle CPU Datapath, Conrol, Pipelining, Caches",
+      "Data Structures - Exceptions, Iterators, Object Methods, Command LIne Programming",
   },
   {
     date: "4/20/22",
     weight: 40,
     topics:
-      "Great Ideas in Computer Architecture - Virtual Memory, Flynn Taxonomy, SIMD ",
+      "Data Structures - Asymptotics, Disjoint Sets, ADTs, Sets, Maps, BSTs",
   },
   {
     date: "4/21/22",
     weight: 40,
     topics:
-      "Great Ideas in Computer Architecture - Thread-Level & Data-Level Parallelism",
+      "Data Structures - B-Trees, Red Black Trees, Hashing, Heaps & PQs, Tree and Graph Traversals",
   },
   {
     date: "4/22/22",
     weight: 40,
     topics:
-      "Great Ideas in Computer Architecture - MapReduce, Spark, Data Centers",
+      "Data Str/uctures - Shortest Paths, Minimum Spanning Trees, Range Searching and Multidimensional Data",
   },
   {
     date: "4/23/22",
     weight: 40,
     topics:
+      "Data Structures - Prefix Operations & Tries, Reductions  Decomposition, Basic Sorts, Quick Sort",
+  },
+  {
+    date: "4/24/22",
+    weight: 40,
+    topics: "Data Structures - Sorting & Algorithmic Bounds, Radix Sorts",
+  },
+  {
+    date: "4/25/22",
+    weight: 40,
+    topics: "Data Structures - Compression, Complexity, P = NP?",
+  },
+  {
+    date: "4/26/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - Number representation, C Intro, Memory Management, Floating Point, RISC-V intro",
+  },
+  {
+    date: "4/27/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - RISC-V lw, sw, Decisions, Procedure, Instruction Formats",
+  },
+  {
+    date: "4/28/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - Syncronous Digital Systems, State machines, Combinational Logic",
+  },
+  {
+    date: "4/29/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - Single-cycle CPU Datapath, Conrol, Pipelining, Caches",
+  },
+  {
+    date: "4/30/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - Virtual Memory, Flynn Taxonomy, SIMD ",
+  },
+  {
+    date: "5/1/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - Thread-Level & Data-Level Parallelism",
+  },
+  {
+    date: "5/2/22",
+    weight: 40,
+    topics:
+      "Great Ideas in Computer Architecture - MapReduce, Spark, Data Centers",
+  },
+  {
+    date: "5/3/22",
+    weight: 40,
+    topics:
       "Great Ideas in Computer Architecture - Cloud Computing, I/O, Parity, ECC",
   },
   {
-    date: "4/34/22",
+    date: "5/4/22",
     weight: 40,
     topics: "Great Ideas in Computer Architecture - GPUs",
   },
@@ -610,19 +610,19 @@ const leetCode = [
   { date: "1/11/22", weight: 1962, topics: "CodeWars JavaScript Training" },
   { date: "2/6/22", weight: 300, topics: "CodeWars JavaScript Training" },
   { date: "3/27/22", weight: 300, topics: "CodeWars JavaScript Training" },
-  { date: "4/3/22", weight: 100, topics: "CodeWars Java Training" },
-  { date: "4/6/22", weight: 300, topics: "CodeWars Java Training" },
-  { date: "4/10/22", weight: 100, topics: "CodeWars C Training" },
-  { date: "4/13/22", weight: 200, topics: "CodeWars C Training" },
-  { date: "4/16/22", weight: 300, topics: "CodeWars C Training" },
-  { date: "4/18/22", weight: 300, topics: "LeetCode Training - Easy" },
-  { date: "4/19/22", weight: 400, topics: "LeetCode Training - Easy" },
-  { date: "4/20/22", weight: 600, topics: "LeetCode Training - Easy" },
-  { date: "4/22/22", weight: 700, topics: "LeetCode Training - Easy & Medium" },
-  { date: "4/26/22", weight: 1200, topics: "LeetCode Training - Medium" },
-  { date: "4/28/22", weight: 1200, topics: "LeetCode Training - Medium" },
-  { date: "5/1/22", weight: 1300, topics: "LeetCode Training - Hard & Medium" },
-  { date: "5/8/22", weight: 1300, topics: "LeetCode Training - Hard" },
+  { date: "5/3/22", weight: 100, topics: "CodeWars Java Training" },
+  { date: "5/6/22", weight: 300, topics: "CodeWars Java Training" },
+  { date: "5/10/22", weight: 100, topics: "CodeWars C Training" },
+  { date: "5/13/22", weight: 200, topics: "CodeWars C Training" },
+  { date: "5/16/22", weight: 300, topics: "CodeWars C Training" },
+  { date: "5/18/22", weight: 300, topics: "LeetCode Training - Easy" },
+  { date: "5/19/22", weight: 400, topics: "LeetCode Training - Easy" },
+  { date: "5/20/22", weight: 600, topics: "LeetCode Training - Easy" },
+  { date: "5/22/22", weight: 700, topics: "LeetCode Training - Easy & Medium" },
+  { date: "5/26/22", weight: 1200, topics: "LeetCode Training - Medium" },
+  { date: "5/28/22", weight: 1200, topics: "LeetCode Training - Medium" },
+  { date: "6/1/22", weight: 1300, topics: "LeetCode Training - Hard & Medium" },
+  { date: "6/8/22", weight: 1300, topics: "LeetCode Training - Hard" },
 ];
 
 export const trainingMatrix: TrainingMatrix = [
@@ -639,9 +639,9 @@ export const trainingMatrix: TrainingMatrix = [
     name: "cs50",
     fullname: "Harvard CS50",
     description:
-      "I'm completing Harvard's <a href='https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0' target='_blank'>CS50</a>. This 10-week course with paid certificate option covers more theoretical and foundational computer science concepts than those addressed by the MIT certificate. The primary languages are C and Python.",
+      "I'm completing Harvard's <a href='https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0' target='_blank'>CS50</a>. This 10-week course covers more theoretical and foundational computer science concepts than those addressed by the MIT Full Stack certificate. The primary languages are C and Python.",
     completed:
-      "I completed Harvard's <a href='https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0' target='_blank'>CS50</a>. This 10-week course with paid certificate option covered more theoretical and foundational computer science concepts than those addressed by the MIT certificate. The primary languages were C and Python.",
+      "I completed Harvard's <a href='https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0' target='_blank'>CS50</a>. This 10-week course covered more theoretical and foundational computer science concepts than those addressed by the MIT Full Stack certificate. The primary languages were C and Python.",
     milestones: cs50,
   },
   {

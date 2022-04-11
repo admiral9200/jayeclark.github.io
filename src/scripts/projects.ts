@@ -67,7 +67,7 @@ export const projects: Array<Category> = [
     category: "Open Source Software",
     slug: "opensourcesoftware",
     description:
-      "I've contributed code to more than <b>70 open source software projects</b> including:<br/>&nbsp;<ul style='list-style-type: none; padding-left: 0px;display:flex;flex-wrap:wrap;justify-content:center'><li style='padding: 5px;'><img class='unprocessed projectsView-img' alt='typescript' src='ts-lettermark-white.png' height='24px'></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' alt='O3DE' height='24px' src='o3de.png'></li><li style='padding: 5px;'><img  class='unprocessed projectsView-img' style='margin: 0px 0px 4px 4px' alt='react bootstrap' src='react-bootstrap.svg' height='18px'>&nbsp;&nbsp;<b>React Bootstrap</b></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' alt='chatwoot' src='chatwoot.svg' height='22px'></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' src='metamask.png' height='24px' alt='Metamask'></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' src='materialui.png' height='32px'></li></ul><span>View more of my contributions here: <a href='https://github.com/jayeclark/jayeclark/blob/main/opensourcechallenge.md' target='_blank' rel='noreferrer'>Open Source Challenge</a></span>",
+      "I've contributed code to more than <b>80 open source software projects</b> including:<br/>&nbsp;<ul style='list-style-type: none; padding-left: 0px;display:flex;flex-wrap:wrap;justify-content:center'><li style='padding: 5px;'><img class='unprocessed projectsView-img' alt='typescript' src='ts-lettermark-white.png' height='24px'></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' alt='O3DE' height='24px' src='o3de.png'></li><li style='padding: 5px;'><img  class='unprocessed projectsView-img' style='margin: 0px 0px 4px 4px' alt='react bootstrap' src='react-bootstrap.svg' height='18px'>&nbsp;&nbsp;<b>React Bootstrap</b></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' alt='chatwoot' src='chatwoot.svg' height='22px'></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' src='metamask.png' height='24px' alt='Metamask'></li><li style='padding: 5px;'><img class='unprocessed projectsView-img' src='materialui.png' height='32px'></li></ul><span>View more of my contributions here: <a href='https://github.com/jayeclark/jayeclark/blob/main/opensourcechallenge.md' target='_blank' rel='noreferrer'>Open Source Challenge</a></span>",
     order: 2,
     projects: [
       {
@@ -76,7 +76,7 @@ export const projects: Array<Category> = [
         url: "https://github.com/pulls?q=is%3Apr+author%3Ajayeclark+repo%3A%22joemasilotti%2Frailsdevs.com%22+is%3Amerged+",
         github: "https://github.com/joemasilotti/railsdevs.com",
         description:
-          "RailsDev is a reverse job board for Rails developers. For this project, I implemented a notification badge and notification system UI. I had no experience in Ruby or Ruby on Rails prior to starting this effort.",
+          "RailsDev is a reverse job board for Rails developers. For this project, I implemented a notification badge and notification system UI. I had no experience in Ruby or Ruby on Rails prior to this PR.",
         icons: ["display.svg", "api.svg", "server.svg"],
         subtitle:
           "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;300 lines of code changed",
@@ -97,10 +97,10 @@ export const projects: Array<Category> = [
       {
         name: "Rotting Research",
         thumbnail: "rottingresearch-thumbnail.png",
-        url: "https://github.com/pulls?q=is%3Apr+author%3Ajayeclark+repo%3Amarshalmiller%2Frottingresearch+is%3Amerged+",
+        url: "https://github.com/marshalmiller/rottingresearch/pulls?q=is%3Apr+is%3Aclosed+author%3Ajayeclark",
         github: "https://github.com/marshalmiller/rottingresearch",
         description:
-          "This python/flask resource to help researchers identify outdated links in scientific publications needed general styling improvements as well as a responsive design that would work on tablets and phones. I made minor adjustments to the UI, using some of the methods outlined on <a href='https://www.refactoringUI.com' target='_blank' rel='noreferrer'>RefactoringUI.com</a>, and the result was a substantial improvement in the UI.",
+          "This Python/Flask app to help researchers identify outdated links in scientific publications needed general styling improvements, a responsive design, and a major performance upgrade. I made adjustments to the UI using some of the methods outlined on <a href='https://www.refactoringUI.com' target='_blank' rel='noreferrer'>RefactoringUI.com</a>, and threaded the back end processing. The result was a 10x+ reduction in time-to-first-content (from 30 seconds down to 2.)",
         icons: ["display.svg"],
         subtitle:
           "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;500+ lines of code changed",
@@ -133,7 +133,7 @@ export const projects: Array<Category> = [
         github: "https://github.com/jayeclark/front-end",
         thumbnail: "clones-thumbnail.png",
         description:
-          "lones of various commercial websites' desktop apps, with a toggler function to load different sites into the app. Built with React. <i>Note: Desktop only (not responsive.)</i>",
+          "Clones of various commercial websites' desktop apps, with a toggler function to load different sites into the app. Built with React. <i>Note: Desktop only (not responsive.)</i>",
         icons: ["display.svg"],
         subtitle:
           "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;React",

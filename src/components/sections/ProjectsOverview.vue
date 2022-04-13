@@ -81,12 +81,12 @@ export default {
 
       <template v-for="(category, index) in categories" v-bind:key="index">
         <hr :class="index === 0 ? `hidden` : `visible`" />
-        <div style="width: 100%; max-width: 700px">
-          <div style="width: 100%">
+        <div style="width: 100%">
+          <div style="width: 100%; max-width: 700px; margin: 0px auto;">
             <h3>{{ category.title }}</h3>
             <p :innerHTML="category.description"></p>
           </div>
-          <div style="width: 100%">
+          <div style="width: 100%; max-width: 700px; margin: 0px auto;">
             <div class="project-links">
               <template
                 v-for="(sample, linkindex) in category.samples"

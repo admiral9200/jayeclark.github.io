@@ -36,14 +36,9 @@ const cardsToDisplay = computed(() =>
         ]"
         :buttons="[
           {
-            text: `Read my bio`,
+            text: `Read more`,
             url: `about#story`,
             classList: `btn btn-primary`,
-          },
-          {
-            text: `Watch my video intro`,
-            url: `about#video`,
-            classList: `btn btn-default`,
           },
         ]"
         :imageUrl="`person.png`"
@@ -83,10 +78,9 @@ const cardsToDisplay = computed(() =>
         :title="`Codewars`"
         :subtitle="`Coding Challenges`"
         :paragraphs="[
-          `<p>I train regularly on Codewars, completing as many kata as possible in a
-        1-2 hour time frame. I've achieved a rank of 3 kyu in Javascript, which
-        reflects a 'highly competent' skill level, and I rank among the top 1.4%
-        of developers on the site.</p>`,
+          `<p>I train regularly on Codewars. I've achieved a rank of 2 kyu in Javascript, which
+        reflects a 'proficient' skill level, and I rank among the top 1%
+        of developers on the site. The most recent challenge I completed was building a regex that can determine if a binary number is divisible by seven.</p>`,
         ]"
         :buttons="[
           {

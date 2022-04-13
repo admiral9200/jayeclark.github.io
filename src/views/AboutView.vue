@@ -13,23 +13,13 @@ import { RouterLink } from "vue-router";
     </div>
 
     <!-- VIDEO -->
-    <div class="video">
-      <div class="video-container">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/pNaepLSho48"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div id="story"></div>
+    <div style="display: flex; justify-content: center; margin: 40px">
+      <img src="@/assets/profile.jpg" style="max-width: 400px" />
     </div>
 
     <!-- ABOUT-CONTENT -->
-    <div class="about-content" style="margin: 0px 0px 90px 0px"></div>
+    <div id="story">&nbsp;</div>
+    <div class="about-content" style="margin: 0px 0px 70px 0px"></div>
     <div class="about-content">
       <span style="text-align: center">
         <hr style="width: 60%" />
@@ -37,36 +27,47 @@ import { RouterLink } from "vue-router";
       </span>
       <p></p>
       <p>
-        When the pandemic put my small business executive job on pause, I
-        reflected on my past roles and realized none had been quite the right
-        fit. I started to give serious, deep thought to what that 'right' type
-        of work might be, and realized I'd felt most fulfilled (and most useful)
+        I'm a career-transitioning full stack SWE focusing on React, Express &
+        Node.js. I’ve contributed code to 80+ Open Source Software projects, and
+        am completing professional certificates in Data Science and Machine
+        Learning to round out my full-stack training.
+      </p>
+      <p>
+        The small business I worked for closed three months into the pandemic. I
+        reflected on my past roles and realized I'd gravitated toward software
+        development projects in each, even though that hadn't been my primary
+        role to begin with. I realized I'd felt most fulfilled (and most useful)
         applying technology to solve business problems.
       </p>
 
       <p>
-        In May 2021, I took the humbling step of completely rebooting my career,
-        starting over from scratch as a software engineer.
+        Seven years of being a self-taught, part-time solo developer left me
+        with some serious knowledge gaps! I rented out my house, hit the road as
+        a digital nomad (new experiences are the PERFECT backdrop for learning),
+        and embarked on a 12-month training program of self-study and
+        self-improvement accompanied by four professional certificates: Intro to
+        Computer Science, Full-stack Web Development, Data Science, and Machine
+        Learning.
       </p>
 
       <p>
         My previous experience includes co-founding and running a talent
         management business for gaming content creators, working in management
-        consulting, and internships at a nonprofit biotech and a software
-        startup. I received my AB <i>magna cum laude</i> from Harvard, where my
-        thesis on internet culture was nominated for a Hoopes Prize.
+        consulting, teaching at Harvard & MIT, and internships at a nonprofit
+        biotech and a software startup. I received my AB magna cum laude from
+        Harvard, where my thesis on internet culture was nominated for a Hoopes
+        Prize.
       </p>
 
       <p>
-        In my spare time, I enjoy traveling, assembling IKEA furniture, Bikram
-        yoga, and the culinary arts. You can see some of my culinary plating
-        ventures on my hobby
-        <a href="https://www.instagram.com/jennbot3000/" target="_blank"
-          >Instagram</a
-        >
-        account. I collect silvestre Mezcals (made from wild harvested agave)
-        and obscure worm salts to accompany them. I've never lived more than 10
-        minutes from the ocean.
+        In my spare time, I enjoy traveling, cooking, and amateur food
+        photography. I spend a lot of my free time exercising - I'm working very
+        hard at shedding weight gained after the one-two punch of a back injury
+        and the the pandemic. I also volunteer for my neighborhood cat rescue
+        organization both on the tech front (improving their website to raise
+        more funds) and by fostering feral kittens to make them adopable (they
+        and their adorable toebeans are frequent guest stars on my Zoom calls),
+        and cultivating my amateur chef & photographer skills.
       </p>
     </div>
 

@@ -1,3 +1,5 @@
+import { RouterLink } from "vue-router";
+
 <script lang="js">
 export default {
   name: "CardWithShadow",
@@ -42,12 +44,13 @@ export default {
           :innerHTML="paragraph"
           style="margin-top: 20px; margin-bottom: 20px"
         ></div>
-        <a
+        <RouterLink
           v-for="(button, index) in buttons"
           :key="index"
-          :href="button.url"
           :class="button.classList"
-          >{{ button.text }}</a
+          :to="button.url"
+        >
+          <span>{{ button.text }}</span></RouterLink
         >
       </div>
     </div>

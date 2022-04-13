@@ -77,22 +77,38 @@ export default {
                   class="project-description pl-25px"
                   :innerHTML="project.description"
                 ></p>
-                <div class="project-description-container-detail">
+                <div
+                  class="project-description-container-detail"
+                  :style="{
+                    'flex-wrap':
+                      group.category === 'Before and After' ? 'wrap' : '',
+                  }"
+                >
                   <img
-                    :src="`${project.thumbnail}`"
-                    height="70"
-                    style="border: 1px solid #ccc"
+                    v-for="(photo, iidx) in project.thumbnails"
+                    :key="iidx"
+                    :src="`${photo}`"
+                    :height="group.category === 'Before and After' ? null : 70"
+                    :width="group.category === 'Before and After' ? 800 : null"
+                    :style="{
+                      border: '1px solid #ccc',
+                      'max-width': `${100 / project.thumbnails.length}%`,
+                    }"
                     class="unprocessed projectsView-img"
                   />
                   <div>
                     <div
                       class="project-description"
-                      style="
-                        font-weight: bold;
-                        margin-left: 10px;
-                        padding-top: none;
-                        align-items: center;
-                      "
+                      :style="{
+                        display:
+                          group.category === 'Before and After'
+                            ? 'none'
+                            : 'block',
+                        'font-weight': 'bold',
+                        'margin-left': '10px',
+                        'padding-top': 'none',
+                        'align-items': 'center',
+                      }"
                     >
                       <template
                         v-for="(icon, iidx) in project.icons"
@@ -133,6 +149,9 @@ export default {
                       >
                       <a
                         :href="project.github"
+                        :style="{
+                          display: project.github !== '' ? '' : 'none',
+                        }"
                         class="btn btn-default btn-sm"
                         target="_blank"
                         >See the code</a

@@ -26,6 +26,18 @@ export const projects: Array<Category> = [
     order: 1,
     projects: [
       {
+        name: "My Dev Interview",
+        thumbnails: ["mydevinterview-thumbnail.png"],
+        url: "https://jayeclark.github.io/my-dev-interview",
+        github: "https://github.com/jayeclark/my-dev-interview",
+        description:
+          "This full stack project provides a simple interface for practicing answers to video interview questions. It has a Next.js front end, a Strapi API layer, and a PostgreSQL back end data store.",
+        icons: [],
+        subtitle:
+          "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;React, Next, Strapi, Postgres",
+        feature: true,
+      },
+      {
         name: "Instaplate",
         thumbnails: ["instaplate-thumbnail.png"],
         url: "http://instaplate.herokuapp.com",
@@ -38,27 +50,15 @@ export const projects: Array<Category> = [
         feature: true,
       },
       {
-        name: "WhatsApp",
-        thumbnails: ["whatsapp-thumbnail.png"],
-        url: "https://jayeclark.github.io/whatsapp/",
-        github: "https://github.com/jayeclark/whatsapp/",
+        name: "Tiny Tech Trivia",
+        thumbnails: ["t3-thumb.png"],
+        url: "https://tinytechtrivia.herokuapp.com/",
+        github: "https://github.com/jayeclark/t3",
         description:
-          "A simple chat application that uses Firebase for its data store and authentication. Client interacts with Firebase directly (no intermediae API layer is needed.)",
+          "A simple Python/Flask quiz & regex training application that uses SQLite for its data store.",
         icons: [],
         subtitle:
-          "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;Vanilla JS, Firebase",
-        feature: false,
-      },
-      {
-        name: "Holy Grail Layout",
-        thumbnails: ["holygrail-thumbnail.png"],
-        url: "http://jayeclark.github.io/holy-grail",
-        github: "https://github.com/jayeclark/holy-grail/",
-        description:
-          "A small demo project using React, Express and Redis. Express serves the API routes and static client files, while Redis provides the persistent data store. Clicking the plus and minus buttons adds additional sentences of 'Lorem Ipsum' text to that area of the page.",
-        icons: [],
-        subtitle:
-          "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;React, Express, Redis",
+          "<img class='unprocessed projectsView-img' src='code.svg'>&nbsp;Python, Flask, SQLite3",
         feature: false,
       },
     ],

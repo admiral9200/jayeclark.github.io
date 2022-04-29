@@ -161,30 +161,30 @@ const dataScienceCert = [
     topics: "Machine Learning - Final Course Assessment",
   },
   {
-    date: "4/12/22",
+    date: "5/1/22",
     weight: 72,
     topics: "Wrangling - Importing data into R, web scraping, tidyverse",
   },
   {
-    date: "4/14/22",
+    date: "5/2/22",
     weight: 48,
     topics: "Wrangling - String Processing, dplyr",
   },
   {
-    date: "4/16/22",
+    date: "5/3/22",
     weight: 48,
     topics: "Wrangling - Dates & Times, text mining",
   },
   {
-    date: "4/18/22",
+    date: "5/4/22",
     weight: 12,
     topics: "Wrangling - Final Course Assessment",
   },
 
-  { date: "4/26/22", weight: 24, topics: "Capstone Day 1" },
-  { date: "4/27/22", weight: 24, topics: "Capstone Day 2" },
-  { date: "4/28/22", weight: 24, topics: "Capstone Day 3" },
-  { date: "4/28/22", weight: 24, topics: "Capstone Day 4" },
+  { date: "5/16/22", weight: 24, topics: "Capstone Day 1" },
+  { date: "5/17/22", weight: 24, topics: "Capstone Day 2" },
+  { date: "5/18/22", weight: 24, topics: "Capstone Day 3" },
+  { date: "5/19/22", weight: 24, topics: "Capstone Day 4" },
 ];
 
 const machineLearningCert = [
@@ -542,65 +542,65 @@ const openSource = [
       "Data Structures - Prefix Operations & Tries, Reductions  Decomposition, Basic Sorts, Quick Sort",
   },
   {
-    date: "4/24/22",
+    date: "5/24/22",
     weight: 40,
     topics: "Data Structures - Sorting & Algorithmic Bounds, Radix Sorts",
   },
   {
-    date: "4/25/22",
+    date: "5/25/22",
     weight: 40,
     topics: "Data Structures - Compression, Complexity, P = NP?",
   },
   {
-    date: "4/26/22",
+    date: "5/26/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Number representation, C Intro, Memory Management, Floating Point, RISC-V intro",
   },
   {
-    date: "4/27/22",
+    date: "5/27/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - RISC-V lw, sw, Decisions, Procedure, Instruction Formats",
   },
   {
-    date: "4/28/22",
+    date: "5/28/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Syncronous Digital Systems, State machines, Combinational Logic",
   },
   {
-    date: "4/29/22",
+    date: "5/29/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Single-cycle CPU Datapath, Conrol, Pipelining, Caches",
   },
   {
-    date: "4/30/22",
+    date: "5/30/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Virtual Memory, Flynn Taxonomy, SIMD ",
   },
   {
-    date: "5/1/22",
+    date: "6/1/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Thread-Level & Data-Level Parallelism",
   },
   {
-    date: "5/2/22",
+    date: "6/2/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - MapReduce, Spark, Data Centers",
   },
   {
-    date: "5/3/22",
+    date: "6/3/22",
     weight: 40,
     topics:
       "Great Ideas in Computer Architecture - Cloud Computing, I/O, Parity, ECC",
   },
   {
-    date: "5/4/22",
+    date: "6/4/22",
     weight: 40,
     topics: "Great Ideas in Computer Architecture - GPUs",
   },

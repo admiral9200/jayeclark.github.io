@@ -619,10 +619,14 @@ const leetCode = [
   { date: "5/19/22", weight: 400, topics: "LeetCode Training - Easy" },
   { date: "5/20/22", weight: 600, topics: "LeetCode Training - Easy" },
   { date: "5/22/22", weight: 700, topics: "LeetCode Training - Easy & Medium" },
-  { date: "5/26/22", weight: 1200, topics: "LeetCode Training - Medium" },
-  { date: "5/28/22", weight: 1200, topics: "LeetCode Training - Medium" },
-  { date: "6/1/22", weight: 1300, topics: "LeetCode Training - Hard & Medium" },
-  { date: "6/8/22", weight: 1300, topics: "LeetCode Training - Hard" },
+  { date: "6/7/22", weight: 1200, topics: "LeetCode Training - Medium" },
+  { date: "6/15/22", weight: 1200, topics: "LeetCode Training - Medium" },
+  {
+    date: "6/20/22",
+    weight: 1300,
+    topics: "LeetCode Training - Hard & Medium",
+  },
+  { date: "6/30/22", weight: 1300, topics: "LeetCode Training - Hard" },
 ];
 
 export const trainingMatrix: TrainingMatrix = [

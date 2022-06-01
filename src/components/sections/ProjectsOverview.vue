@@ -10,15 +10,15 @@ export default {
           description:
             "I work primarily in Node.js on the back end, though I've also done some work in Ruby on Rails, Flask, and LAMP.",
           samples: [
+            { name: "My Dev Interview", img: "mydevinterview-thumbnail.png" },
             { name: "Instaplate", img: "instaplate-thumbnail.png" },
-            { name: "WhatsApp", img: "whatsapp-thumbnail.png" },
-            { name: "Holy Grail", img: "holygrail-thumbnail.png" },
+            { name: "Tiny Tech Trivia", img: "t3-thumb.png" },
           ],
         },
         {
           title: "Open Source Software",
           description:
-            "I've contributed code to more than <b>70 open source software projects</b> including TypeScript, O3DE, React Bootstrap, Material UI, Chatwoot, and MetaMask.",
+            "I've contributed code to more than <b>80 open source software projects</b> including TypeScript, O3DE, React Bootstrap, Material UI, Chatwoot, and MetaMask.",
           samples: [
             { name: "RailsDevs", img: "railsdevs-thumbnail.png" },
             { name: "Interactivenn", img: "interactivenn-thumbnail.png" },
@@ -28,7 +28,7 @@ export default {
         {
           title: "Front End",
           description:
-            "I work primarily in React, Vue, and vanilla JS on the front end, I've also done some work with Angular, and advanced customization in Wordpress and Wix.",
+            "I work primarily in React, Vue, and vanilla JS on the front end, I've also done some work with Angular, Jinja, and advanced customization in Wordpress and Wix.",
           samples: [
             { name: "Bad Bank", img: "badbank-thumbnail.png" },
             { name: "Clones", img: "clones-thumbnail.png" },

@@ -69,47 +69,51 @@ export default {
         Outside of work, I’ve contributed code to 80+ Open Source Software
         projects and am a maintainer and volunteer mentor on one project.
       </p>
+      <hr />
       <p>
         I didn't start off with software engineering as my goal. But in every
-        job, from academia to real estate development to management consulting &
-        entrepreneurship, software development work found and fascinated me. In
-        grad school, while teaching at Harvard & MIT, I built a content
+        job - academia, real estate development, management consulting,
+        entrepreneurship - software engineering work found and fascinated me.
+        Whenever I faced a tough business problem, software engineering was how
+        I solved it.
+      </p>
+      <br />
+      <p>
+        In grad school, while teaching at Harvard & MIT, I built a content
         management system. As a management consultant, I built & deployed a
         mission-critical real-time GPS tracking and dispatch app for an airport
-        shuttle collective. As an executive and acting CTO at a startup, I
-        became an individual contributor after-hours, and built a machine
-        learning-driven talent management platform that resulted in my company
-        being profiled in The New Yorker's 2017 tech issue. No matter what I
-        did, I was constantly solving tough business problems through software
-        engineering.
+        shuttle collective.
       </p>
+      <br />
       <p>
         From 2015 to 2020, I served as COO & acting CTO of a bootstrapped
         startup that provided talent management services for professional
-        videogame content creators at Twitch, YouTube, Facebook, and Beam
-        (Microsoft). I ran a small 3-person tech team, was the sole developer
-        working on the systems that drove our business and processed our
-        clients' sponsorship payments, and played a product management role on
-        our data ingestion pipeline and viewership analytics platform.
+        videogame content creators. I ran a small tech team and served as a
+        product manager for our data ingestion pieline and viewership analytics
+        platform. I was also the sole developer working on building a machine
+        learning-driven talent management system on top of our analytics
+        platform. Our unique tech-driven approach to content creator talent
+        management was profiled in The New Yorker's 2017 tech issue.
       </p>
+      <br />
       <p>
-        That startup unfortunately failed three months into the pandemic. When
+        Unfortunately, that startup failed three months into the pandemic. When
         the dust settled, I realized I was no longer willing to have software
-        development be just an 'after hours' project - mostly because the after
-        hours project had grown into an entire second job! I needed software
-        development to be my day to day.
+        development be just a neat 'after hours' project - mostly because the
+        after hours project had grown into an entire second job! I needed
+        software engineering to be my day to day.
       </p>
+      <br />
       <p>
-        Being a self-taught developer without a mentor had left me with some
-        knowledge gaps! While I was capable of complex tasks that bordered on
-        'Senior Developer' territory (like productionizing a machine learning
-        model to predict ideal rates to charge for sponsored content), my lack
-        of formal training in CS was apparent. I packed up my belongings, hit
-        the road as a digital nomad, and embarked on a 15-month training program
-        of self-study and self-improvement accompanied by coursework for three
-        professional certificates: Full-stack Web Development with MERN, Data
-        Science, and Machine Learning, Modeling & Simulation.
+        I was a self-taught developer with no mentor. That had left me with some
+        knowledge gaps that I needed to fill if I wanted to commit seriously to
+        engineering excellence. I packed up my belongings, hit the road as a
+        digital nomad, and embarked on a 15-month program of self-study and
+        self-improvement, accompanied by coursework for three professional
+        certificates: Full-stack Web Development with MERN, Data Science, and
+        Machine Learning, Modeling & Simulation.
       </p>
+      <br />
       <p>
         My plan worked, and in 2022 I landed a role on a machine learning and
         telemetry oriented data team in the Amazon Physical Stores org. Though
@@ -118,6 +122,7 @@ export default {
         improve during my brief time on the team, and I'm looking forward to
         finding the next team where I can contribute my talents and enthusiasm.
       </p>
+      <br />
       <p>
         In my spare time, I enjoy traveling (mainly to Puerto Rico and Venice),
         cooking, and amateur food photography. I volunteer for a San Juan,

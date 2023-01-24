@@ -113,11 +113,10 @@ export default {
       <p>
         My plan worked, and in 2022 I landed a role on a machine learning and
         telemetry oriented data team in the Amazon Physical Stores org. Though
-        my role was eliminated as part of a massive reduction in force, I'm
-        grateful for the work I was able to do and the software & systems I was
-        able to improve during my brief time on the team, and I'm looking
-        forward to finding the next team where I can contribute my talents and
-        enthusiasm.
+        my role was eliminated as part of a reduction in force, I'm grateful for
+        the work I was able to do and the software & systems I was able to
+        improve during my brief time on the team, and I'm looking forward to
+        finding the next team where I can contribute my talents and enthusiasm.
       </p>
       <p>
         In my spare time, I enjoy traveling (mainly to Puerto Rico and Venice),

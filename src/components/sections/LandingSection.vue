@@ -10,7 +10,8 @@ import { RouterLink } from "vue-router";
         wants to work for you.
       </h1>
       <p style="font-size: 1.75rem">
-        I am a full stack software engineer seeking employment opportunities.
+        I'm a full stack software engineer with a talent for DevOps, CI/CD, and
+        ML engineering.
       </p>
       <RouterLink to="/projects"
         ><span class="btn btn-primary">See my work</span></RouterLink

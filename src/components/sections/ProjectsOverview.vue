@@ -8,7 +8,8 @@ export default {
         {
           title: "Back End",
           description:
-            "I work primarily in Node.js on the back end, though I've also done some work in Ruby on Rails, Flask, and LAMP.",
+            "I work primarily in Java on the back end. Most of my experience is with proprietary projects for work, and can't be highlighted here, but I'm working on updating this section" +
+            " with some sample projects that better reflect my back end skill level. <br><br>More recently, I've added Node.js to my back end skill set, and have also done some work in Ruby on Rails, Flask, and LAMP.",
           samples: [
             { name: "My Dev Interview", img: "mydevinterview-thumbnail.png" },
             { name: "Instaplate", img: "instaplate-thumbnail.png" },
@@ -28,7 +29,7 @@ export default {
         {
           title: "Front End",
           description:
-            "I work primarily in React, Vue, and vanilla JS on the front end, I've also done some work with Angular, Jinja, and advanced customization in Wordpress and Wix.",
+            "I work primarily in React, Vue, and vanilla JS on the front end. I've also done some work with Angular, Jinja, and advanced customization in Wordpress and Wix.",
           samples: [
             { name: "Bad Bank", img: "badbank-thumbnail.png" },
             { name: "Clones", img: "clones-thumbnail.png" },
@@ -75,18 +76,20 @@ export default {
           class="offset-none card-content"
           style="padding-left: 0px; margin-bottom: 40px; align-items: bottom"
         >
-          <div style="margin-top: auto"><h1>Projects</h1></div>
+          <div style="margin-top: auto">
+            <h1>Projects</h1>
+          </div>
         </div>
       </div>
 
       <template v-for="(category, index) in categories" v-bind:key="index">
         <hr :class="index === 0 ? `hidden` : `visible`" />
         <div style="width: 100%">
-          <div style="width: 100%; max-width: 700px; margin: 0px auto;">
+          <div style="width: 100%; max-width: 700px; margin: 0px auto">
             <h3>{{ category.title }}</h3>
             <p :innerHTML="category.description"></p>
           </div>
-          <div style="width: 100%; max-width: 700px; margin: 0px auto;">
+          <div style="width: 100%; max-width: 700px; margin: 0px auto">
             <div class="project-links">
               <template
                 v-for="(sample, linkindex) in category.samples"
@@ -100,7 +103,8 @@ export default {
                     },
                   }"
                   :class="{
-                    'final-project': category.samples.length % 2 > 0 &&
+                    'final-project':
+                      category.samples.length % 2 > 0 &&
                       linkindex === category.samples.length - 1,
                   }"
                 >

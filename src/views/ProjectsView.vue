@@ -1,42 +1,48 @@
-<script lang="js">
+<script setup lang="ts">
 import { projects } from "@/scripts/projects";
+import type { Category } from "@/scripts/projects";
+</script>
+<script lang="ts">
 export default {
-  name: 'ProjectsView',
+  name: "ProjectsView",
   data() {
     return {
       projects,
       params: this.$route.params,
-    }
+    };
   },
   computed: {
     sortedProjects() {
       const { section } = this.params;
-      const newProjects = [];
-      this.projects.forEach(p => {
+      const newProjects: Category[] = [];
+      this.projects.forEach((p) => {
         newProjects.push({ ...p });
       });
       if (section) {
-        const index = newProjects.findIndex(x => x.slug === section);
+        const index = newProjects.findIndex((x) => x.slug === section);
         if (index > 0) {
           newProjects[index].order = 0;
         }
       }
-      const sortedProjects = newProjects.sort((a,b) => a.order - b.order);
+      const sortedProjects = newProjects.sort((a, b) => a.order - b.order);
       return sortedProjects;
-    }
+    },
   },
   mounted() {
-    const images = Array.from(document.getElementsByTagName('img'));
+    const images = Array.from(document.getElementsByTagName("img"));
     images.forEach((image) => {
-      if (image.classList.contains('unprocessed') && image.classList.contains('projectsView-img')) {
+      if (
+        image.classList.contains("unprocessed") &&
+        image.classList.contains("projectsView-img")
+      ) {
         const currentSrc = image.getAttribute("src");
         const newSrc = new URL(`../assets/${currentSrc}`, import.meta.url);
-        image.src = newSrc;
-        image.classList.remove('unprocessed');
+        image.src = newSrc.toString();
+        image.classList.remove("unprocessed");
       }
-    })
-  }
-}
+    });
+  },
+};
 </script>
 
 <template>
@@ -79,17 +85,22 @@ export default {
                 ></p>
                 <div
                   class="project-description-container-detail"
-                  :style="{
-                    'flex-wrap':
-                      group.category === 'Before and After' ? 'wrap' : '',
-                  }"
+                  :style="
+                    'flex-wrap: ' + group.category === 'Before and After'
+                      ? 'wrap'
+                      : ''
+                  "
                 >
                   <img
                     v-for="(photo, iidx) in project.thumbnails"
                     :key="iidx"
                     :src="`${photo}`"
-                    :height="group.category === 'Before and After' ? null : 70"
-                    :width="group.category === 'Before and After' ? 800 : null"
+                    :height="
+                      group.category === 'Before and After' ? undefined : 70
+                    "
+                    :width="
+                      group.category === 'Before and After' ? 800 : undefined
+                    "
                     :style="{
                       border: '1px solid #ccc',
                       'max-width': `${100 / project.thumbnails.length}%`,

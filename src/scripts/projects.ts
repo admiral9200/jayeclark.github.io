@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
   name: string;
   thumbnails: string[];
   url: string;
@@ -9,7 +9,7 @@ interface Project {
   feature: boolean;
 }
 
-interface Category {
+export interface Category {
   category: string;
   slug: string;
   description: string;
@@ -22,7 +22,10 @@ export const projects: Array<Category> = [
     category: "Back End",
     slug: "backend",
     description:
-      "I work primarily in Node.js on the back end, and have also done some work in Ruby on Rails, Flask, and LAMP.",
+      "I work primarily in Java & Kotlin on the back end, on AWS infrastructure (CDK, serverless, Sagemaker inference with multimodel endpoints). " +
+      "I have experience with GraphQL & Gremlin. I've been working mainly with DynamoDB and S3/Glue for data storage, but also " +
+      "have experience with mySQL, SQLLite, Postgres, MongoDB, Firebase, and Redis. I plan to add some recent personal projects here " +
+      "that better reflect my skill set & expertise, but for now please enjoy these quick & dirty Node & Flask demo projects.",
     order: 1,
     projects: [
       {
@@ -112,7 +115,8 @@ export const projects: Array<Category> = [
     category: "Front End",
     slug: "frontend",
     description:
-      "I work primarily in React, Vue, and vanilla JS on the front end. I've also done some work with Angular, and advanced customization in Wordpress and Wix.",
+      "I work primarily in React, Vue, and vanilla JS on the front end. I've also done some work with Angular, and advanced customization in Wordpress and Wix. After 6 years working on the backend and data, I'm very interested in roles " +
+      "that will allow me to flex some of my front-end chops.",
     order: 3,
     projects: [
       {

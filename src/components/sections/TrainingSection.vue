@@ -36,7 +36,7 @@ const mostRecentTopic = (milestones: Array<Milestone>) => {
   const completedToDate = milestones
     .filter((milestone: Milestone) => isDateInPast(milestone.date))
     .reverse();
-  return `<p><b>Currently working on:</b> ${completedToDate[0].topics}</p>`;
+  return `<p><b>Currently working on:</b> ${completedToDate[0]?.topics}</p>`;
 };
 </script>
 

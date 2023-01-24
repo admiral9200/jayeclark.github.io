@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { RouterLink } from "vue-router";
 import LandingSection from "@/components/sections/LandingSection.vue";
-import PrimaryStackSection from "@/components/sections/PrimaryStackSection.vue";
+import FullWidthLogoDisplayWithTitle from "@/components/ui/FullWidthLogoDisplayWithTitle.vue";
 import SecondaryStackSection from "@/components/sections/secondarystack/SecondaryStackSection.vue";
 import CardWithShadowVue from "@/components/ui/CardWithShadow.vue";
 import TransparentStripVue from "@/components/ui/TransparentStrip.vue";
 import ProjectsOverviewVue from "@/components/sections/ProjectsOverview.vue";
-import TrainingSectionVue from "@/components/sections/TrainingSection.vue";
 import { computed } from "vue";
+
 const cardsToDisplay = computed(() =>
   Math.floor((window.innerWidth * 0.82 - 20) / 170)
 );
@@ -19,20 +19,25 @@ const cardsToDisplay = computed(() =>
       <LandingSection />
     </div>
     <div>
-      <PrimaryStackSection />
-    </div>
-    <div>
-      <SecondaryStackSection :cardsToDisplay="cardsToDisplay" />
+      <FullWidthLogoDisplayWithTitle
+        :title="`Primary Languages`"
+        :logos="[
+          { fileName: 'java.png', alt: 'Java' },
+          { fileName: 'typescript.png', alt: 'Typescript' },
+          { fileName: 'kotlin.png', alt: 'Kotlin' },
+          { fileName: 'python.png', alt: 'Python' },
+        ]"
+      />
     </div>
     <div style="margin-bottom: 60px">
       <CardWithShadowVue
         :title="`Get to know me`"
         :paragraphs="[
-          `I'm a Harvard-educated professional with strong communication skills and
-        experience in mentorship and teaching.`,
-          `I learn quickly, accept constructive feedback gratefully, and share knowledge 
-        freely with peers who need assistance.`,
-          `I care deeply about diversity & inclusion, decolonization, and transgender rights.`,
+          `I'm a Harvard-educated professional with strong communication skills, top tier writing abilities, and
+        experience in mentorship, teaching, and training.`,
+          `I ramp up quickly on new projects, accept constructive feedback gratefully, adapt rapidly, and share knowledge 
+        freely with peers. `,
+          `I have a talent for CI/CD debugging, machine learning engineering, and orchestrating complex, interconnected tech stack upgrades. I have six years of professional software development experience, five in back-end and one in full-stack.`,
         ]"
         :buttons="[
           {
@@ -49,18 +54,19 @@ const cardsToDisplay = computed(() =>
     <div style="margin-bottom: 40px">
       <TransparentStripVue
         :title="`Github`"
-        :subtitle="`Applying best practices`"
+        :subtitle="`Modeling best practices`"
         :paragraphs="[
-          `<p>I've used git and GitHub from the start of my training to build
-        expertise in pull requests, resolving merge conflicts, and posting clean
-        commits. I recently completed an
+          `<p>I've contributed to more than 80 open source software projects, including some of the main languages & libraries
+        that I use in my personal projects. I'm a maintainer
+        on an educationally-oriented OSS project developing a social media platform for software development training & self-improvement.
+        I work to mentor a small group of volunteer developers as they learn best practices in writing clean code, raising & revising pull
+        requests, and navigating the CI/CD approval process. In 2021 I completed an 
         <a
           href='https://github.com/jayeclark/jayeclark/blob/main/opensourcechallenge.md'
           target='_blank'
           >Open Source Challenge</a
         >
-        to submit 100 open source software pull requests in 100 days, which
-        significantly expanded my git and GitHub experience.</p>`,
+        to submit 100 non-trivial open source software pull requests in 100 days.</p>`,
         ]"
         :buttons="[
           {
@@ -76,11 +82,12 @@ const cardsToDisplay = computed(() =>
     <div style="margin-bottom: 120px; height: max-content">
       <TransparentStripVue
         :title="`Codewars`"
-        :subtitle="`Coding Challenges`"
+        :subtitle="`Code Dojo`"
         :paragraphs="[
-          `<p>I train regularly on Codewars. I've achieved a rank of 2 kyu in Javascript, which
-        reflects a 'proficient' skill level, and I rank among the top 1%
-        of developers on the site. The most recent challenge I completed was building a regex that can determine if a binary number is divisible by seven.</p>`,
+          `<p>I train regularly on Codewars to keep my problem solving and language skills sharp. I've achieved a rank of 2 kyu in Javascript (proficient' skill level), and I rank in the top 1%
+        of developers on the site. My favorite JS challenge has been building a regex that can determine if a binary number is divisible by seven. Deterministic finite automata FTW - it's a <a href='https://www.codewars.com/kata/56a73d2194505c29f600002d'>really fun problem</a> and I highly encourage taking a crack at it! I dabble
+        a little in Leetcode as well, where a number of my solutions have beaten 100% of other submissions on speed (still working on getting
+        that memory utilization down!)</p>`,
         ]"
         :buttons="[
           {
@@ -96,9 +103,22 @@ const cardsToDisplay = computed(() =>
 
     <ProjectsOverviewVue />
 
-    <!-- TRAINING PLAN-->
-    <TrainingSectionVue />
-
+    <div>
+      <FullWidthLogoDisplayWithTitle
+        :title="`Primary stack`"
+        :logos="[
+          { fileName: 'aws_small.png', alt: 'Amazon Web Services' },
+          { fileName: 'mongodb.png', alt: 'Mongo DB' },
+          { fileName: 'expressjs.png', alt: 'Express' },
+          { fileName: 'react.png', alt: 'React' },
+          { fileName: 'nodejs.png', alt: 'NodeJS' },
+        ]"
+      />
+    </div>
+    <div>
+      <SecondaryStackSection :cardsToDisplay="cardsToDisplay" />
+    </div>
+    <div style="height: 82px"></div>
     <!-- CONTACT CARD -->
     <div id="bottom-contact-card" class="contact card-white">
       <div class="card-container">
